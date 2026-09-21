@@ -1,0 +1,4 @@
+alltoall_gpu
+*.o
+cxi-*-*.out
+cxi-*-*.err

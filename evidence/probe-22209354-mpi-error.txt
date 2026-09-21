@@ -1,0 +1,15 @@
+# First MPI error, job 22209354, 512 ranks, FI_CXI_RX_MATCH_MODE=software
+
+MPICH ERROR [Rank 392] [job id 22209354.1] [Mon Sep 21 15:14:17 2026] [nid006928] - Abort(271202447) (rank 392 in comm 0): Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=1022, req_array=0x2809b00, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+
+aborting job:
+Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=1022, req_array=0x2809b00, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 

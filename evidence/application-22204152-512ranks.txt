@@ -1,0 +1,16 @@
+# Application (exact-diagonalisation transpose), job 22204152
+# 64 nodes / 512 ranks, software matching. Hung in the first iteration.
+
+MPICH ERROR [Rank 170] [job id 22204152.0] [Mon Sep 21 11:15:55 2026] [nid006667] - Abort(673855631) (rank 170 in comm 0): Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=511, req_array=0x59e1a40, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+
+aborting job:
+Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=511, req_array=0x59e1a40, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 

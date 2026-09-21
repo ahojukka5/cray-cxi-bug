@@ -1,0 +1,46 @@
+# Reduced probe, job 22209354, LUMI-G standard-g.
+#
+# NOTE: this run used a Julia MPI + ROCArray program with the same
+# communication pattern as alltoall_gpu.c: the same all-to-all of
+# device buffers, no compute kernels. The C program in this
+# repository is the further-reduced equivalent, verified to build
+# on LUMI-G; its own runs at these rank counts are pending and will
+# be added here.
+# Node subsets of one 192-node allocation, 8 ranks per node.
+
+ranks=480  payload=12.43 MB  per-rank device buffers=11.65 GiB  rounds=40
+  MPICH_GPU_SUPPORT_ENABLED=1
+  MPICH_GPU_IPC_ENABLED=0
+  FI_CXI_RX_MATCH_MODE=software
+  FI_CXI_DEFAULT_CQ_SIZE=131072
+  FI_CXI_DEFAULT_TX_SIZE=4096
+  FI_CXI_REQ_BUF_MIN_POSTED=6
+  FI_CXI_REQ_BUF_SIZE=12582912
+  FI_CXI_RDZV_THRESHOLD=16384
+  FI_CXI_OFLOW_BUF_COUNT=3
+round     1  elapsed 1.9 s
+round    25  elapsed 38.6 s
+PROBE OK  40 rounds in 61.8 s
+ARM 60n_480r_software: OK
+ranks=512  payload=10.92 MB  per-rank device buffers=10.92 GiB  rounds=40
+  MPICH_GPU_SUPPORT_ENABLED=1
+  MPICH_GPU_IPC_ENABLED=0
+  FI_CXI_RX_MATCH_MODE=software
+  FI_CXI_DEFAULT_CQ_SIZE=131072
+  FI_CXI_DEFAULT_TX_SIZE=4096
+  FI_CXI_REQ_BUF_MIN_POSTED=6
+  FI_CXI_REQ_BUF_SIZE=12582912
+  FI_CXI_RDZV_THRESHOLD=16384
+  FI_CXI_OFLOW_BUF_COUNT=3
+round     1  elapsed 3.4 s
+ARM 64n_512r_software: FAILED
+ranks=768  payload=4.85 MB  per-rank device buffers=7.28 GiB  rounds=40
+  MPICH_GPU_SUPPORT_ENABLED=1
+  MPICH_GPU_IPC_ENABLED=0
+  FI_CXI_RX_MATCH_MODE=software
+  FI_CXI_DEFAULT_CQ_SIZE=131072
+  FI_CXI_DEFAULT_TX_SIZE=4096
+  FI_CXI_REQ_BUF_MIN_POSTED=6
+  FI_CXI_REQ_BUF_SIZE=12582912
+  FI_CXI_RDZV_THRESHOLD=16384
+  FI_CXI_OFLOW_BUF_COUNT=3

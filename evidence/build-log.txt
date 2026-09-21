@@ -1,0 +1,5 @@
+# Build on LUMI-G, job 22211814
+
+built alltoall_gpu against /opt/rocm-6.3.4
+BUILD OK
+-rwxrwx--- 1 juaho project_462001519 25488 Sep 21 16:31 alltoall_gpu
