@@ -1,0 +1,2 @@
+nodes=64 ranks=512 mode=software rdzv=default payload=10.924MB
+RESULT 512r_software: FAILED

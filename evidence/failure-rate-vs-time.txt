@@ -1,0 +1,10 @@
+# Failure rate by time of day, configuration held constant.
+# Identical work throughout. This is why block comparisons mislead.
+
+WINDOW   CLEAN  FAILED  RATE
+16:49    0      4       100%
+18:22    3      3       50%
+20:44    9      2       18%
+21:23    13     1       7%
+21:27    15     1       6%
+22:4x    7      11      61% (interleaved arms)

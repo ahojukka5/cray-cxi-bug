@@ -1,0 +1,1071 @@
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 364] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007478] - Abort(1) (rank 364 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 364
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 364
+rank 376: need 10.92 GiB of device memory but only 3.80 GiB is free on device 0 of 1 visible. Launch with one GCD per rank (--gpus-per-task=1 --gpu-bind=closest) or lower --mb.
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 366] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007478] - Abort(1) (rank 366 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 366
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 366
+MPICH ERROR [Rank 376] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007480] - Abort(2) (rank 376 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 2) - process 376
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 2) - process 376
+MPICH ERROR [Rank 363] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007478] - Abort(1) (rank 363 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 363
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 363
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 379] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007480] - Abort(1) (rank 379 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 379
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 379
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 277] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007385] - Abort(1) (rank 277 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 277
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 277
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 278] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007385] - Abort(1) (rank 278 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 278
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 278
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 272] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007385] - Abort(1) (rank 272 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 272
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 272
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 45] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005534] - Abort(1) (rank 45 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 45
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 45
+rank 129: need 10.92 GiB of device memory but only 3.80 GiB is free on device 0 of 1 visible. Launch with one GCD per rank (--gpus-per-task=1 --gpu-bind=closest) or lower --mb.
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 218] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006021] - Abort(1) (rank 218 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 218
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 218
+rank 44: need 10.92 GiB of device memory but only 3.73 GiB is free on device 0 of 1 visible. Launch with one GCD per rank (--gpus-per-task=1 --gpu-bind=closest) or lower --mb.
+MPICH ERROR [Rank 129] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005922] - Abort(2) (rank 129 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 2) - process 129
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 2) - process 129
+MPICH ERROR [Rank 44] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005534] - Abort(2) (rank 44 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 2) - process 44
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 2) - process 44
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 219] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006021] - Abort(1) (rank 219 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 219
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 219
+MPICH ERROR [Rank 216] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006021] - Abort(1) (rank 216 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 216
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 216
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 268] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007384] - Abort(1) (rank 268 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 268
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 268
+rank 96: need 10.92 GiB of device memory but only 3.60 GiB is free on device 0 of 1 visible. Launch with one GCD per rank (--gpus-per-task=1 --gpu-bind=closest) or lower --mb.
+MPICH ERROR [Rank 96] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005918] - Abort(2) (rank 96 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 2) - process 96
+
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 153] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006013] - Abort(1) (rank 153 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 153
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 153
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 282] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007386] - Abort(1) (rank 282 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 282
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 282
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 269] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007384] - Abort(1) (rank 269 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 269
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 269
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 2) - process 96
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 370] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007479] - Abort(1) (rank 370 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 370
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 370
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 156] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006013] - Abort(1) (rank 156 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 156
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 156
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 283] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007386] - Abort(1) (rank 283 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 283
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 283
+MPICH ERROR [Rank 264] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007384] - Abort(1) (rank 264 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 264
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 264
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 374] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007479] - Abort(1) (rank 374 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 374
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 374
+MPICH ERROR [Rank 152] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006013] - Abort(1) (rank 152 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 152
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 152
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 281] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007386] - Abort(1) (rank 281 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 281
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 281
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 100] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005918] - Abort(1) (rank 100 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 100
+
+MPICH ERROR [Rank 368] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007479] - Abort(1) (rank 368 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 368
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 368
+MPICH ERROR [Rank 132] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005922] - Abort(1) (rank 132 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 132
+
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 149] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005924] - Abort(1) (rank 149 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 149
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 149
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 100
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 132
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 150] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005924] - Abort(1) (rank 150 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 150
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 150
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 234] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006720] - Abort(1) (rank 234 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 234
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 234
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 179] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006016] - Abort(1) (rank 179 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 179
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 179
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 252] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006722] - Abort(1) (rank 252 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 252
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 252
+MPICH ERROR [Rank 146] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005924] - Abort(1) (rank 146 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 146
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 146
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 52] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005535] - Abort(1) (rank 52 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 52
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 52
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 235] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006720] - Abort(1) (rank 235 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 235
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 235
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 180] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006016] - Abort(1) (rank 180 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 180
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 180
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 254] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006722] - Abort(1) (rank 254 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 254
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 254
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 53] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005535] - Abort(1) (rank 53 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 53
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 53
+MPICH ERROR [Rank 233] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006720] - Abort(1) (rank 233 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 233
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 233
+MPICH ERROR [Rank 176] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006016] - Abort(1) (rank 176 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 176
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 176
+MPICH ERROR [Rank 249] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006722] - Abort(1) (rank 249 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 249
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 249
+MPICH ERROR [Rank 51] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005535] - Abort(1) (rank 51 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 51
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 51
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 116] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005920] - Abort(1) (rank 116 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 116
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 116
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 164] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006014] - Abort(1) (rank 164 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 164
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 164
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 9] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005530] - Abort(1) (rank 9 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 9
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 9
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 118] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005920] - Abort(1) (rank 118 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 118
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 118
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 165] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006014] - Abort(1) (rank 165 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 165
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 165
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 308] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007389] - Abort(1) (rank 308 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 308
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 308
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 112] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005920] - Abort(1) (rank 112 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 112
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 112
+MPICH ERROR [Rank 160] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006014] - Abort(1) (rank 160 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 160
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 160
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 11] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005530] - Abort(1) (rank 11 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 11
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 11
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 309] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007389] - Abort(1) (rank 309 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 309
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 309
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 212] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006020] - Abort(1) (rank 212 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 212
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 212
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 8] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005530] - Abort(1) (rank 8 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 8
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 8
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 187] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006017] - Abort(1) (rank 187 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 187
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 187
+MPICH ERROR [Rank 304] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007389] - Abort(1) (rank 304 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 304
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 304
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 214] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006020] - Abort(1) (rank 214 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 214
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 214
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 124] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005921] - Abort(1) (rank 124 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 124
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 124
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 188] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006017] - Abort(1) (rank 188 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 188
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 188
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 211] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006020] - Abort(1) (rank 211 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 211
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 211
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 89] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005917] - Abort(1) (rank 89 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 89
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 89
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 125] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005921] - Abort(1) (rank 125 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 125
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 125
+MPICH ERROR [Rank 185] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006017] - Abort(1) (rank 185 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 185
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 185
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 357] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007477] - Abort(1) (rank 357 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 357
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 357
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 93] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005917] - Abort(1) (rank 93 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 93
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 93
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 443] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007527] - Abort(1) (rank 443 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 443
+
+MPICH ERROR [Rank 120] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005921] - Abort(1) (rank 120 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 120
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 120
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 358] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007477] - Abort(1) (rank 358 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 358
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 358
+MPICH ERROR [Rank 88] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005917] - Abort(1) (rank 88 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 88
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 88
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 354] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007477] - Abort(1) (rank 354 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 354
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 354
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 445] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007527] - Abort(1) (rank 445 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 445
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 445
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 465] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007530] - Abort(1) (rank 465 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 465
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 465
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 404] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007483] - Abort(1) (rank 404 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 404
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 404
+MPICH ERROR [Rank 440] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007527] - Abort(1) (rank 440 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 440
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 440
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 470] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007530] - Abort(1) (rank 470 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 470
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 470
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 405] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007483] - Abort(1) (rank 405 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 405
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 405
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 443
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 464] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007530] - Abort(1) (rank 464 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 464
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 464
+MPICH ERROR [Rank 400] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007483] - Abort(1) (rank 400 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 400
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 400
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 67] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005537] - Abort(1) (rank 67 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 67
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 67
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 197] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006018] - Abort(1) (rank 197 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 197
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 197
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 259] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006723] - Abort(1) (rank 259 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 259
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 259
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 36] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005533] - Abort(1) (rank 36 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 36
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 36
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 68] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005537] - Abort(1) (rank 68 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 68
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 68
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 198] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006018] - Abort(1) (rank 198 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 198
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 198
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 262] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006723] - Abort(1) (rank 262 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 262
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 262
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 38] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005533] - Abort(1) (rank 38 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 38
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 38
+MPICH ERROR [Rank 64] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005537] - Abort(1) (rank 64 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 64
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 64
+MPICH ERROR [Rank 194] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006018] - Abort(1) (rank 194 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 194
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 194
+MPICH ERROR [Rank 257] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006723] - Abort(1) (rank 257 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 257
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 257
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 507] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007535] - Abort(1) (rank 507 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 507
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 507
+MPICH ERROR [Rank 35] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005533] - Abort(1) (rank 35 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 35
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 35
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 508] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007535] - Abort(1) (rank 508 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 508
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 508
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 505] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007535] - Abort(1) (rank 505 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 505
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 505
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 83] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005916] - Abort(1) (rank 83 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 83
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 83
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 459] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007529] - Abort(1) (rank 459 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 459
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 459
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 84] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005916] - Abort(1) (rank 84 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 84
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 84
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 460] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007529] - Abort(1) (rank 460 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 460
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 460
+MPICH ERROR [Rank 80] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005916] - Abort(1) (rank 80 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 80
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 80
+MPICH ERROR [Rank 457] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007529] - Abort(1) (rank 457 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 457
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 457
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 205] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006019] - Abort(1) (rank 205 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 205
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 205
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 206] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006019] - Abort(1) (rank 206 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 206
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 206
+MPICH ERROR [Rank 200] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006019] - Abort(1) (rank 200 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 200
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 200
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 331] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007392] - Abort(1) (rank 331 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 331
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 331
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 332] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007392] - Abort(1) (rank 332 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 332
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 332
+MPICH ERROR [Rank 328] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007392] - Abort(1) (rank 328 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 328
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 328
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 140] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005923] - Abort(1) (rank 140 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 140
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 140
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 314] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007390] - Abort(1) (rank 314 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 314
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 314
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 141] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005923] - Abort(1) (rank 141 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 141
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 141
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 242] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006721] - Abort(1) (rank 242 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 242
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 242
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 170] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006015] - Abort(1) (rank 170 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 170
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 170
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 317] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007390] - Abort(1) (rank 317 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 317
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 317
+MPICH ERROR [Rank 136] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005923] - Abort(1) (rank 136 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 136
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 136
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 490] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007533] - Abort(1) (rank 490 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 490
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 490
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 417] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007485] - Abort(1) (rank 417 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 417
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 417
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 243] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006721] - Abort(1) (rank 243 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 243
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 243
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 171] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006015] - Abort(1) (rank 171 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 171
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 171
+MPICH ERROR [Rank 312] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007390] - Abort(1) (rank 312 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 312
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 312
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 493] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007533] - Abort(1) (rank 493 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 493
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 493
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 292] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007387] - Abort(1) (rank 292 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 292
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 292
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 419] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007485] - Abort(1) (rank 419 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 419
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 419
+MPICH ERROR [Rank 241] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006721] - Abort(1) (rank 241 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 241
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 241
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 168] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006015] - Abort(1) (rank 168 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 168
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 168
+MPICH ERROR [Rank 489] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007533] - Abort(1) (rank 489 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 489
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 489
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 293] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007387] - Abort(1) (rank 293 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 293
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 293
+MPICH ERROR [Rank 416] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007485] - Abort(1) (rank 416 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 416
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 416
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 388] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007481] - Abort(1) (rank 388 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 388
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 388
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 5] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005529] - Abort(1) (rank 5 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 5
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 5
+MPICH ERROR [Rank 290] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007387] - Abort(1) (rank 290 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 290
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 290
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 390] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007481] - Abort(1) (rank 390 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 390
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 390
+MPICH ERROR [Rank 0] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005529] - Abort(1) (rank 0 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 384] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007481] - Abort(1) (rank 384 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 384
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 384
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 339] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007393] - Abort(1) (rank 339 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 339
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 339
+MPICH ERROR [Rank 2] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005529] - Abort(1) (rank 2 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 340] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007393] - Abort(1) (rank 340 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 340
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 340
+MPICH ERROR [Rank 337] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007393] - Abort(1) (rank 337 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 337
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 337
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 433] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007526] - Abort(1) (rank 433 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 433
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 433
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 436] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007526] - Abort(1) (rank 436 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 436
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 436
+MPICH ERROR [Rank 432] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007526] - Abort(1) (rank 432 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 432
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 432
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 429] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007525] - Abort(1) (rank 429 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 429
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 429
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 430] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007525] - Abort(1) (rank 430 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 430
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 430
+MPICH ERROR [Rank 424] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007525] - Abort(1) (rank 424 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 424
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 424
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 484] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007532] - Abort(1) (rank 484 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 484
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 484
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 486] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007532] - Abort(1) (rank 486 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 486
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 486
+MPICH ERROR [Rank 481] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007532] - Abort(1) (rank 481 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 481
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 481
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 413] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007484] - Abort(1) (rank 413 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 413
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 413
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 473] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007531] - Abort(1) (rank 473 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 473
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 473
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 106] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005919] - Abort(1) (rank 106 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 106
+
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 414] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007484] - Abort(1) (rank 414 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 414
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 414
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 478] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007531] - Abort(1) (rank 478 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 478
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 478
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 108] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005919] - Abort(1) (rank 108 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 108
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 108
+MPICH ERROR [Rank 409] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007484] - Abort(1) (rank 409 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 409
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 409
+MPICH ERROR [Rank 472] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007531] - Abort(1) (rank 472 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 472
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 472
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 109] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005919] - Abort(1) (rank 109 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 109
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 109
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 106
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 76] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005915] - Abort(1) (rank 76 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 76
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 76
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 78] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005915] - Abort(1) (rank 78 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 78
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 78
+MPICH ERROR [Rank 73] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005915] - Abort(1) (rank 73 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 73
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 73
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 324] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007391] - Abort(1) (rank 324 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 324
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 324
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 326] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007391] - Abort(1) (rank 326 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 326
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 326
+MPICH ERROR [Rank 323] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007391] - Abort(1) (rank 323 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 323
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 323
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 25] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005532] - Abort(1) (rank 25 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 25
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 25
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 30] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005532] - Abort(1) (rank 30 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 30
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 30
+MPICH ERROR [Rank 24] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005532] - Abort(1) (rank 24 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 24
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 24
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 345] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007476] - Abort(1) (rank 345 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 345
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 345
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 346] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007476] - Abort(1) (rank 346 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 346
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 346
+MPICH ERROR [Rank 344] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007476] - Abort(1) (rank 344 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 344
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 344
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 21] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005531] - Abort(1) (rank 21 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 21
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 21
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 19] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005531] - Abort(1) (rank 19 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 19
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 19
+MPICH ERROR [Rank 22] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005531] - Abort(1) (rank 22 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 22
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 22
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 395] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007482] - Abort(1) (rank 395 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 395
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 395
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 397] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007482] - Abort(1) (rank 397 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 397
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 397
+MPICH ERROR [Rank 394] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007482] - Abort(1) (rank 394 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 394
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 394
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 298] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007388] - Abort(1) (rank 298 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 298
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 298
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 302] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007388] - Abort(1) (rank 302 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 302
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 302
+MPICH ERROR [Rank 296] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007388] - Abort(1) (rank 296 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 296
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 296
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 225] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006022] - Abort(1) (rank 225 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 225
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 225
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 230] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006022] - Abort(1) (rank 230 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 230
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 230
+MPICH ERROR [Rank 224] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid006022] - Abort(1) (rank 224 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 224
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 224
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 500] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007534] - Abort(1) (rank 500 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 500
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 500
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 502] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007534] - Abort(1) (rank 502 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 502
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 502
+MPICH ERROR [Rank 499] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007534] - Abort(1) (rank 499 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 499
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 499
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 449] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007528] - Abort(1) (rank 449 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 449
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 449
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 453] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007528] - Abort(1) (rank 453 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 453
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 453
+MPICH ERROR [Rank 448] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid007528] - Abort(1) (rank 448 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 448
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 448
+HIP error out of memory at alltoall_gpu.c:97
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 59] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005536] - Abort(1) (rank 59 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 59
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 59
+HIP error out of memory at alltoall_gpu.c:97
+MPICH ERROR [Rank 60] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005536] - Abort(1) (rank 60 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 60
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 60
+MPICH ERROR [Rank 58] [job id 22214579.0] [Mon Sep 21 17:21:06 2026] [nid005536] - Abort(1) (rank 58 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 58
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 58
+srun: error: nid007478: tasks 363-364,366: Exited with exit code 255
+srun: Terminating StepId=22214579.0
+srun: error: nid005920: tasks 112,116,118: Exited with exit code 255
+srun: error: nid005534: tasks 44-45: Exited with exit code 255
+srun: error: nid006018: tasks 194,197-198: Exited with exit code 255
+srun: error: nid005530: tasks 8-9,11: Exited with exit code 255
+srun: error: nid005537: tasks 64,67-68: Exited with exit code 255
+srun: error: nid007535: tasks 505,507-508: Exited with exit code 255
+srun: error: nid005535: tasks 51-53: Exited with exit code 255
+srun: error: nid007386: tasks 281-283: Exited with exit code 255
+srun: error: nid007481: tasks 384,388,390: Exited with exit code 255
+srun: error: nid007392: tasks 328,331-332: Exited with exit code 255
+srun: error: nid005918: tasks 96,100: Exited with exit code 255
+[2026-09-21T17:21:06.889] error: *** STEP 22214579.0 ON nid005529 CANCELLED AT 2026-09-21T17:21:06 DUE TO TASK FAILURE ***
+srun: error: nid007390: tasks 312,314,317: Exited with exit code 255
+srun: error: nid005529: tasks 0,2,5: Exited with exit code 255
+srun: error: nid005919: tasks 106,108-109: Exited with exit code 255
+srun: error: nid007385: tasks 272,277-278: Exited with exit code 255
+srun: error: nid006720: tasks 233-235: Exited with exit code 255
+srun: error: nid007483: tasks 400,404-405: Exited with exit code 255
+srun: error: nid005915: tasks 73,76,78: Exited with exit code 255
+srun: error: nid006020: tasks 211-212,214: Exited with exit code 255
+srun: error: nid007384: tasks 264,268-269: Exited with exit code 255
+srun: error: nid005533: tasks 35-36,38: Exited with exit code 255
+srun: error: nid006017: tasks 185,187-188: Exited with exit code 255
+srun: error: nid006723: tasks 257,259,262: Exited with exit code 255
+srun: error: nid005917: tasks 88-89,93: Exited with exit code 255
+srun: error: nid007389: tasks 304,308-309: Exited with exit code 255
+srun: error: nid006722: tasks 249,252,254: Exited with exit code 255
+srun: error: nid007530: tasks 464-465,470: Exited with exit code 255
+srun: error: nid007527: tasks 440,443,445: Exited with exit code 255
+srun: error: nid007479: tasks 368,370,374: Exited with exit code 255
+srun: error: nid007480: tasks 376,379: Exited with exit code 255
+srun: error: nid005922: tasks 129,132: Exited with exit code 255
+srun: error: nid005923: tasks 136,140-141: Exited with exit code 255
+srun: error: nid007393: tasks 337,339-340: Exited with exit code 255
+srun: error: nid007525: tasks 424,429-430: Exited with exit code 255
+srun: error: nid007387: tasks 290,292-293: Exited with exit code 255
+srun: error: nid006019: tasks 200,205-206: Exited with exit code 255
+srun: error: nid007526: tasks 432-433,436: Exited with exit code 255
+srun: error: nid006015: tasks 168,170-171: Exited with exit code 255
+srun: error: nid007532: tasks 481,484,486: Exited with exit code 255
+srun: error: nid006013: tasks 152-153,156: Exited with exit code 255
+srun: error: nid006022: tasks 224-225,230: Exited with exit code 255
+srun: error: nid007484: tasks 409,413-414: Exited with exit code 255
+srun: error: nid006014: tasks 160,164-165: Exited with exit code 255
+srun: error: nid007482: tasks 394-395,397: Exited with exit code 255
+srun: error: nid007477: tasks 354,357-358: Exited with exit code 255
+srun: error: nid007388: tasks 296,298,302: Exited with exit code 255
+srun: error: nid007391: tasks 323-324,326: Exited with exit code 255
+srun: error: nid006021: tasks 216,218-219: Exited with exit code 255
+srun: error: nid005924: tasks 146,149-150: Exited with exit code 255
+srun: error: nid007531: tasks 472-473,478: Exited with exit code 255
+srun: error: nid007485: tasks 416-417,419: Exited with exit code 255
+srun: error: nid005532: tasks 24-25,30: Exited with exit code 255
+srun: error: nid007528: tasks 448-449,453: Exited with exit code 255
+srun: error: nid007476: tasks 344-346: Exited with exit code 255
+srun: error: nid007534: tasks 499-500,502: Exited with exit code 255
+srun: error: nid007529: tasks 457,459-460: Exited with exit code 255
+srun: error: nid005916: tasks 80,83-84: Exited with exit code 255
+srun: error: nid005921: tasks 120,124-125: Exited with exit code 255
+srun: error: nid005531: tasks 19,21-22: Exited with exit code 255
+srun: error: nid005536: tasks 58-60: Exited with exit code 255
+srun: error: nid006721: tasks 241-243: Exited with exit code 255
+srun: error: nid007533: tasks 489-490,493: Exited with exit code 255
+srun: error: nid006016: tasks 176,179-180: Exited with exit code 255
+srun: error: nid007530: tasks 466-469,471: Terminated
+srun: error: nid005537: tasks 65-66,69-71: Terminated
+srun: error: nid007478: tasks 360-362,365,367: Terminated
+srun: error: nid007390: tasks 313,315-316,318-319: Terminated
+srun: error: nid005531: tasks 16-18,20,23: Terminated
+srun: error: nid006022: tasks 226-229,231: Terminated
+srun: error: nid006016: tasks 177-178,181-183: Terminated
+srun: error: nid007531: tasks 474-477,479: Terminated
+srun: error: nid007388: tasks 297,299-301,303: Terminated
+srun: error: nid006723: tasks 256,258,260-261,263: Terminated
+srun: error: nid007387: tasks 288-289,291,294-295: Terminated
+srun: error: nid005919: tasks 104-105,107,110-111: Terminated
+srun: error: nid005535: tasks 48-50,54-55: Terminated
+srun: error: nid005917: tasks 90-92,94-95: Terminated
+srun: error: nid007485: tasks 418,420-423: Terminated
+srun: error: nid005529: tasks 1,3-4,6-7: Terminated
+srun: error: nid006013: tasks 154-155,157-159: Terminated
+srun: error: nid007526: tasks 434-435,437-439: Terminated
+srun: error: nid005532: tasks 26-29,31: Terminated
+srun: error: nid005918: tasks 97-99,101-103: Terminated
+srun: error: nid007534: tasks 496-498,501,503: Terminated
+srun: error: nid005923: tasks 137-139,142-143: Terminated
+srun: error: nid007477: tasks 352-353,355-356,359: Terminated
+srun: error: nid007484: tasks 408,410-412,415: Terminated
+srun: error: nid005924: tasks 144-145,147-148,151: Terminated
+srun: error: nid007482: tasks 392-393,396,398-399: Terminated
+srun: error: nid007389: tasks 305-307,310-311: Terminated
+srun: error: nid006722: tasks 248,250-251,253,255: Terminated
+srun: error: nid007479: tasks 369,371-373,375: Terminated
+srun: error: nid006720: tasks 232,236-239: Terminated
+srun: error: nid007532: tasks 480,482-483,485,487: Terminated
+srun: error: nid006015: tasks 169,172-175: Terminated
+srun: error: nid007385: tasks 273-276,279: Terminated
+srun: error: nid006021: tasks 217,220-223: Terminated
+srun: error: nid006018: tasks 192-193,195-196,199: Terminated
+srun: error: nid007529: tasks 456,458,461-463: Terminated
+srun: error: nid007483: tasks 401-403,406-407: Terminated
+srun: error: nid007535: tasks 504,506,509-511: Terminated
+srun: error: nid006020: tasks 208-210,213,215: Terminated
+srun: error: nid007392: tasks 329-330,333-335: Terminated
+srun: error: nid007391: tasks 320-322,325,327: Terminated
+srun: error: nid007533: tasks 488,491-492,494-495: Terminated
+srun: error: nid005922: tasks 128,130-131,133-135: Terminated
+srun: error: nid007476: tasks 347-351: Terminated
+srun: error: nid007525: tasks 425-428,431: Terminated
+srun: error: nid005536: tasks 56-57,61-63: Terminated
+srun: error: nid005916: tasks 81-82,85-87: Terminated
+srun: error: nid006721: tasks 240,244-247: Terminated
+srun: error: nid005530: tasks 10,12-15: Terminated
+srun: error: nid007527: tasks 441-442,444,446-447: Terminated
+srun: error: nid007393: tasks 336,338,341-343: Terminated
+srun: error: nid007480: tasks 377-378,380-383: Terminated
+srun: error: nid007384: tasks 265-267,270-271: Terminated
+srun: error: nid005921: tasks 121-123,126-127: Terminated
+srun: error: nid005533: tasks 32-34,37,39: Terminated
+srun: error: nid006014: tasks 161-163,166-167: Terminated
+srun: error: nid007528: tasks 450-452,454-455: Terminated
+srun: error: nid007481: tasks 385-387,389,391: Terminated
+srun: error: nid005920: tasks 113-115,117,119: Terminated
+srun: error: nid005534: tasks 40-43,46-47: Terminated
+srun: error: nid007386: tasks 280,284-287: Terminated
+srun: error: nid006019: tasks 201-204,207: Terminated
+srun: error: nid006017: tasks 184,186,189-191: Terminated
+srun: error: nid005915: tasks 72,74-75,77,79: Terminated
+srun: Force Terminated StepId=22214579.0

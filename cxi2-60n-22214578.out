@@ -1,0 +1,2 @@
+nodes=60 ranks=480 mode=software rdzv=default payload=12.431MB
+RESULT 480r_software: FAILED

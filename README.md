@@ -71,22 +71,15 @@ srun --nodes=64 --ntasks=512 --ntasks-per-node=8 \
 
 ## What we have observed
 
-### The threshold
+### There is no threshold
 
-Measured with a Julia MPI + ROCArray program using the identical
-communication pattern to `alltoall_gpu.c`: same all-to-all of device
-buffers, no compute kernels. The C program here is the further-reduced
-equivalent for handover. It is verified to build on LUMI-G; its own
-runs at these rank counts are queued and this table will be updated
-with them.
+An earlier version of this file reported a clean threshold between 480
+and 512 ranks. That was wrong, and the correction is instructive: the
+same configuration gives different outcomes at different times of day,
+so any single-sample comparison is unreliable. With repeats, neither
+rank count nor message size predicts failure.
 
-| ranks | nodes | payload | `FI_CXI_RX_MATCH_MODE=software` |
-|---:|---:|---:|---|
-| 480 | 60 | 12.43 MB | OK, all rounds |
-| 512 | 64 | 10.92 MB | **FAILED**, on the first `MPI_Waitall` |
-
-Larger rank counts and the `hybrid` mode are still being swept; this
-README will be updated with the full table.
+What does predict it is when the run happens.
 
 ### The same pattern in the application
 
@@ -106,18 +99,47 @@ explain. It rules out a simple monotonic resource ceiling.
 
 ### Things that do not fix it
 
-- **`FI_CXI_RX_MATCH_MODE=software`.** Adopted after it appeared to fix
-  1024 ranks. It does not: 512 ranks then failed twice, having
-  previously run 229 consecutive iterations under `hybrid`.
-- **Bounding requests in flight.** Restructuring the exchange to keep
-  at most 64 requests outstanding, instead of `2(P-1)`, failed with the
-  identical error at `MPI_Waitall(count=64)`. The number of concurrent
-  requests is not the trigger.
-- **Larger completion queues.** `FI_CXI_DEFAULT_CQ_SIZE=131072` and
-  `FI_CXI_DEFAULT_TX_SIZE=4096` are set in all runs above; they removed
-  an earlier, different error but not this one.
-- **Request buffer size and count.** `FI_CXI_REQ_BUF_MIN_POSTED=8` and
-  `FI_CXI_REQ_BUF_SIZE=8388608` made no reproducible difference.
+Measured with all arms **submitted together**, six runs each, 60 nodes,
+identical work, so every arm samples the same machine conditions:
+
+| configuration | clean | failed |
+|---|---:|---:|
+| baseline, software matching | 3 | 3 |
+| `FI_CXI_RDZV_PROTO=alt_read` | 1 | **5** |
+| 32 MB overflow and request buffers | 3 | 3 |
+
+No setting helps. `alt_read` is **worse**, and its failures are almost
+all silent hangs rather than aborts.
+
+Interleaving matters more than anything else here. Run in blocks
+instead, the same three arms gave baseline 3 of 6 failing and
+`alt_read` 0 of 5, which reads as a fix and is not one. The difference
+was entirely *when* each block ran:
+
+| window | clean | failed | rate |
+|---|---:|---:|---:|
+| 16:49 | 0 | 4 | 100% |
+| 18:22 | 3 | 3 | 50% |
+| 20:44 | 9 | 2 | 18% |
+| 21:23 | 13 | 1 | 7% |
+| 21:27 | 15 | 1 | 6% |
+
+Identical work throughout. The rate fell from 100% to 6% over five
+hours and later returned to 50%. Any comparison not interleaved in
+time is measuring the machine, not the setting.
+
+Also ruled out, each on interleaved or same-window evidence:
+
+- **Message size.** 4, 8, 12 and 16 MB per peer at 480 ranks: one
+  failure in sixteen runs, and it was at 4 MB. An earlier apparent
+  threshold at 12 MB, matching the `FI_CXI_OFLOW_BUF_SIZE` default, was
+  the same time confound.
+- **Rank count.** 64 to 768 ranks at 4 MB: 15 runs, no failures.
+- **Bounding requests in flight.** Restructuring to keep at most 64
+  outstanding failed identically at `MPI_Waitall(count=64)`.
+- **Completion queue size.** `FI_CXI_DEFAULT_CQ_SIZE=131072` and
+  `FI_CXI_DEFAULT_TX_SIZE=4096` are set throughout; they removed an
+  earlier, different error but not this one.
 
 ### Things that are not the cause
 

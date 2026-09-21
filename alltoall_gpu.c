@@ -70,23 +70,29 @@ int main(int argc, char **argv)
     int dev = (ndev > 1 && local) ? (atoi(local) % ndev) : 0;
     HIP_CHECK(hipSetDevice(dev));
 
+    /* Report the binding and the free memory before allocating. If
+     * several ranks land on one GCD, which happens when the job asks
+     * for GPUs per node instead of per task, the allocation below runs
+     * out of memory and that is a launch mistake, not the fault this
+     * program is for. */
+    size_t hfree = 0, htotal = 0;
+    HIP_CHECK(hipMemGetInfo(&hfree, &htotal));
+
     /* One contiguous send region and one receive region, each holding a
      * slot per peer. The production code sends views of a large tile,
      * which this mirrors: the buffers are big and the per-peer pieces
      * are offsets into them, not separate allocations. */
     size_t total = bytes_per_peer * (size_t)world;
-    void *sbuf = NULL, *rbuf = NULL;
-    HIP_CHECK(hipMalloc(&sbuf, total));
-    HIP_CHECK(hipMalloc(&rbuf, total));
-    HIP_CHECK(hipMemset(sbuf, me & 0xff, total));
-    HIP_CHECK(hipMemset(rbuf, 0, total));
-    HIP_CHECK(hipDeviceSynchronize());
-
     if (me == 0) {
         printf("ranks=%d  payload=%.3f MB/peer  device buffers=%.2f GiB/rank"
                "  rounds=%d  thread_level=%d\n",
                world, (double)bytes_per_peer / (1024 * 1024),
                2.0 * (double)total / (1024.0 * 1024 * 1024), rounds, provided);
+        fflush(stdout);
+        printf("  visible GCDs per rank=%d  using device %d"
+               "  free=%.1f GiB of %.1f GiB\n",
+               ndev, dev, (double)hfree / (1024.0 * 1024 * 1024),
+               (double)htotal / (1024.0 * 1024 * 1024));
         static const char *vars[] = {
             "MPICH_GPU_SUPPORT_ENABLED", "MPICH_GPU_IPC_ENABLED",
             "FI_CXI_RX_MATCH_MODE", "FI_CXI_RDZV_PROTO",
@@ -99,6 +105,22 @@ int main(int argc, char **argv)
         }
         fflush(stdout);
     }
+
+    if (2 * total > hfree) {
+        fprintf(stderr,
+                "rank %d: need %.2f GiB of device memory but only %.2f GiB "
+                "is free on device %d of %d visible. Launch with one GCD per "
+                "rank (--gpus-per-task=1 --gpu-bind=closest) or lower --mb.\n",
+                me, 2.0 * total / (1024.0 * 1024 * 1024),
+                (double)hfree / (1024.0 * 1024 * 1024), dev, ndev);
+        MPI_Abort(MPI_COMM_WORLD, 2);
+    }
+    void *sbuf = NULL, *rbuf = NULL;
+    HIP_CHECK(hipMalloc(&sbuf, total));
+    HIP_CHECK(hipMalloc(&rbuf, total));
+    HIP_CHECK(hipMemset(sbuf, me & 0xff, total));
+    HIP_CHECK(hipMemset(rbuf, 0, total));
+    HIP_CHECK(hipDeviceSynchronize());
 
     MPI_Request *reqs = malloc(sizeof(MPI_Request) * 2 * (size_t)world);
     if (!reqs) { fprintf(stderr, "out of host memory\n"); MPI_Abort(MPI_COMM_WORLD, 1); }

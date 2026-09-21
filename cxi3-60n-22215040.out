@@ -1,0 +1,14 @@
+nodes=60 ranks=480 mode=software rdzv=default payload=12.431MB
+ranks=480  payload=12.431 MB/peer  device buffers=11.65 GiB/rank  rounds=40  thread_level=3
+  visible GCDs per rank=1  using device 0  free=63.9 GiB of 64.0 GiB
+  MPICH_GPU_SUPPORT_ENABLED=1
+  MPICH_GPU_IPC_ENABLED=0
+  FI_CXI_RX_MATCH_MODE=software
+  FI_CXI_RDZV_THRESHOLD=16384
+  FI_CXI_DEFAULT_CQ_SIZE=131072
+  FI_CXI_DEFAULT_TX_SIZE=1024
+  FI_CXI_REQ_BUF_MIN_POSTED=6
+  FI_CXI_REQ_BUF_SIZE=12582912
+  FI_CXI_OFLOW_BUF_COUNT=3
+round     1  elapsed     2.3 s
+RESULT 480r_software: FAILED

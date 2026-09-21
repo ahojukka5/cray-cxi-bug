@@ -1,0 +1,86 @@
+MPICH ERROR [Rank 57] [job id 22215040.0] [Mon Sep 21 17:46:16 2026] [nid005921] - Abort(1009399951) (rank 57 in comm 0): Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x665e450, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+
+aborting job:
+Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x665e450, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+srun: error: nid005921: task 57: Exited with exit code 255
+srun: Terminating StepId=22215040.0
+[2026-09-21T17:46:16.587] error: *** STEP 22215040.0 ON nid005914 CANCELLED AT 2026-09-21T17:46:16 DUE TO TASK FAILURE ***
+srun: error: nid007386: tasks 248-255: Terminated
+srun: error: nid005915: tasks 8-15: Terminated
+srun: error: nid005914: tasks 0-7: Terminated
+srun: error: nid005917: tasks 24-31: Terminated
+srun: error: nid007089: tasks 200-207: Terminated
+srun: error: nid007481: tasks 352-359: Terminated
+srun: error: nid007530: tasks 432-439: Terminated
+srun: error: nid007485: tasks 384-391: Terminated
+srun: error: nid007091: tasks 216-223: Terminated
+srun: error: nid007480: tasks 344-351: Terminated
+srun: error: nid007531: tasks 440-447: Terminated
+srun: error: nid006014: tasks 96-103: Terminated
+srun: error: nid005922: tasks 64-71: Terminated
+srun: error: nid006013: tasks 88-95: Terminated
+srun: error: nid007529: tasks 424-431: Terminated
+srun: error: nid005923: tasks 72-79: Terminated
+srun: error: nid007085: tasks 168-175: Terminated
+srun: error: nid006020: tasks 144-151: Terminated
+srun: error: nid007088: tasks 192-199: Terminated
+srun: error: nid007534: tasks 464-471: Terminated
+srun: error: nid007384: tasks 232-239: Terminated
+srun: error: nid007535: tasks 472-479: Terminated
+srun: error: nid007525: tasks 392-399: Terminated
+srun: error: nid007090: tasks 208-215: Terminated
+srun: error: nid006015: tasks 104-111: Terminated
+srun: error: nid007092: tasks 224-231: Terminated
+srun: error: nid005920: tasks 48-55: Terminated
+srun: error: nid007392: tasks 296-303: Terminated
+srun: error: nid005921: tasks 56,58-63: Terminated
+srun: error: nid005918: tasks 32-39: Terminated
+srun: error: nid006017: tasks 120-127: Terminated
+srun: error: nid007387: tasks 256-263: Terminated
+srun: error: nid007476: tasks 312-319: Terminated
+srun: error: nid007526: tasks 400-407: Terminated
+srun: error: nid007479: tasks 336-343: Terminated
+srun: error: nid007477: tasks 320-327: Terminated
+srun: error: nid006019: tasks 136-143: Terminated
+srun: error: nid006022: tasks 160-167: Terminated
+srun: error: nid007533: tasks 456-463: Terminated
+srun: error: nid005919: tasks 40-47: Terminated
+srun: error: nid006021: tasks 152-159: Terminated
+srun: error: nid007478: tasks 328-335: Terminated
+srun: error: nid007393: tasks 304-311: Terminated
+srun: error: nid007388: tasks 264-271: Terminated
+srun: error: nid007389: tasks 272-279: Terminated
+srun: error: nid007482: tasks 360-367: Terminated
+srun: error: nid007528: tasks 416-423: Terminated
+srun: error: nid005916: tasks 16-23: Terminated
+[2026-09-21T17:46:16.825] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+srun: error: nid007527: tasks 408-415: Terminated
+srun: error: nid007483: tasks 368-375: Terminated
+srun: error: nid006018: tasks 128-135: Terminated
+srun: error: nid006016: tasks 112-119: Terminated
+srun: error: nid007390: tasks 280-287: Terminated
+srun: error: nid007391: tasks 288-295: Terminated
+srun: error: nid007086: tasks 176-183: Terminated
+srun: error: nid005924: tasks 80-87: Terminated
+srun: error: nid007484: tasks 376-383: Terminated
+srun: error: nid007532: tasks 448-455: Terminated
+srun: error: nid007385: tasks 240-247: Terminated
+[2026-09-21T17:46:17.825] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-21T17:46:18.825] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-21T17:46:19.825] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-21T17:46:20.825] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-21T17:46:21.826] error: switch_g_job_postfini: Device or resource busy
+srun: error: nid007087: tasks 184-191: Terminated
+srun: Force Terminated StepId=22215040.0

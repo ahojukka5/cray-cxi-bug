@@ -9,7 +9,14 @@
 #SBATCH --partition=standard-g
 #SBATCH --nodes=192
 #SBATCH --ntasks-per-node=8
-#SBATCH --gpus-per-node=8
+#SBATCH --gpus-per-task=1
+# --gpu-bind=closest resolves the "closest" GCD from the rank's CPU
+# affinity. Without a CPU allocation per rank several ranks land in the
+# same NUMA domain, are given the same GCD, and the device allocation
+# below runs out of memory. That is a launch mistake and not the fault
+# this reproduces, so these two are required, not decoration.
+#SBATCH --cpus-per-task=7
+#SBATCH --mem=0
 #SBATCH --time=00:50:00
 #SBATCH --output=%x-%j.out
 #SBATCH --error=%x-%j.err

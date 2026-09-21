@@ -1,0 +1,8 @@
+# Interleaved configuration comparison, 60 nodes / 480 ranks.
+# All 18 jobs submitted together so every arm samples the same
+# machine conditions. Six runs per arm, identical work.
+
+CONFIGURATION                      CLEAN  FAILED  DETAIL
+baseline, software matching        3      3        abort hang ok abort ok ok
+FI_CXI_RDZV_PROTO=alt_read         1      5        hang hang hang hang hang ok
+32MB overflow + request buffers    3      3        abort ok abort ok abort ok
