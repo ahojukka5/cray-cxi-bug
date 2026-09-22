@@ -2,3 +2,5 @@ alltoall_gpu
 *.o
 cxi-*-*.out
 cxi-*-*.err
+cxiB*-*.out
+cxiB*-*.err

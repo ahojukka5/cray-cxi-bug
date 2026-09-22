@@ -1,22 +1,39 @@
 # Does the fault depend on rank count? Bare C, production payload rule.
 # Jobs 22251805-22251817, three attempts each at 512/640/768/1024 nodes,
 # submitted interleaved so all four sample the same machine conditions.
-# Sweep incomplete at time of writing; the 768-node arm is decisive on
-# its own and is recorded here.
+# All twelve ran on 2026-09-22 between 20:02 and 22:08 local time.
+# Tally: `RESULT .*: OK|FAILED` in cxiB<nodes>x<attempt>-<job>.out; a
+# job with no RESULT line that sacct reports as TIMEOUT is a hang, and a
+# hang is a failure.
 
-768 nodes / 6144 ranks, payload 0.076 MB/peer:
-  22251807  FAILED at round 1 of 40  (elapsed 1.0 s)
-  22251811  FAILED at round 1 of 40  (elapsed 1.0 s)
+nodes ranks  job       start  outcome                     Waitall count
+  512  4096  22251805  21:39  FAILED after round 20 of 40  8190
+  512  4096  22251809  21:47  OK, 40 rounds in 9.5 s
+  512  4096  22251813  21:55  error at round 1, then hang  8190
+  640  5120  22251806  21:01  FAILED at round 1            10238
+  640  5120  22251810  21:19  FAILED at round 1            10238
+  640  5120  22251815  21:25  error by round 10, then hang 10238
+  768  6144  22251807  20:02  FAILED at round 1            12286
+  768  6144  22251811  20:07  FAILED at round 1            12286
+  768  6144  22251816  20:47  FAILED at round 1            12286
+ 1024  8192  22251808  22:04  FAILED at round 1            16382
+ 1024  8192  22251812  22:06  FAILED at round 1            16382
+ 1024  8192  22251817  22:08  error before round 1, hang   16382
 
-Both aborted on the first exchange. No Julia, no application code, no
-compute kernels: MPI over HIP device buffers and nothing else.
+Clean runs: 512 nodes 1 of 3, 640 nodes 0 of 3, 768 nodes 0 of 3,
+1024 nodes 0 of 3. Every failure is the same `No route to host` abort
+in MPI_Waitall with 2(P-1) requests outstanding.
 
-This matters because the same scale had failed seven times out of seven
-in the application (Lieb.jl jobs 22223239, 22229860, 22231048, 22233653,
-22240542, 22240544, 22240545), every one on its first Hx, while 384 and
-512 nodes produced clean nine-repeat runs in the same period. The bare
-reproducer reaching the same verdict rules out the application as the
-cause.
+No Julia, no application code, no compute kernels: MPI over HIP device
+buffers and nothing else. The application record matches: 0 of 10
+above 512 nodes (Lieb.jl jobs 22223239, 22229860, 22231048, 22233653,
+22240542, 22240544, 22240545 at 768 nodes; 22240546, 22240547, 22240548
+at 1024), every one on its first Hx, while 384 and 512 nodes produced
+clean runs in the same period. The application is not the cause.
 
-Whether 6144 ranks is a specific boundary or only a point on a rising
-curve is not settled: the 512, 640 and 1024 node arms were still queued.
+The answer is a gradient, not a boundary at 6144 ranks. 512 nodes still
+completes some of the time; from 640 nodes upward nothing completed,
+and above 512 nodes the failure comes on the first exchange rather than
+part way through. Twelve runs in one two-hour evening window cannot
+separate rank count from time of day (see failure-rate-vs-time.txt),
+so the statement is limited to that window.
