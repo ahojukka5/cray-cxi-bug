@@ -45,7 +45,13 @@ if [[ -n "${FIXED_MB:-}" ]]; then MB="$FIXED_MB"
 else MB=$(awk -v t="$T" 'BEGIN{printf "%.3f", 99.9e9*480/t/(16*(t-1))/1048576}'); fi
 echo "nodes=$SLURM_JOB_NUM_NODES ranks=$T mode=${MATCH_MODE:-software} rdzv=${RDZV_PROTO:-default} payload=${MB}MB"
 
+# BIN lets a variant binary be tested without overwriting the one
+# that queued jobs will exec at run time.
 srun --gpus-per-task=1 --gpu-bind=closest --cpu-bind=cores \
-     ./alltoall_gpu --mb "$MB" --rounds "${ROUNDS:-40}" \
+     "${BIN:-./alltoall_gpu}" --mb "$MB" --rounds "${ROUNDS:-40}" \
+       ${WARM_ROUNDS:+--warm-rounds $WARM_ROUNDS} \
+       ${WARM_BYTES:+--warm-bytes $WARM_BYTES} \
+       ${STAGGER_MS:+--stagger-ms $STAGGER_MS} \
+       ${HANDSHAKE:+--handshake} ${COLLECTIVE:+--collective} \
     && echo "RESULT ${T}r_${MATCH_MODE:-software}: OK" \
     || echo "RESULT ${T}r_${MATCH_MODE:-software}: FAILED"
