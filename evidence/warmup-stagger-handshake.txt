@@ -1,0 +1,33 @@
+# Does a warm-up, a stagger, or a measuring handshake prevent the fault?
+# 60 nodes / 480 ranks, 40 rounds, software receive matching throughout.
+# Arms were submitted interleaved so each samples the same machine
+# conditions; the failure rate varies with time of day by an order of
+# magnitude, which is why block comparisons mislead (failure-rate-vs-time).
+
+ARM                                    CLEAN  FAILED  N   CLEAN RATE
+none (baseline)                        17     5       22  77%
+warm-up, 5 rounds x 1 kB               10     4       14  71%
+stagger 2000 ms                         4     2        6  67%
+stagger 5000 ms                         7     1        8  88%
+handshake (sized sweep) + stagger 2 s   3     3        6  50%
+
+No arm is distinguishable from the baseline. The handshake arm, which
+does the most work before the first full-size exchange, is the worst of
+the five; with n=6 that is noise, but it is certainly not a fix.
+
+Jobs: none 22225726,22225730,22225734,22225738,22225742,22225746,
+      22225814,22225816,22225820,22225824,22225828,22225830,22225832,
+      22225834,22228271,22228273,22228275,22228277,22228279,22228281,
+      22228283,22228285
+      warm 22225727,22225731,22225735,22225739,22225743,22225747,
+      22225815,22225818,22225822,22225826,22225829,22225831,22225833,
+      22225835
+      stagger2s 22225728,22225732,22225736,22225740,22225744,22225748
+      stagger5s 22228272,22228274,22228276,22228278,22228280,22228282,
+      22228284,22228286
+      handshake 22225729,22225733,22225737,22225741,22225745,22225749
+
+Conclusion: the fault is not a cold-fabric or thundering-herd effect
+that a gentler start can absorb. Nothing the application does BEFORE
+the first full exchange changes the outcome. What remains untested is
+changing the exchange itself.
