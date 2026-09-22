@@ -3,6 +3,8 @@ bin/
 *.o
 cxi-*-*.out
 cxi-*-*.err
+cxiB*-*.out
+cxiB*-*.err
 
 # Generated local state. Not source.
 Manifest.toml
