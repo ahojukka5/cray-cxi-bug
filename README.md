@@ -152,6 +152,35 @@ Also ruled out, each on interleaved or same-window evidence:
   rejects views into a large allocation, is disabled throughout via
   `MPICH_GPU_IPC_ENABLED=0`.
 
+### MPICH 9 and `MPI_Alltoall` do not do the same thing
+
+Sixty nodes, 480 ranks, 12.431 MB per peer, 40 rounds. Six jobs per
+arm, submitted in interleaved order and run between 12:08 and 13:25
+on 2026-09-25. Account `project_462001120`. Full record:
+`evidence/mpi9/results.md`.
+
+| stack | exchange | jobs | clean | CXI fail | other | CXI rate | median time |
+|---|---|---:|---:|---:|---:|---:|---:|
+| MPICH 8.1.32.110 | point-to-point | 6 | 4 | 2 | 0 | 2/6 | 62.0 s |
+| MPICH 8.1.32.110 | `MPI_Alltoall` | 6 | 6 | 0 | 0 | 0/6 | 39.2 s |
+| MPICH 9.0.1.498 | point-to-point | 6 | 3 | 3 | 0 | 3/6 | 58.4 s |
+| MPICH 9.0.1.498 | `MPI_Alltoall` | 6 | 5 | 0 | 1 | 0/6 | 35.5 s |
+
+Every CXI failure is `Invalid request descriptor` from
+`MPIDI_OFI_handle_cq_error`, then `Failed to destroy CXI Service ID`.
+No `No route to host`, no hang. The one "other" is a GPU hang on
+job 22337453, with no CXI line.
+
+Point-to-point failed on both stacks (5 of 12). `MPI_Alltoall` did
+not produce the CXI signature (0 of 12). Jobs that started in the
+same wave still split by arm, so this is not one bad fabric window.
+MPICH 9 did not help the point-to-point path: 3 of 6 failed, against
+2 of 6 on 8.1.32. libfabric 1.22.0 and libcxi 1.5.0 are the same
+files on both stacks.
+
+`MPI_Alltoall` is also faster on the jobs that finish. That is a
+separate fact. It does not carry the reliability claim.
+
 ## Our reading, offered tentatively
 
 `Invalid request descriptor` names a rendezvous descriptor. Every

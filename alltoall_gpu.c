@@ -124,6 +124,10 @@ int main(int argc, char **argv)
      * are offsets into them, not separate allocations. */
     size_t total = bytes_per_peer * (size_t)world;
     if (me == 0) {
+        char libver[MPI_MAX_LIBRARY_VERSION_STRING];
+        int libverlen = 0;
+        MPI_Get_library_version(libver, &libverlen);
+        printf("MPI_Get_library_version: %s\n", libver);
         printf("ranks=%d  payload=%.3f MB/peer  device buffers=%.2f GiB/rank"
                "  rounds=%d  thread_level=%d  exchange=%s\n",
                world, (double)bytes_per_peer / (1024 * 1024),
@@ -136,6 +140,7 @@ int main(int argc, char **argv)
                (double)htotal / (1024.0 * 1024 * 1024));
         static const char *vars[] = {
             "MPICH_GPU_SUPPORT_ENABLED", "MPICH_GPU_IPC_ENABLED",
+            "MPICH_OFI_NIC_POLICY",
             "FI_CXI_RX_MATCH_MODE", "FI_CXI_RDZV_PROTO",
             "FI_CXI_RDZV_THRESHOLD", "FI_CXI_DEFAULT_CQ_SIZE",
             "FI_CXI_DEFAULT_TX_SIZE", "FI_CXI_REQ_BUF_MIN_POSTED",

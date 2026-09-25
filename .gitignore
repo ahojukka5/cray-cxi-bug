@@ -1,4 +1,5 @@
 alltoall_gpu
+bin/
 *.o
 cxi-*-*.out
 cxi-*-*.err
