@@ -8,6 +8,21 @@ the HIP runtime allocator and MPI point-to-point calls in play.
 We hit this in an exact-diagonalisation code and reduced it to the
 ~150-line C program here.
 
+> **Update 2026-09-26: located below user space.** `Invalid request
+> descriptor` is `strerror(53)`, and 53 is the Cassini return code
+> `C_RC_CONN_CLOSED`. The NIC reports it on the sender when the receiver's
+> rendezvous Get has been retried past the target connection timeout. In
+> every failure the receiver is in LUMI cabinet x1304
+> (nid006984-nid007107, one Slingshot group), and its traffic is held by
+> switch flow control far longer than any other NIC in the job. Runs that
+> exclude x1304 have not failed: 0 of 38, against 19 of 23 with x1304
+> nodes, and 8 of 8 runs placed entirely inside x1304 were clean, which
+> points at the links between that group and the rest of the fabric. Four libfabric builds, up to upstream `main`, behave identically.
+> Details: [`evidence/provider/README.md`](evidence/provider/README.md);
+> vendor summary: [`evidence/provider/HANDOFF.md`](evidence/provider/HANDOFF.md).
+> The reading further down, rendezvous resource exhaustion in the
+> provider, is superseded.
+
 ```
 MPI_Waitall(count=1022, ...) failed
 MPIR_Waitall(167)..............:
