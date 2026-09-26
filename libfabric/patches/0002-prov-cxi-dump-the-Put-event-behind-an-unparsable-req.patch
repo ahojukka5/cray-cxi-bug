@@ -1,0 +1,81 @@
+From 70baeb80929b576fc1a37ad737654cd4bc323bf2 Mon Sep 17 00:00:00 2001
+From: Jukka Aho <ahojukka5@gmail.com>
+Date: Sat, 26 Sep 2026 05:39:10 +0300
+Subject: [PATCH 2/2] prov/cxi: dump the Put event behind an unparsable request
+ header
+
+Diagnostic only. Before aborting on a request-buffer fabric header it cannot
+parse, print the stored Put event (return code, start, mlength), the header
+bytes and the recent event ring.
+
+Signed-off-by: Jukka Aho <ahojukka5@gmail.com>
+---
+ prov/cxi/include/cxip.h     |  1 +
+ prov/cxi/src/cxip_diag.c    | 16 ++++++++++++++++
+ prov/cxi/src/cxip_req_buf.c |  5 ++++-
+ 3 files changed, 21 insertions(+), 1 deletion(-)
+
+diff --git a/prov/cxi/include/cxip.h b/prov/cxi/include/cxip.h
+index 43bf4e9ce..fcf97fd57 100644
+--- a/prov/cxi/include/cxip.h
++++ b/prov/cxi/include/cxip.h
+@@ -3199,6 +3199,7 @@ void cxip_diag_event(struct cxip_evtq *evtq, const union c_event *ev,
+ 		     struct cxip_req *req);
+ void cxip_diag_req_error(const char *where, struct cxip_req *req, int err,
+ 			 int prov_errno);
++void cxip_diag_bad_header(const union c_event *ev, const void *hdr);
+ 
+ void cxip_ep_progress(struct fid *fid);
+ void cxip_ep_flush_trig_reqs(struct cxip_ep_obj *ep_obj);
+diff --git a/prov/cxi/src/cxip_diag.c b/prov/cxi/src/cxip_diag.c
+index 721d86ade..d1f764905 100644
+--- a/prov/cxi/src/cxip_diag.c
++++ b/prov/cxi/src/cxip_diag.c
+@@ -294,3 +294,19 @@ void cxip_diag_req_error(const char *where, struct cxip_req *req, int err,
+ 	diag_ring_dump();
+ 	fflush(stderr);
+ }
++
++/* Called just before the provider aborts on a request-buffer header it cannot
++ * parse. Prints the stored Put event, the header bytes and the ring,
++ * regardless of the per-process cap.
++ */
++void cxip_diag_bad_header(const union c_event *ev, const void *hdr)
++{
++	diag_on();
++	fprintf(stderr, "CXIDIAG %s pid=%d BAD-HEADER t=%lu\n", diag_host,
++		getpid(), (unsigned long)diag_now());
++	diag_event_fields("BAD-HEADER-PUT", ev);
++	diag_hex("BAD-HEADER-PUT", (const uint8_t *)ev, 64);
++	diag_hex("BAD-HEADER-BYTES", (const uint8_t *)hdr, 64);
++	diag_ring_dump();
++	fflush(stderr);
++}
+diff --git a/prov/cxi/src/cxip_req_buf.c b/prov/cxi/src/cxip_req_buf.c
+index 4a4624c59..a5152af89 100644
+--- a/prov/cxi/src/cxip_req_buf.c
++++ b/prov/cxi/src/cxip_req_buf.c
+@@ -37,9 +37,11 @@ static void cxip_req_buf_get_header_info(struct cxip_ptelist_buf *buf,
+ 	struct c_port_unrestricted_hdr *unres_hdr =
+ 		(void *)((char *)fab_hdr + sizeof(*fab_hdr));
+ 
+-	if (fab_hdr->ver != 4)
++	if (fab_hdr->ver != 4) {
++		cxip_diag_bad_header(&ux->put_ev, fab_hdr);
+ 		RXC_FATAL(buf->rxc, "Unsupported fabric header version: %u\n",
+ 			  fab_hdr->ver);
++	}
+ 
+ 	switch (unres_hdr->ver_pkt_type) {
+ 	case C_V4_PKT_UNRESTRICTED:
+@@ -54,6 +56,7 @@ static void cxip_req_buf_get_header_info(struct cxip_ptelist_buf *buf,
+ 		*remote_offset = 0;
+ 		break;
+ 	default:
++		cxip_diag_bad_header(&ux->put_ev, fab_hdr);
+ 		RXC_FATAL(buf->rxc, "Unsupported packet type: %u\n",
+ 			  unres_hdr->ver_pkt_type);
+ 	}
+-- 
+2.51.0
+
