@@ -1,0 +1,25 @@
+arm         job       start                class                          verify first_rc_line
+sys         22358855  2026-09-26T04:45:31  clean                          OK     
+shs15       22358856  2026-09-26T04:45:31  CONN_CLOSED                    -      libfabric:101183:1790387210::cxi:ep_data:cxip_rdzv_pte_src_cb():4472<warn> nid006312: TXC (0xbc10:5): Get error: 0x645dad0 rc: CONN_CLOSED
+main        22358857  2026-09-26T04:52:17  clean                          OK     
+shs15       22358858  2026-09-26T04:52:17  clean                          OK     
+main        22358859  2026-09-26T04:56:19  CONN_CLOSED                    -      libfabric:112332:1790387912::cxi:ep_data:cxip_rdzv_pte_src_cb():4472<warn> nid007747: TXC (0x111e2:0): Get error: 0x65e1840 rc: CONN_CLOSED
+sys         22358860  2026-09-26T05:47:11  gpu-hang                       -      
+main        22358861  2026-09-26T05:52:42  CONN_CLOSED                    -      libfabric:84325:1790391236::cxi:ep_data:cxip_rdzv_pte_src_cb():4472<warn> nid006243: TXC (0xb8e2:0): Get error: 0x65fc230 rc: CONN_CLOSED
+sys         22358862  2026-09-26T06:09:38  CONN_CLOSED                    -      libfabric:75370:1790392302::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid007631: TXC (0x109c0:2): Get error: 0x65d63f0 rc: CONN_CLOSED
+shs15       22358863  2026-09-26T06:14:08  clean                          OK     
+sys         22358864  2026-09-26T06:14:08  clean                          OK     
+shs15       22358865  2026-09-26T06:14:08  clean                          OK     
+main        22358866  2026-09-26T06:34:38  clean                          OK     
+shs15       22358867  2026-09-26T06:34:38  CONN_CLOSED                    -      libfabric:39915:1790393760::cxi:ep_data:cxip_rdzv_pte_src_cb():4472<warn> nid007381: TXC (0xf9d1:0): Get error: 0x5a39be0 rc: CONN_CLOSED
+main        22358868  2026-09-26T06:34:38  clean                          OK     
+sys         22358869  2026-09-26T06:38:28  CONN_CLOSED                    -      libfabric:27252:1790394030::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid007650: TXC (0x10a42:2): Get error: 0x64cf500 rc: CONN_CLOSED
+main        22358870  2026-09-26T06:42:27  clean                          OK     
+sys         22358871  2026-09-26T06:42:26  clean                          OK     
+shs15       22358872  2026-09-26T06:42:26  clean                          OK     
+sys         22358873  2026-09-26T06:49:21  clean                          OK     
+shs15       22358874  2026-09-26T06:49:20  clean                          OK     
+main        22358875  2026-09-26T06:49:21  CONN_CLOSED                    -      libfabric:117141:1790394725::cxi:ep_data:cxip_rdzv_pte_src_cb():4472<warn> nid005299: TXC (0x7be3:3): Get error: 0x5af6870 rc: CONN_CLOSED
+shs15       22358876  2026-09-26T06:49:20  CONN_CLOSED                    -      libfabric:107361:1790394660::cxi:ep_data:cxip_rdzv_pte_src_cb():4472<warn> nid006434: TXC (0xc421:5): Get error: 0x65d7b20 rc: CONN_CLOSED
+main        22358877  2026-09-26T06:56:52  clean                          OK     
+sys         22358878  2026-09-26T06:56:52  clean                          OK     

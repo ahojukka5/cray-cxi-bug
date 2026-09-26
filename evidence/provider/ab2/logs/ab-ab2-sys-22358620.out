@@ -1,0 +1,23 @@
+arm=sys nodes=60 ranks=480 payload=12.431MB rounds=40 bin=bin/alltoall_gpu_ref
+nodelist: nid[005164-005165,005176,005242,005269,005304,005334,005336,005357-005358,005403,005500-005501,005513,005628,005887-005890,005893,005921-005922,005926,005929,005954,005996,006038,006058-006059,006062-006063,006078-006080,006149-006152,006158-006159,006196,006263-006264,006302,006306,006309,006323-006324,006502-006503,006994-006995,006999-007001,007128,007131-007132,007586-007587]
+start: 2026-09-26T04:22:51+03:00
+exchange start: 2026-09-26T04:23:07+03:00
+LIBS libfabric=/opt/cray/libfabric/1.22.0/lib64/libfabric.so.1.25.0 fi_version=1.22 libcxi=/usr/lib64/libcxi.so.1.5.0 same_on_all_ranks=yes
+MPI_Get_library_version: MPI VERSION    : CRAY MPICH version 8.1.32.110 (ANL base 3.4a2)
+MPI BUILD INFO : Thu Feb 06 22:43 2025 (git hash f9c5634)
+
+ranks=480  payload=12.431 MB/peer  device buffers=11.65 GiB/rank  rounds=40  thread_level=3  exchange=p2p
+  verify=on (3 x 256 B windows per peer per round)
+  visible GCDs per rank=1  using device 0  free=63.9 GiB of 64.0 GiB
+  MPICH_GPU_SUPPORT_ENABLED=1
+  MPICH_GPU_IPC_ENABLED=0
+  FI_CXI_RX_MATCH_MODE=software
+  FI_CXI_RDZV_THRESHOLD=16384
+  FI_CXI_DEFAULT_CQ_SIZE=131072
+  FI_CXI_DEFAULT_TX_SIZE=1024
+  FI_CXI_REQ_BUF_MIN_POSTED=6
+  FI_CXI_REQ_BUF_SIZE=12582912
+  FI_CXI_OFLOW_BUF_COUNT=3
+round     1  elapsed     2.4 s
+RESULT arm=sys: FAILED rc=143
+exchange end: 2026-09-26T04:24:09+03:00

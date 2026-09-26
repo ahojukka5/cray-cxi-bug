@@ -1,0 +1,110 @@
+srun: forcing job termination
+srun: got SIGCONT
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-09-26T05:07:11.088] error: *** STEP 22359756.1 ON nid005345 CANCELLED AT 2026-09-26T05:07:11 DUE to SIGNAL Killed ***
+[2026-09-26T05:07:11.293] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T05:07:11.295] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T05:07:11.295] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T05:07:11.296] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T05:07:11.296] error: Failed to destroy CXI Service ID 5 (cxi3): Device or resource busy
+[2026-09-26T05:07:11.296] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T05:07:11.297] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T05:07:11.297] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T05:07:11.297] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T05:07:11.297] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T05:07:11.297] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T05:07:11.298] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T05:07:11.299] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T05:07:11.299] error: Failed to destroy CXI Service ID 5 (cxi3): Device or resource busy
+[2026-09-26T05:07:11.300] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T05:07:11.300] error: Failed to destroy CXI Service ID 5 (cxi3): Device or resource busy
+[2026-09-26T05:07:11.300] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T05:07:11.301] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T05:07:11.301] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+srun: error: nid006654: tasks 296-303: Killed
+srun: Terminating StepId=22359756.1
+[2026-09-26T05:07:11.303] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T05:07:11.303] error: Failed to destroy CXI Service ID 5 (cxi3): Device or resource busy
+[2026-09-26T05:07:11.304] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T05:07:11.304] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T05:07:11.304] error: Failed to destroy CXI Service ID 5 (cxi3): Device or resource busy
+[2026-09-26T05:07:11.305] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T05:07:11.306] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+srun: error: nid005880: tasks 176-183: Killed
+srun: error: nid005862: tasks 152-159: Killed
+srun: error: nid005878: tasks 168-175: Killed
+srun: error: nid006717: tasks 304-311: Killed
+[2026-09-26T05:07:11.307] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T05:07:11.309] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T05:07:11.309] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T05:07:11.310] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T05:07:11.310] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T05:07:11.310] error: Failed to destroy CXI Service ID 5 (cxi3): Device or resource busy
+[2026-09-26T05:07:11.312] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+srun: error: nid006052: tasks 224-231: Killed
+[2026-09-26T05:07:11.315] error: Failed to destroy CXI Service ID 5 (cxi3): Device or resource busy
+[2026-09-26T05:07:11.315] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T05:07:11.320] error: Failed to destroy CXI Service ID 5 (cxi3): Device or resource busy
+srun: error: nid005568: tasks 56-63: Killed
+srun: error: nid005990: tasks 216-223: Killed
+[2026-09-26T05:07:11.324] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+srun: error: nid006948: tasks 344-351: Killed
+srun: error: nid006921: tasks 328-335: Killed
+srun: error: nid007112: tasks 360-367: Killed
+srun: error: nid007128: tasks 368-375: Killed
+[2026-09-26T05:07:11.335] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T05:07:11.335] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+srun: error: nid006881: tasks 320-327: Killed
+[2026-09-26T05:07:11.341] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T05:07:11.349] error: Failed to destroy CXI Service ID 5 (cxi3): Device or resource busy
+[2026-09-26T05:07:11.352] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+srun: error: nid007641: tasks 464-471: Killed
+[2026-09-26T05:07:11.373] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+srun: error: nid007642: tasks 472-479: Killed
+[2026-09-26T05:07:11.415] error: Failed to destroy CXI Service ID 5 (cxi3): Device or resource busy
+[2026-09-26T05:07:11.421] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+srun: error: nid006354: tasks 256-263: Killed
+srun: error: nid005939: tasks 200-207: Killed
+srun: error: nid005982: tasks 208-215: Killed
+srun: error: nid005715: tasks 112-119: Killed
+srun: error: nid005346: tasks 8-15: Killed
+srun: error: nid005357: tasks 16-23: Killed
+srun: error: nid005892: tasks 184-191: Killed
+srun: error: nid005927: tasks 192-199: Killed
+srun: error: nid006479: tasks 280-287: Killed
+srun: error: nid006243: tasks 240-247: Killed
+srun: error: nid007143: tasks 392-399: Killed
+srun: error: nid007134: tasks 384-391: Killed
+srun: error: nid005613: tasks 72-79: Killed
+srun: error: nid007149: tasks 400-407: Killed
+srun: error: nid005501: tasks 40-47: Killed
+srun: error: nid005681: tasks 96-103: Killed
+srun: error: nid005620: tasks 88-95: Killed
+srun: error: nid005827: tasks 128-135: Killed
+srun: error: nid005358: tasks 24-31: Killed
+srun: error: nid005700: tasks 104-111: Killed
+srun: error: nid006480: tasks 288-295: Killed
+srun: error: nid005876: tasks 160-167: Killed
+srun: error: nid007633: tasks 448-455: Killed
+srun: error: nid006828: tasks 312-319: Killed
+srun: error: nid005569: tasks 64-71: Killed
+srun: error: nid005769: tasks 120-127: Killed
+srun: error: nid006300: tasks 248-255: Killed
+srun: error: nid005345: tasks 0-7: Killed
+srun: error: nid006378: tasks 264-271: Killed
+srun: error: nid005861: tasks 144-151: Killed
+srun: error: nid005500: tasks 32-39: Killed
+srun: error: nid005828: tasks 136-143: Killed
+srun: error: nid006075: tasks 232-239: Killed
+srun: error: nid005532: tasks 48-55: Killed
+srun: error: nid005614: tasks 80-87: Killed
+srun: error: nid007196: tasks 432-439: Killed
+srun: error: nid006970: tasks 352-359: Killed
+srun: error: nid007172: tasks 416-423: Killed
+srun: error: nid007194: tasks 424-431: Killed
+srun: error: nid007133: tasks 376-383: Killed
+srun: error: nid007157: tasks 408-415: Killed
+srun: error: nid006942: tasks 336-343: Killed
+srun: error: nid007634: tasks 456-463: Killed
+srun: error: nid006379: tasks 272-279: Killed
+srun: error: nid007225: tasks 440-447: Killed

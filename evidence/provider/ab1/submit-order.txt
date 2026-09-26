@@ -1,0 +1,26 @@
+submitted: 2026-09-26T02:51:41+03:00 arms: sys shs12-ref shs12-diag rounds: 8
+0 sys 22358563
+0 shs12-ref 22358565
+0 shs12-diag 22358566
+1 shs12-ref 22358567
+1 shs12-diag 22358568
+1 sys 22358569
+2 shs12-diag 22358570
+2 sys 22358571
+2 shs12-ref 22358572
+3 sys 22358573
+3 shs12-ref 22358574
+3 shs12-diag 22358575
+4 shs12-ref 22358576
+4 shs12-diag 22358577
+4 sys 22358578
+5 shs12-diag 22358579
+5 sys 22358580
+5 shs12-ref 22358581
+6 sys 22358582
+6 shs12-ref 22358583
+6 shs12-diag 22358584
+7 shs12-ref 22358585
+7 shs12-diag 22358586
+7 sys 22358587
+cancelled: 2026-09-26T02:53:11+03:00 all 24 above, none had started; resubmitted as ab2 with NIC counter snapshots

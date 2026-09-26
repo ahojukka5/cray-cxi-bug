@@ -1,0 +1,35 @@
+submitted: 2026-09-26T04:43:37+03:00 arms: sys (baseline) sysex (--exclude cabinet x1304: nid[006984-007107]) rounds: 8 account project_462001120
+0 sys 22359754
+0 sysex 22359755
+1 sysex 22359756
+1 sys 22359757
+2 sys 22359758
+2 sysex 22359759
+3 sysex 22359760
+3 sys 22359761
+4 sys 22359762
+4 sysex 22359763
+5 sysex 22359764
+5 sys 22359765
+6 sys 22359766
+6 sysex 22359767
+7 sysex 22359768
+7 sys 22359769
+cancelled: 2026-09-26T05:10:55+03:00 pending ab4 (22359769 22359768 22359765 22359766 22359767 22359764 22359760 22359762 22359763 22359761 22359759); 22359754 died in PMI_Init (bootstrap barrier timeout), 22359755/56 healthy but killed by the 330 s harness timeout after a 180 s launch stall. Resubmitted with EXCH_TIMEOUT=600, 13 min limit.
+submitted: 2026-09-26T05:10:55+03:00 arms: sys sysex(--exclude=nid[006984-007107]) rounds: 8 EXCH_TIMEOUT=600
+10 sys 22360074
+10 sysex 22360075
+11 sysex 22360076
+11 sys 22360077
+12 sys 22360078
+12 sysex 22360079
+13 sysex 22360080
+13 sys 22360081
+14 sys 22360083
+14 sysex 22360084
+15 sysex 22360086
+15 sys 22360087
+16 sys 22360088
+16 sysex 22360089
+17 sysex 22360090
+17 sys 22360091

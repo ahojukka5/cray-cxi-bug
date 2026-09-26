@@ -1,0 +1,174 @@
+srun: Step created for StepId=22358619.1
+CXIDIAG nid007227 pid=49093 EVENT t=1016942900536939 eqn=33
+CXIDIAG nid007227 pid=49093 EVENT type=GET rc=53(CONN_CLOSED) size=64 buffer_id=2 ptlte=17 ptl_list=0 initiator=0 match_bits=0x82000000000033 rlength=13032800 mlength=13032800 remote_offset=0x33ea4cedbe34c0 start=0x33ea4cedbe34c0 rendezvous=0 get_issued=0 rendezvous_id=0 auto_unlinked=0 vni=50235
+CXIDIAG nid007227 pid=49093 EVENT raw=00000000000000000000000011000700330000000000820002003bc4dcd157e260ddc60060ddc600c034beed4cea3300c034beed4cea33000200000000000035
+CXIDIAG nid007227 pid=49093 EVENT-REQ req=0xc6b590 req_id=2 type=0 cb=?+0x76120 flags=0 data_len=0 tag=0 discard=0
+CXIDIAG nid007227 pid=49093 ring begin n=128 now=1016942900602387
+CXIDIAG nid007227 pid=49093 ring[1756] t=1016892080292839 eqn=33 req=0x64782b0 type=REPLY rc=1(OK) size=16 user_ptr=0x64782b0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1757] t=1016892082660287 eqn=33 req=0x5a05cf0 type=REPLY rc=1(OK) size=16 user_ptr=0x5a05cf0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1758] t=1016892082665697 eqn=33 req=0x5a05ec0 type=REPLY rc=1(OK) size=16 user_ptr=0x5a05ec0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1759] t=1016892086733463 eqn=33 req=0x6473a30 type=REPLY rc=1(OK) size=16 user_ptr=0x6473a30 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1760] t=1016892086736419 eqn=33 req=0x6473860 type=REPLY rc=1(OK) size=16 user_ptr=0x6473860 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1761] t=1016892087087943 eqn=33 req=0x66418c0 type=REPLY rc=1(OK) size=16 user_ptr=0x66418c0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1762] t=1016892087095949 eqn=33 req=0x6641a90 type=REPLY rc=1(OK) size=16 user_ptr=0x6641a90 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1763] t=1016892094322032 eqn=33 req=0x66406a0 type=REPLY rc=1(OK) size=16 user_ptr=0x66406a0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1764] t=1016892095172407 eqn=33 req=0x6640870 type=REPLY rc=1(OK) size=16 user_ptr=0x6640870 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1765] t=1016892095335504 eqn=33 req=0x6472f50 type=REPLY rc=1(OK) size=16 user_ptr=0x6472f50 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1766] t=1016892095347878 eqn=33 req=0x6472d80 type=REPLY rc=1(OK) size=16 user_ptr=0x6472d80 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1767] t=1016892101823542 eqn=33 req=0x5ac45c0 type=REPLY rc=1(OK) size=16 user_ptr=0x5ac45c0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1768] t=1016892102214803 eqn=33 req=0x6474510 type=REPLY rc=1(OK) size=16 user_ptr=0x6474510 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1769] t=1016892106031792 eqn=33 req=0x5a0a740 type=REPLY rc=1(OK) size=16 user_ptr=0x5a0a740 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1770] t=1016892108023398 eqn=33 req=0x5a0a570 type=REPLY rc=1(OK) size=16 user_ptr=0x5a0a570 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1771] t=1016892117111696 eqn=33 req=0x6474340 type=REPLY rc=1(OK) size=16 user_ptr=0x6474340 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1772] t=1016892118032839 eqn=33 req=0x5a07650 type=REPLY rc=1(OK) size=16 user_ptr=0x5a07650 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1773] t=1016892119443213 eqn=33 req=0x64794d0 type=REPLY rc=1(OK) size=16 user_ptr=0x64794d0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1774] t=1016892121634348 eqn=33 req=0x6479300 type=REPLY rc=1(OK) size=16 user_ptr=0x6479300 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1775] t=1016892126854908 eqn=33 req=0x1879450 type=REPLY rc=1(OK) size=16 user_ptr=0x1879450 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1776] t=1016892126856061 eqn=33 req=0x1879280 type=REPLY rc=1(OK) size=16 user_ptr=0x1879280 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1777] t=1016892131565035 eqn=33 req=0x663fd90 type=REPLY rc=1(OK) size=16 user_ptr=0x663fd90 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1778] t=1016892131689668 eqn=33 req=0x663fbc0 type=REPLY rc=1(OK) size=16 user_ptr=0x663fbc0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1779] t=1016892142428277 eqn=33 req=0x187a840 type=REPLY rc=1(OK) size=16 user_ptr=0x187a840 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1780] t=1016892142450751 eqn=33 req=0x187aa10 type=REPLY rc=1(OK) size=16 user_ptr=0x187aa10 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1781] t=1016892142542560 eqn=33 req=0x6478820 type=REPLY rc=1(OK) size=16 user_ptr=0x6478820 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1782] t=1016892142547118 eqn=33 req=0x64789f0 type=REPLY rc=1(OK) size=16 user_ptr=0x64789f0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1783] t=1016892146195539 eqn=33 req=0x6473fa0 type=REPLY rc=1(OK) size=16 user_ptr=0x6473fa0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1784] t=1016892146203614 eqn=33 req=0x5a06f10 type=REPLY rc=1(OK) size=16 user_ptr=0x5a06f10 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1785] t=1016892150948649 eqn=33 req=0x187d930 type=REPLY rc=1(OK) size=16 user_ptr=0x187d930 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1786] t=1016892150948900 eqn=33 req=0x187d760 type=REPLY rc=1(OK) size=16 user_ptr=0x187d760 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1787] t=1016892158339073 eqn=33 req=0x6474170 type=REPLY rc=1(OK) size=16 user_ptr=0x6474170 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1788] t=1016892158615651 eqn=33 req=0x1879f30 type=REPLY rc=1(OK) size=16 user_ptr=0x1879f30 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1789] t=1016892159701324 eqn=33 req=0x663f480 type=REPLY rc=1(OK) size=16 user_ptr=0x663f480 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1790] t=1016892159701735 eqn=33 req=0x663f650 type=REPLY rc=1(OK) size=16 user_ptr=0x663f650 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1791] t=1016892168109619 eqn=35 req=0x18771e0 type=PUT rc=1(OK) size=64 buffer_id=1 ptlte=19 ptl_list=2 initiator=0x2807990 match_bits=0x1882000000000007 rlength=13034848 mlength=2111 remote_offset=0 start=0xfc20ffd0f132c rendezvous=1 get_issued=0 rendezvous_id=163 auto_unlinked=0 vni=50235
+CXIDIAG nid007227 pid=49093 ring[1792] t=1016892169162367 eqn=35 req=0x18771e0 type=PUT rc=1(OK) size=64 buffer_id=1 ptlte=19 ptl_list=2 initiator=0x2007990 match_bits=0x1882000000000007 rlength=13034848 mlength=2111 remote_offset=0 start=0xfc20ffd0f1b6b rendezvous=1 get_issued=0 rendezvous_id=163 auto_unlinked=0 vni=50235
+CXIDIAG nid007227 pid=49093 ring[1793] t=1016892170606298 eqn=33 req=0x64ddc90 type=REPLY rc=1(OK) size=16 user_ptr=0x64ddc90 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1794] t=1016892170606438 eqn=33 req=0x1879d60 type=REPLY rc=1(OK) size=16 user_ptr=0x1879d60 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1795] t=1016892170606698 eqn=33 req=0x663ff60 type=REPLY rc=1(OK) size=16 user_ptr=0x663ff60 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1796] t=1016892170606809 eqn=33 req=0x6640130 type=REPLY rc=1(OK) size=16 user_ptr=0x6640130 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1797] t=1016892174065119 eqn=33 req=0x6640300 type=REPLY rc=1(OK) size=16 user_ptr=0x6640300 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1798] t=1016892174080078 eqn=33 req=0x66404d0 type=REPLY rc=1(OK) size=16 user_ptr=0x66404d0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1799] t=1016892174453926 eqn=33 req=0x663e260 type=REPLY rc=1(OK) size=16 user_ptr=0x663e260 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1800] t=1016892174468685 eqn=33 req=0x663e430 type=REPLY rc=1(OK) size=16 user_ptr=0x663e430 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1801] t=1016892179111090 eqn=33 req=0x663f0e0 type=REPLY rc=1(OK) size=16 user_ptr=0x663f0e0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1802] t=1016892179111401 eqn=33 req=0x663f2b0 type=REPLY rc=1(OK) size=16 user_ptr=0x663f2b0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1803] t=1016892179779361 eqn=33 req=0x187d020 type=REPLY rc=1(OK) size=16 user_ptr=0x187d020 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1804] t=1016892179780944 eqn=33 req=0x187d1f0 type=REPLY rc=1(OK) size=16 user_ptr=0x187d1f0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1805] t=1016892184344014 eqn=33 req=0x6479fb0 type=REPLY rc=1(OK) size=16 user_ptr=0x6479fb0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1806] t=1016892184344395 eqn=33 req=0x6479de0 type=REPLY rc=1(OK) size=16 user_ptr=0x6479de0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1807] t=1016892186740148 eqn=33 req=0x64746e0 type=REPLY rc=1(OK) size=16 user_ptr=0x64746e0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1808] t=1016892186773453 eqn=33 req=0x64748b0 type=REPLY rc=1(OK) size=16 user_ptr=0x64748b0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1809] t=1016892190345986 eqn=33 req=0x187c370 type=REPLY rc=1(OK) size=16 user_ptr=0x187c370 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1810] t=1016892190349813 eqn=33 req=0x187c1a0 type=REPLY rc=1(OK) size=16 user_ptr=0x187c1a0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1811] t=1016892199070154 eqn=33 req=0x6476ec0 type=REPLY rc=1(OK) size=16 user_ptr=0x6476ec0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1812] t=1016892199431147 eqn=33 req=0x6477090 type=REPLY rc=1(OK) size=16 user_ptr=0x6477090 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1813] t=1016892210653778 eqn=33 req=0x187c8e0 type=REPLY rc=1(OK) size=16 user_ptr=0x187c8e0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1814] t=1016892210654039 eqn=33 req=0x187cab0 type=REPLY rc=1(OK) size=16 user_ptr=0x187cab0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1815] t=1016892211030582 eqn=33 req=0x6477430 type=REPLY rc=1(OK) size=16 user_ptr=0x6477430 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1816] t=1016892211052174 eqn=33 req=0x6477260 type=REPLY rc=1(OK) size=16 user_ptr=0x6477260 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1817] t=1016892220777772 eqn=33 req=0x64732f0 type=REPLY rc=1(OK) size=16 user_ptr=0x64732f0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1818] t=1016892220796028 eqn=33 req=0x6473120 type=REPLY rc=1(OK) size=16 user_ptr=0x6473120 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1819] t=1016892224726657 eqn=33 req=0x6479a40 type=REPLY rc=1(OK) size=16 user_ptr=0x6479a40 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1820] t=1016892227911606 eqn=33 req=0x6479c10 type=REPLY rc=1(OK) size=16 user_ptr=0x6479c10 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1821] t=1016892236460805 eqn=33 req=0x6477600 type=REPLY rc=1(OK) size=16 user_ptr=0x6477600 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1822] t=1016892236502426 eqn=33 req=0x64777d0 type=REPLY rc=1(OK) size=16 user_ptr=0x64777d0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1823] t=1016892240853965 eqn=33 req=0x64796a0 type=REPLY rc=1(OK) size=16 user_ptr=0x64796a0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1824] t=1016892240889815 eqn=33 req=0x6479870 type=REPLY rc=1(OK) size=16 user_ptr=0x6479870 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1825] t=1016892250016788 eqn=33 req=0x1878230 type=REPLY rc=1(OK) size=16 user_ptr=0x1878230 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1826] t=1016892250083959 eqn=33 req=0x1878060 type=REPLY rc=1(OK) size=16 user_ptr=0x1878060 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1827] t=1016892250974492 eqn=33 req=0x187dcd0 type=REPLY rc=1(OK) size=16 user_ptr=0x187dcd0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1828] t=1016892252289170 eqn=33 req=0x187db00 type=REPLY rc=1(OK) size=16 user_ptr=0x187db00 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1829] t=1016892258534745 eqn=33 req=0x64734c0 type=REPLY rc=1(OK) size=16 user_ptr=0x64734c0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1830] t=1016892258547700 eqn=33 req=0x6473690 type=REPLY rc=1(OK) size=16 user_ptr=0x6473690 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1831] t=1016892260947050 eqn=33 req=0x663eb70 type=REPLY rc=1(OK) size=16 user_ptr=0x663eb70 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1832] t=1016892261337229 eqn=33 req=0x663e9a0 type=REPLY rc=1(OK) size=16 user_ptr=0x663e9a0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1833] t=1016892267685464 eqn=33 req=0x187af80 type=REPLY rc=1(OK) size=16 user_ptr=0x187af80 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1834] t=1016892267712166 eqn=33 req=0x187b150 type=REPLY rc=1(OK) size=16 user_ptr=0x187b150 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1835] t=1016892267903018 eqn=33 req=0x187abe0 type=REPLY rc=1(OK) size=16 user_ptr=0x187abe0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1836] t=1016892267903218 eqn=33 req=0x187adb0 type=REPLY rc=1(OK) size=16 user_ptr=0x187adb0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1837] t=1016892273550669 eqn=33 req=0x6476210 type=REPLY rc=1(OK) size=16 user_ptr=0x6476210 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1838] t=1016892273561300 eqn=33 req=0x6476040 type=REPLY rc=1(OK) size=16 user_ptr=0x6476040 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1839] t=1016892275671998 eqn=33 req=0x6475730 type=REPLY rc=1(OK) size=16 user_ptr=0x6475730 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1840] t=1016892275674853 eqn=33 req=0x6475560 type=REPLY rc=1(OK) size=16 user_ptr=0x6475560 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1841] t=1016892280771012 eqn=33 req=0x6474c50 type=REPLY rc=1(OK) size=16 user_ptr=0x6474c50 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1842] t=1016892280777134 eqn=33 req=0x6474a80 type=REPLY rc=1(OK) size=16 user_ptr=0x6474a80 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1843] t=1016892281143196 eqn=33 req=0x187d590 type=REPLY rc=1(OK) size=16 user_ptr=0x187d590 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1844] t=1016892281146813 eqn=33 req=0x187d3c0 type=REPLY rc=1(OK) size=16 user_ptr=0x187d3c0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1845] t=1016892286934427 eqn=33 req=0x18799c0 type=REPLY rc=1(OK) size=16 user_ptr=0x18799c0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1846] t=1016892286961710 eqn=33 req=0x1879b90 type=REPLY rc=1(OK) size=16 user_ptr=0x1879b90 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1847] t=1016892288410239 eqn=33 req=0x6478650 type=REPLY rc=1(OK) size=16 user_ptr=0x6478650 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1848] t=1016892292582229 eqn=33 req=0x6478480 type=REPLY rc=1(OK) size=16 user_ptr=0x6478480 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1849] t=1016892298123985 eqn=33 req=0x187bfd0 type=REPLY rc=1(OK) size=16 user_ptr=0x187bfd0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1850] t=1016892298126059 eqn=33 req=0x187be00 type=REPLY rc=1(OK) size=16 user_ptr=0x187be00 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1851] t=1016892298213459 eqn=33 req=0x187c540 type=REPLY rc=1(OK) size=16 user_ptr=0x187c540 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1852] t=1016892298217306 eqn=33 req=0x187c710 type=REPLY rc=1(OK) size=16 user_ptr=0x187c710 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1853] t=1016892302314671 eqn=33 req=0x6477d40 type=REPLY rc=1(OK) size=16 user_ptr=0x6477d40 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1854] t=1016892302318428 eqn=33 req=0x6477f10 type=REPLY rc=1(OK) size=16 user_ptr=0x6477f10 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1855] t=1016892303051284 eqn=33 req=0x6475900 type=REPLY rc=1(OK) size=16 user_ptr=0x6475900 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1856] t=1016892303058518 eqn=33 req=0x6475ad0 type=REPLY rc=1(OK) size=16 user_ptr=0x6475ad0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1857] t=1016892308355257 eqn=33 req=0x6477b70 type=REPLY rc=1(OK) size=16 user_ptr=0x6477b70 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1858] t=1016892308355447 eqn=33 req=0x64779a0 type=REPLY rc=1(OK) size=16 user_ptr=0x64779a0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1859] t=1016892308879337 eqn=33 req=0x64751c0 type=REPLY rc=1(OK) size=16 user_ptr=0x64751c0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1860] t=1016892308880469 eqn=33 req=0x6475390 type=REPLY rc=1(OK) size=16 user_ptr=0x6475390 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1861] t=1016892314284776 eqn=33 req=0x18785d0 type=REPLY rc=1(OK) size=16 user_ptr=0x18785d0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1862] t=1016892314293644 eqn=33 req=0x1878400 type=REPLY rc=1(OK) size=16 user_ptr=0x1878400 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1863] t=1016892314397796 eqn=33 req=0x663ef10 type=REPLY rc=1(OK) size=16 user_ptr=0x663ef10 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1864] t=1016892314423366 eqn=33 req=0x663ed40 type=REPLY rc=1(OK) size=16 user_ptr=0x663ed40 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1865] t=1016892318416748 eqn=33 req=0x187b320 type=REPLY rc=1(OK) size=16 user_ptr=0x187b320 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1866] t=1016892318417900 eqn=33 req=0x187b4f0 type=REPLY rc=1(OK) size=16 user_ptr=0x187b4f0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1867] t=1016892320568376 eqn=33 req=0x6475e70 type=REPLY rc=1(OK) size=16 user_ptr=0x6475e70 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1868] t=1016892320596520 eqn=33 req=0x6475ca0 type=REPLY rc=1(OK) size=16 user_ptr=0x6475ca0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1869] t=1016892326279972 eqn=33 req=0x187cc80 type=REPLY rc=1(OK) size=16 user_ptr=0x187cc80 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1870] t=1016892326284581 eqn=33 req=0x187ce50 type=REPLY rc=1(OK) size=16 user_ptr=0x187ce50 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1871] t=1016892326392360 eqn=33 req=0x64763e0 type=REPLY rc=1(OK) size=16 user_ptr=0x64763e0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1872] t=1016892326394344 eqn=33 req=0x64765b0 type=REPLY rc=1(OK) size=16 user_ptr=0x64765b0 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1873] t=1016892332725236 eqn=33 req=0x6478f60 type=REPLY rc=1(OK) size=16 user_ptr=0x6478f60 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1874] t=1016892332756026 eqn=33 req=0x6479130 type=REPLY rc=1(OK) size=16 user_ptr=0x6479130 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1875] t=1016892334151882 eqn=33 req=0x6478bc0 type=REPLY rc=1(OK) size=16 user_ptr=0x6478bc0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1876] t=1016892334258379 eqn=33 req=0x6478d90 type=REPLY rc=1(OK) size=16 user_ptr=0x6478d90 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1877] t=1016892340657774 eqn=33 req=0x1878d10 type=REPLY rc=1(OK) size=16 user_ptr=0x1878d10 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1878] t=1016892340699075 eqn=33 req=0x1878b40 type=REPLY rc=1(OK) size=16 user_ptr=0x1878b40 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1879] t=1016892341438594 eqn=33 req=0x187dea0 type=REPLY rc=1(OK) size=16 user_ptr=0x187dea0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1880] t=1016892341477049 eqn=33 req=0x187e070 type=REPLY rc=1(OK) size=16 user_ptr=0x187e070 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1881] t=1016892578078766 eqn=33 req=0x1878970 type=REPLY rc=1(OK) size=16 user_ptr=0x1878970 mlength=13032832 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1882] t=1016892644894484 eqn=33 req=0x18787a0 type=REPLY rc=1(OK) size=16 user_ptr=0x18787a0 mlength=13032800 rendezvous=0 retry=0 tgt_error=0 ptl_list=0
+CXIDIAG nid007227 pid=49093 ring[1883] t=1016942900536939 eqn=33 req=0xc6b590 type=GET rc=53(CONN_CLOSED) size=64 buffer_id=2 ptlte=17 ptl_list=0 initiator=0 match_bits=0x82000000000033 rlength=13032800 mlength=13032800 remote_offset=0x33ea4cedbe34c0 start=0x33ea4cedbe34c0 rendezvous=0 get_issued=0 rendezvous_id=0 auto_unlinked=0 vni=50235
+CXIDIAG nid007227 pid=49093 ring end
+libfabric:49093:1790385654::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid007227: TXC (0xf7d0:2): Get error: 0x6557800 rc: CONN_CLOSED
+libfabric:49093:1790385654::cxi:ep_data:cxip_report_send_completion():676<warn> nid007227: TXC (0xf7d0:2): Request dest_addr: 306 caddr.nic: 0XEF52 caddr.pid: 2 error: 0x6557800 (err: 5, CONN_CLOSED)
+CXIDIAG nid007227 pid=49093 REQ-ERROR where=report_send_completion err=5(Input/output error) prov_errno=53(CONN_CLOSED) t=1016942900969882
+CXIDIAG nid007227 pid=49093 REQ-ERROR req=0x6557800 req_id=-1 type=4 cb=?+0x701d0 flags=0x808 data_len=0 tag=0 discard=0
+CXIDIAG nid007227 pid=49093 REQ-ERROR send len=13034848 tag=0x7 tagged=1 dest_addr=306 caddr.nic=0xef52 caddr.pid=2 rdzv_id/tx_id=563 rc=53(CONN_CLOSED) rdzv_send_events=2 canceled=0 retries=0 tclass=512 hmem_iface=2 md_cached=1
+MPICH ERROR [Rank 426] [job id 22358619.1] [Sat Sep 26 04:20:54 2026] [nid007227] - Abort(740964495) (rank 426 in comm 0): Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x6513c90, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+
+aborting job:
+Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x6513c90, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+srun: error: nid007227: task 426: Exited with exit code 255
+srun: Terminating StepId=22358619.1
+[2026-09-26T04:20:55.384] error: *** STEP 22358619.1 ON nid005273 CANCELLED AT 2026-09-26T04:20:55 DUE TO TASK FAILURE ***
+[2026-09-26T04:20:55.588] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T04:20:55.595] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T04:20:56.589] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T04:20:56.595] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T04:20:57.589] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T04:20:57.595] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T04:20:58.589] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T04:20:58.595] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T04:20:59.589] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T04:20:59.595] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T04:21:00.589] error: switch_g_job_postfini: Device or resource busy
+[2026-09-26T04:21:00.596] error: switch_g_job_postfini: Device or resource busy
+srun: Force Terminated StepId=22358619.1
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-09-26T04:27:49.022] error: *** JOB 22358619 ON nid005273 CANCELLED AT 2026-09-26T04:27:49 DUE TO TIME LIMIT ***

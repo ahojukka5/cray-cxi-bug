@@ -1,0 +1,29 @@
+srun: Step created for StepId=22360087.1
+libfabric:97456:1790389610::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid005876: TXC (0xa051:0): Get error: 0x645fd00 rc: CONN_CLOSED
+libfabric:97456:1790389610::cxi:ep_data:cxip_report_send_completion():675<warn> nid005876: TXC (0xa051:0): Request dest_addr: 437 caddr.nic: 0XEAB1 caddr.pid: 5 error: 0x645fd00 (err: 5, CONN_CLOSED)
+MPICH ERROR [Rank 136] [job id 22360087.1] [Sat Sep 26 05:26:50 2026] [nid005876] - Abort(606746767) (rank 136 in comm 0): Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x64eda50, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+
+aborting job:
+Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x64eda50, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+srun: error: nid005876: task 136: Exited with exit code 255
+srun: Terminating StepId=22360087.1
+[2026-09-26T05:26:50.646] error: *** STEP 22360087.1 ON nid005242 CANCELLED AT 2026-09-26T05:26:50 DUE TO TASK FAILURE ***
+srun: forcing job termination
+srun: got SIGCONT
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+/var/spool/slurmd/job22360087/slurm_script: line 67: 55936 Killed                  timeout -k 30 -s TERM "${EXCH_TIMEOUT:-330}" srun --gpus-per-task=1 --gpu-bind=closest --cpu-bind=cores "$BIN" --mb "$MB" --rounds "${ROUNDS:-40}" --verify
+[2026-09-26T05:37:41.025] error: *** JOB 22360087 ON nid005242 CANCELLED AT 2026-09-26T05:37:41 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-09-26T05:37:41.036] error: execve(): jobs/nic_counters.sh: Interrupted system call

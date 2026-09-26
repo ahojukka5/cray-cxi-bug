@@ -1,0 +1,4 @@
+job 22358875: 240 NICs, no after-snapshot: none
+  max fgfc stall nid007020/cxi1 x5.3 fgfc_frames=794522
+  rel nid005299/cxi1 fgfc x0.9 pct_tct_timeouts=1 rh_tct_timeouts=1
+  rel nid007020/cxi1 fgfc x5.3 pct_spt_timeouts=320 pct_retry_srb_requests=256 pct_rsp_err_rcvd=64 pct_bad_seq_nacks=1 rh_spt_timeouts=320 rh_pkts_cancelled_o=64

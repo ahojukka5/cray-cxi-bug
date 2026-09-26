@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "jobs/nic_outliers.py", line 23, in <module>
+    med = statistics.median(r.get(FLOW[0], 0) for r in rows.values()) or 1
+  File "/usr/lib64/python3.6/statistics.py", line 380, in median
+    raise StatisticsError("no median for empty data")
+statistics.StatisticsError: no median for empty data

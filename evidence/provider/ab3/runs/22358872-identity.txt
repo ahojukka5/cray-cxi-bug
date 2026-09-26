@@ -1,0 +1,92 @@
+timestamp: 2026-09-26T06:42:20+03:00
+hostname: nid005133
+slurm_job: 22358872
+=== module list ===
+
+Currently Loaded Modules:
+  1) LUMI/25.03                     (S)   8) cce/19.0.0
+  2) craype-x86-trento                    9) craype/2.7.34
+  3) craype-accel-amd-gfx90a             10) cray-dsmml/0.3.1
+  4) libfabric/1.22.0                    11) cray-libsci/25.03.0
+  5) craype-network-ofi                  12) PrgEnv-cray/8.6.0
+  6) xpmem/2.11.5-1.3_g73ade43320bc      13) rocm/6.3.4
+  7) partition/G                    (S)  14) cray-mpich/8.1.32
+
+  Where:
+   S:  Module is Sticky, requires --force to unload or purge
+=== compiler wrapper ===
+/opt/cray/pe/craype/2.7.34/bin/cc
+Cray clang version 19.0.0  (cc4d36e4ff3377d45f0e6e892b5dacd82009a0ca)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /opt/cray/pe/cce/19.0.0/cce-clang/x86_64/bin
+Build config: +assertions
+=== Cray MPICH ===
+CRAY_MPICH_DIR=/opt/cray/pe/mpich/8.1.32/ofi/crayclang/17.0
+libmpi_cray.so -> /opt/cray/pe/mpich/8.1.32/ofi/cray/17.0/lib/libmpi_cray.so.12.0.0
+#define MPICH_VERSION "3.4a2"
+#define MPICH_NUMVERSION 30400002
+=== ROCm ===
+ROCM_PATH=/opt/rocm-6.3.4
+6.3.42134-a9a80e791=== libfabric / CXI ===
+----------------------------------------------------------------------------
+   /opt/cray/modulefiles/libfabric/1.22.0:
+prepend_path("PATH","/opt/cray/libfabric/1.22.0/bin")
+prepend_path("LD_LIBRARY_PATH","/opt/cray/libfabric/1.22.0/lib64")
+prepend_path("MANPATH","/opt/cray/libfabric/1.22.0/share/man")
+prepend_path("PKG_CONFIG_PATH","/opt/cray/libfabric/1.22.0/lib64/pkgconfig")
+=== MPICH_* and FI_CXI_* ===
+FI_CXI_RX_MATCH_MODE=software
+MPICH_DIR=/opt/cray/pe/mpich/8.1.32/ofi/crayclang/17.0
+MPICH_GPU_IPC_ENABLED=0
+MPICH_GPU_SUPPORT_ENABLED=1
+=== ldd bin/alltoall_gpu_ref ===
+	linux-vdso.so.1 (0x00007ffe4c27e000)
+	libamdhip64.so.6 => /opt/rocm-6.3.4/lib/libamdhip64.so.6 (0x00001485347b4000)
+	libmpi_cray.so.12 => /opt/cray/pe/lib64/libmpi_cray.so.12 (0x0000148531fc2000)
+	libmpi_gtl_hsa.so.0 => /opt/cray/pe/lib64/libmpi_gtl_hsa.so.0 (0x0000148531f1c000)
+	libxpmem.so.0 => /usr/lib64/libxpmem.so.0 (0x0000148531f19000)
+	libstdc++.so.6 => /usr/lib64/libstdc++.so.6 (0x0000148531cc5000)
+	libquadmath.so.0 => /opt/cray/pe/lib64/cce/libquadmath.so.0 (0x0000148531a00000)
+	libmodules.so.2 => /opt/cray/pe/cce/19.0.0/cce/x86_64/lib/libmodules.so.2 (0x0000148531ca9000)
+	libfi.so.2 => /opt/cray/pe/cce/19.0.0/cce/x86_64/lib/libfi.so.2 (0x000014853143b000)
+	libcraymath.so.2 => /opt/cray/pe/cce/19.0.0/cce/x86_64/lib/libcraymath.so.2 (0x0000148531355000)
+	libf.so.2 => /opt/cray/pe/cce/19.0.0/cce/x86_64/lib/libf.so.2 (0x00001485312c1000)
+	libu.so.2 => /opt/cray/pe/cce/19.0.0/cce/x86_64/lib/libu.so.2 (0x00001485311b5000)
+	libcsup.so.1 => /opt/cray/pe/cce/19.0.0/cce/x86_64/lib/libcsup.so.1 (0x0000148531c9f000)
+	libc.so.6 => /lib64/libc.so.6 (0x0000148530fa0000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x0000148531c9c000)
+	librocprofiler-register.so.0 => /opt/rocm-6.3.4/lib/librocprofiler-register.so.0 (0x0000148530f02000)
+	librt.so.1 => /lib64/librt.so.1 (0x0000148531c97000)
+	libamd_comgr.so.2 => /opt/rocm-6.3.4/lib/libamd_comgr.so.2 (0x0000148528799000)
+	libhsa-runtime64.so.1 => /opt/rocm-6.3.4/lib/libhsa-runtime64.so.1 (0x000014852848d000)
+	libnuma.so.1 => /usr/lib64/libnuma.so.1 (0x0000148528200000)
+	libm.so.6 => /lib64/libm.so.6 (0x0000148528116000)
+	libgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x0000148531c68000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x0000148531c65000)
+	/lib64/ld-linux-x86-64.so.2 (0x0000148535d3e000)
+	libfabric.so.1 => /scratch/project_462001519/juaho/cray-cxi-bug/lf/shs15/lib/libfabric.so.1 (0x000014852802c000)
+	libatomic.so.1 => /usr/lib64/libatomic.so.1 (0x0000148531c5b000)
+	libpmi.so.0 => /opt/cray/pe/lib64/libpmi.so.0 (0x000014852846a000)
+	libpmi2.so.0 => /opt/cray/pe/lib64/libpmi2.so.0 (0x0000148528447000)
+	libgfortran.so.5 => /usr/lib64/libgfortran.so.5 (0x0000148527d27000)
+	libz.so.1 => /usr/lib64/libz.so.1 (0x000014852842e000)
+	libzstd.so.1 => /usr/lib64/libzstd.so.1 (0x0000148527c68000)
+	libelf.so.1 => /usr/lib64/libelf.so.1 (0x0000148527a00000)
+	libdrm.so.2 => /opt/amdgpu/lib64/libdrm.so.2 (0x0000148528417000)
+	libdrm_amdgpu.so.1 => /opt/amdgpu/lib64/libdrm_amdgpu.so.1 (0x0000148531c49000)
+	libcxi.so.1 => /usr/lib64/libcxi.so.1 (0x0000148527c47000)
+	libnl-3.so.200 => /usr/lib64/libnl-3.so.200 (0x0000148527c24000)
+	libpals.so.0 => /opt/cray/pals/1.6/lib/libpals.so.0 (0x000014852840f000)
+=== resolved mpi / hip / fabric ===
+	libamdhip64.so.6 => /opt/rocm-6.3.4/lib/libamdhip64.so.6 (0x0000148693abf000)
+	libmpi_cray.so.12 => /opt/cray/pe/lib64/libmpi_cray.so.12 (0x00001486912cd000)
+	libmpi_gtl_hsa.so.0 => /opt/cray/pe/lib64/libmpi_gtl_hsa.so.0 (0x0000148691227000)
+	libhsa-runtime64.so.1 => /opt/rocm-6.3.4/lib/libhsa-runtime64.so.1 (0x0000148687773000)
+	libfabric.so.1 => /scratch/project_462001519/juaho/cray-cxi-bug/lf/shs15/lib/libfabric.so.1 (0x0000148687316000)
+	libcxi.so.1 => /usr/lib64/libcxi.so.1 (0x0000148687615000)
+libmpi runtime -> /opt/cray/pe/mpich/8.1.32/ofi/cray/17.0/lib/libmpi_cray.so.12.0.0
+libfabric -> /pfs/lustrep4/scratch/project_462001519/juaho/cray-cxi-bug/lf/shs15/lib/libfabric.so.1.33.0
+=== ldd /pfs/lustrep4/scratch/project_462001519/juaho/cray-cxi-bug/lf/shs15/lib/libfabric.so.1.33.0 (cxi) ===
+	libcxi.so.1 => /usr/lib64/libcxi.so.1 (0x0000152565879000)
+libcxi -> /usr/lib64/libcxi.so.1.5.0

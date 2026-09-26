@@ -1,0 +1,30 @@
+libfabric:27252:1790394030::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid007650: TXC (0x10a42:2): Get error: 0x64cf500 rc: CONN_CLOSED
+libfabric:27252:1790394030::cxi:ep_data:cxip_report_send_completion():675<warn> nid007650: TXC (0x10a42:2): Request dest_addr: 293 caddr.nic: 0XEF23 caddr.pid: 5 error: 0x64cf500 (err: 5, CONN_CLOSED)
+MPICH ERROR [Rank 394] [job id 22358869.1] [Sat Sep 26 06:40:30 2026] [nid007650] - Abort(1009399951) (rank 394 in comm 0): Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x658f060, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+
+aborting job:
+Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x658f060, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+srun: error: nid007650: task 394: Exited with exit code 255
+srun: Terminating StepId=22358869.1
+[2026-09-26T06:40:31.017] error: *** STEP 22358869.1 ON nid005254 CANCELLED AT 2026-09-26T06:40:31 DUE TO TASK FAILURE ***
+[2026-09-26T06:40:31.230] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T06:40:32.230] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T06:40:33.230] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T06:40:34.231] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T06:40:35.231] error: Failed to destroy CXI Service ID 5 (cxi2): Device or resource busy
+[2026-09-26T06:40:36.231] error: switch_g_job_postfini: Device or resource busy
+srun: Force Terminated StepId=22358869.1
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-09-26T06:46:41.362] error: *** JOB 22358869 ON nid005254 CANCELLED AT 2026-09-26T06:46:41 DUE TO TIME LIMIT ***

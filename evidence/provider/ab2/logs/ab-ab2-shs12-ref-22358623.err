@@ -1,0 +1,41 @@
+libfabric:81910:1790386625::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid006881: TXC (0xe1b0:6): Get error: 0xc70380 rc: CONN_CLOSED
+libfabric:81910:1790386625::cxi:ep_data:cxip_report_send_completion():675<warn> nid006881: TXC (0xe1b0:6): Request dest_addr: 353 caddr.nic: 0XEB43 caddr.pid: 1 error: 0xc70380 (err: 5, CONN_CLOSED)
+libfabric:81911:1790386625::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid006881: TXC (0xe1b0:7): Get error: 0x59aba80 rc: CONN_CLOSED
+libfabric:81911:1790386625::cxi:ep_data:cxip_report_send_completion():675<warn> nid006881: TXC (0xe1b0:7): Request dest_addr: 353 caddr.nic: 0XEB43 caddr.pid: 1 error: 0x59aba80 (err: 5, CONN_CLOSED)
+MPICH ERROR [Rank 302] [job id 22358623.1] [Sat Sep 26 04:37:05 2026] [nid006881] - Abort(875182223) (rank 302 in comm 0): Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x5c6b9d0, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+
+aborting job:
+Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x5c6b9d0, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+MPICH ERROR [Rank 303] [job id 22358623.1] [Sat Sep 26 04:37:05 2026] [nid006881] - Abort(69875855) (rank 303 in comm 0): Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x650b310, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+
+aborting job:
+Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x650b310, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+srun: error: nid006881: tasks 302-303: Exited with exit code 255
+srun: Terminating StepId=22358623.1
+[2026-09-26T04:37:06.140] error: *** STEP 22358623.1 ON nid005203 CANCELLED AT 2026-09-26T04:37:06 DUE TO TASK FAILURE ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-09-26T04:39:50.875] error: *** JOB 22358623 ON nid005203 CANCELLED AT 2026-09-26T04:39:50 DUE TO TIME LIMIT ***
