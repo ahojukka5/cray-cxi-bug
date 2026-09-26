@@ -11,6 +11,8 @@
 #SBATCH --gpus-per-task=1
 #SBATCH --cpus-per-task=7
 #SBATCH --mem=0
+# A requeued job reuses its id and overwrites its logs.
+#SBATCH --no-requeue
 #SBATCH --time=00:10:00
 #SBATCH --nodes=60
 #SBATCH --output=/scratch/project_462001519/juaho/cray-cxi-bug/logs/%x-%j.out

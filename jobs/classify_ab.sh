@@ -16,7 +16,7 @@ grep -E '^[0-9]+ [^ ]+ [0-9]+$' "evidence/provider/$TAG/submit-order.txt" | whil
   lib=$(grep -o 'libfabric=[^ ]*' "$o" | sed 's|.*/lf/||; s|/lib/.*||; s|libfabric=/opt.*|sys|')
   if grep -q 'PROBE OK' "$o"; then cls=clean
   elif grep -q 'PROBE CORRUPT' "$o"; then cls=CORRUPT
-  elif grep -q 'Invalid request descriptor' "$e" 2>/dev/null; then cls=invalid-request-descriptor
+  elif grep -q -E 'Invalid request descriptor|Input/output error - CONN_CLOSED' "$e" 2>/dev/null; then cls=CONN_CLOSED
   elif grep -q 'No route to host' "$e" 2>/dev/null; then cls=no-route-to-host
   elif grep -q 'PMI_Init returned' "$e" 2>/dev/null; then cls=launch-failure-PMI
   elif grep -q 'GPU Hang' "$e" 2>/dev/null; then cls=gpu-hang
@@ -27,6 +27,8 @@ grep -E '^[0-9]+ [^ ]+ [0-9]+$' "evidence/provider/$TAG/submit-order.txt" | whil
   else cls=incomplete; fi
   v=$(grep -o 'VERIFY [A-Z]*' "$o" | tail -1 | cut -d' ' -f2)
   rcl=$(grep -h -m1 -E 'CXIDIAG .*REQ-ERROR|CXIDIAG .* EVENT type|cxi:.*(error|rc)' "$e" 2>/dev/null | cut -c1-160)
-  [[ "$lib" != "$arm" && "$arm" != sys* ]] && cls="$cls LIB-MISMATCH($lib)"
+  # Arms named after a built tree must have loaded that tree.
+  want=${arm%ex}; [[ -d "/scratch/project_462001519/juaho/cray-cxi-bug/lf/shs12-$want" ]] && want=shs12-$want
+  [[ -d "/scratch/project_462001519/juaho/cray-cxi-bug/lf/$want" && "$lib" != "$want" ]] && cls="$cls LIB-MISMATCH($lib)"
   printf '%-11s %-9s %-20s %-30s %-6s %s\n' "$arm" "$job" "${start:--}" "$cls" "${v:--}" "$rcl"
 done
