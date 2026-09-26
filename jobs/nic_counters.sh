@@ -7,4 +7,8 @@ for d in /sys/class/cxi/cxi*; do
   for f in "$d"/device/telemetry/*; do
     printf '%s %s %s\n' "$n" "${f##*/}" "$(cat "$f" 2>/dev/null)"
   done
+  # Retry handler (cxi_rh) statistics, world-readable under /run/cxi.
+  for f in /run/cxi/"$n"/*; do
+    [[ -f "$f" ]] && printf '%s rh_%s %s\n' "$n" "${f##*/}" "$(cat "$f" 2>/dev/null)"
+  done
 done > "$out"
