@@ -18,11 +18,15 @@
  * Run:    see run_sweep.sbatch
  */
 
-/* nanosleep needs the POSIX realtime declarations. */
-#define _POSIX_C_SOURCE 199309L
+/* nanosleep and dl_iterate_phdr need the GNU declarations. */
+#define _GNU_SOURCE
 
 #include <mpi.h>
 #include <hip/hip_runtime.h>
+#include <dlfcn.h>
+#include <limits.h>
+#include <link.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -37,6 +41,43 @@
             MPI_Abort(MPI_COMM_WORLD, 1);                                   \
         }                                                                   \
     } while (0)
+
+/* The libfabric and libcxi this process actually mapped. LD_LIBRARY_PATH
+ * decides which libfabric Cray MPICH loads, so the run has to report it
+ * rather than trust the environment it was given. */
+static char fabric_so[PATH_MAX], cxi_so[PATH_MAX];
+
+static int find_libs(struct dl_phdr_info *info, size_t size, void *data)
+{
+    (void)size; (void)data;
+    const char *n = info->dlpi_name;
+    if (!n || !*n) return 0;
+    char *dst = strstr(n, "/libfabric.so") ? fabric_so
+              : strstr(n, "/libcxi.so")    ? cxi_so : NULL;
+    if (dst && !dst[0] && !realpath(n, dst))
+        snprintf(dst, PATH_MAX, "%s", n);
+    return 0;
+}
+
+static unsigned long hash_str(const char *s)
+{
+    unsigned long h = 5381;
+    while (*s) h = h * 33 + (unsigned char)*s++;
+    return h;
+}
+
+/* Byte that `src` sends to `dst` in round `r`, and the poison written
+ * into the receive buffer before the round. The pattern changes every
+ * round, so a slot left over from an earlier round fails the check, and
+ * it never equals the poison, so a slot nothing was written to fails
+ * too. */
+static uint8_t poison_byte(int r) { return (uint8_t)(r * 53 + 0x11); }
+
+static uint8_t pattern_byte(int src, int dst, int r)
+{
+    uint8_t v = (uint8_t)(src * 131 + dst * 7 + r * 29);
+    return v == poison_byte(r) ? (uint8_t)(v + 1) : v;
+}
 
 int main(int argc, char **argv)
 {
@@ -71,6 +112,12 @@ int main(int argc, char **argv)
      * gradually instead of firing them all at full size at once, and
      * it yields a bandwidth map of the allocation as a side effect. */
     int handshake = 0;
+    /* Check received data every round. Each (sender, receiver, round)
+     * carries its own byte value and the receive buffer is poisoned
+     * first; three 256-byte windows per peer slot (head, tail and a
+     * position that moves with the round) are copied back and
+     * compared. An abort turned into silent corruption fails here. */
+    int verify = 0;
 
     for (int i = 1; i < argc; i++) {
         if (!strcmp(argv[i], "--mb") && i + 1 < argc)
@@ -89,6 +136,8 @@ int main(int argc, char **argv)
             stagger_ms = atoi(argv[++i]);
         else if (!strcmp(argv[i], "--handshake"))
             handshake = 1;
+        else if (!strcmp(argv[i], "--verify"))
+            verify = 1;
         else {
             fprintf(stderr, "usage: %s [--mb F] [--rounds N] [--report N]\n",
                     argv[0]);
@@ -101,6 +150,26 @@ int main(int argc, char **argv)
     int world, me;
     MPI_Comm_size(MPI_COMM_WORLD, &world);
     MPI_Comm_rank(MPI_COMM_WORLD, &me);
+
+    dl_iterate_phdr(find_libs, NULL);
+    {
+        unsigned (*fi_version_fn)(void) =
+            (unsigned (*)(void))dlsym(RTLD_DEFAULT, "fi_version");
+        unsigned fv = fi_version_fn ? fi_version_fn() : 0;
+        unsigned long h[2] = { hash_str(fabric_so) ^ (hash_str(cxi_so) << 1), 0 };
+        unsigned long lo = 0, hi = 0;
+        h[1] = h[0];
+        MPI_Allreduce(&h[0], &lo, 1, MPI_UNSIGNED_LONG, MPI_MIN, MPI_COMM_WORLD);
+        MPI_Allreduce(&h[1], &hi, 1, MPI_UNSIGNED_LONG, MPI_MAX, MPI_COMM_WORLD);
+        if (me == 0) {
+            printf("LIBS libfabric=%s fi_version=%u.%u libcxi=%s same_on_all_ranks=%s\n",
+                   fabric_so[0] ? fabric_so : "(not mapped)",
+                   fv >> 16, fv & 0xffff,
+                   cxi_so[0] ? cxi_so : "(not mapped)",
+                   lo == hi ? "yes" : "NO");
+            fflush(stdout);
+        }
+    }
 
     /* With --gpu-bind=closest each rank is given exactly one GCD, so
      * device 0 is this rank's GCD. Fall back to the local rank id. */
@@ -133,6 +202,7 @@ int main(int argc, char **argv)
                world, (double)bytes_per_peer / (1024 * 1024),
                2.0 * (double)total / (1024.0 * 1024 * 1024), rounds, provided,
                collective ? "MPI_Alltoall" : "p2p");
+        if (verify) printf("  verify=on (3 x 256 B windows per peer per round)\n");
         fflush(stdout);
         printf("  visible GCDs per rank=%d  using device %d"
                "  free=%.1f GiB of %.1f GiB\n",
@@ -287,8 +357,18 @@ int main(int argc, char **argv)
     }
 
     double t0 = MPI_Wtime();
+    long bad_total = 0, checked_total = 0;
+    enum { WIN = 256 };
+    uint8_t win[WIN];
 
     for (int r = 1; r <= rounds; r++) {
+        if (verify) {
+            HIP_CHECK(hipMemset(rbuf, poison_byte(r), total));
+            for (int p = 0; p < world; p++)
+                HIP_CHECK(hipMemset((char *)sbuf + (size_t)p * bytes_per_peer,
+                                    pattern_byte(me, p, r), bytes_per_peer));
+            HIP_CHECK(hipDeviceSynchronize());
+        }
         if (collective) {
             /* Includes the self block, which the point-to-point loop
              * skips: one peer's worth more volume out of P, and a local
@@ -314,6 +394,40 @@ int main(int argc, char **argv)
         MPI_Waitall(n, reqs, MPI_STATUSES_IGNORE);
         }
 
+        if (verify) {
+            long bad = 0, checked = 0;
+            size_t w = bytes_per_peer < WIN ? bytes_per_peer : WIN;
+            for (int p = 0; p < world; p++) {
+                if (p == me && !collective) continue;
+                uint8_t want = pattern_byte(p, me, r);
+                size_t span = bytes_per_peer - w;
+                size_t offs[3] = { 0, span,
+                    span ? (2654435761ul * (unsigned long)(p + 1) * (unsigned long)r) % span : 0 };
+                for (int k = 0; k < 3; k++) {
+                    HIP_CHECK(hipMemcpy(win, (char *)rbuf + (size_t)p * bytes_per_peer + offs[k],
+                                        w, hipMemcpyDeviceToHost));
+                    checked += (long)w;
+                    for (size_t b = 0; b < w; b++) {
+                        if (win[b] == want) continue;
+                        if (bad < 8)
+                            fprintf(stderr, "VERIFY rank %d round %d peer %d offset %zu: "
+                                    "got %#04x want %#04x%s\n", me, r, p, offs[k] + b,
+                                    win[b], want,
+                                    win[b] == poison_byte(r) ? " (poison: never written)" : "");
+                        bad++;
+                    }
+                }
+            }
+            long gbad = 0;
+            MPI_Allreduce(&bad, &gbad, 1, MPI_LONG, MPI_SUM, MPI_COMM_WORLD);
+            bad_total += gbad;
+            checked_total += checked;
+            if (gbad && me == 0) {
+                printf("VERIFY FAILED round %d: %ld bad bytes across ranks\n", r, gbad);
+                fflush(stdout);
+            }
+        }
+
         if (me == 0 && (r == 1 || r % report_every == 0)) {
             printf("round %5d  elapsed %7.1f s\n", r, MPI_Wtime() - t0);
             fflush(stdout);
@@ -321,8 +435,13 @@ int main(int argc, char **argv)
     }
 
     MPI_Barrier(MPI_COMM_WORLD);
-    if (me == 0)
-        printf("PROBE OK  %d rounds in %.1f s\n", rounds, MPI_Wtime() - t0);
+    if (me == 0) {
+        if (verify)
+            printf("VERIFY %s  %ld bad bytes, %ld bytes checked on rank 0\n",
+                   bad_total ? "FAILED" : "OK", bad_total, checked_total);
+        printf("PROBE %s  %d rounds in %.1f s\n", bad_total ? "CORRUPT" : "OK",
+               rounds, MPI_Wtime() - t0);
+    }
 
     free(reqs);
     HIP_CHECK(hipFree(sbuf));
