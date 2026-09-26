@@ -1,0 +1,385 @@
+From 1672ce9c4fa902f9732e04f35b6986a76e6b7678 Mon Sep 17 00:00:00 2001
+From: Jukka Aho <ahojukka5@gmail.com>
+Date: Sat, 26 Sep 2026 02:35:54 +0300
+Subject: [PATCH 1/2] prov/cxi: add error-path event diagnostics
+
+Diagnostic only, not for merge. Copy each handled CXI event into a
+per-thread ring and, when an event carries an unexpected return code or a
+send/receive request completes in error, print the raw event, the request
+state and the recent ring to stderr. Normal completions print nothing.
+
+Signed-off-by: Jukka Aho <ahojukka5@gmail.com>
+---
+ prov/cxi/Makefile.include |   1 +
+ prov/cxi/include/cxip.h   |   4 +
+ prov/cxi/src/cxip_diag.c  | 296 ++++++++++++++++++++++++++++++++++++++
+ prov/cxi/src/cxip_evtq.c  |   1 +
+ prov/cxi/src/cxip_msg.c   |   3 +
+ 5 files changed, 305 insertions(+)
+ create mode 100644 prov/cxi/src/cxip_diag.c
+
+diff --git a/prov/cxi/Makefile.include b/prov/cxi/Makefile.include
+index 8f1c396c6..11258dff0 100644
+--- a/prov/cxi/Makefile.include
++++ b/prov/cxi/Makefile.include
+@@ -12,6 +12,7 @@ _cxi_files = \
+ 	prov/cxi/src/cxip_fabric.c \
+ 	prov/cxi/src/cxip_repsum.c \
+ 	prov/cxi/src/cxip_zbcoll.c \
++	prov/cxi/src/cxip_diag.c \
+ 	prov/cxi/src/cxip_dom.c \
+ 	prov/cxi/src/cxip_ep.c \
+ 	prov/cxi/src/cxip_txc.c \
+diff --git a/prov/cxi/include/cxip.h b/prov/cxi/include/cxip.h
+index 1f1926042..43bf4e9ce 100644
+--- a/prov/cxi/include/cxip.h
++++ b/prov/cxi/include/cxip.h
+@@ -3195,6 +3195,10 @@ struct cxip_req *cxip_evtq_req_alloc(struct cxip_evtq *evtq,
+ 				     int remap, void *req_ctx);
+ void cxip_evtq_req_free(struct cxip_req *req);
+ void cxip_evtq_progress(struct cxip_evtq *evtq);
++void cxip_diag_event(struct cxip_evtq *evtq, const union c_event *ev,
++		     struct cxip_req *req);
++void cxip_diag_req_error(const char *where, struct cxip_req *req, int err,
++			 int prov_errno);
+ 
+ void cxip_ep_progress(struct fid *fid);
+ void cxip_ep_flush_trig_reqs(struct cxip_ep_obj *ep_obj);
+diff --git a/prov/cxi/src/cxip_diag.c b/prov/cxi/src/cxip_diag.c
+new file mode 100644
+index 000000000..721d86ade
+--- /dev/null
++++ b/prov/cxi/src/cxip_diag.c
+@@ -0,0 +1,296 @@
++/*
++ * SPDX-License-Identifier: BSD-2-Clause OR GPL-2.0-only
++ *
++ * Error-path diagnostics for the CXI provider.
++ *
++ * Every hardware event handled by cxip_evtq_progress() is copied into a small
++ * per-thread ring. Nothing is printed for events that complete normally. When
++ * an event carries a return code outside the benign set, or a send or receive
++ * request completes in error, the event, the request and the recent ring are
++ * written to stderr with the prefix "CXIDIAG". Output is capped per process.
++ *
++ * Disable with FI_CXI_DIAG=0. FI_CXI_DIAG_MAX sets the per-process cap on
++ * detailed records (default 16).
++ */
++
++#include "config.h"
++
++#include <dlfcn.h>
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++#include <time.h>
++#include <unistd.h>
++
++#include "cxip.h"
++
++#define DIAG_RING 128
++
++struct diag_ent {
++	uint64_t ns;
++	const void *evtq;
++	const void *req;
++	int eqn;
++	uint8_t size;
++	uint8_t raw[64];
++};
++
++static __thread struct diag_ent diag_ring[DIAG_RING];
++static __thread unsigned int diag_pos;
++
++static int diag_state = -1;	/* -1 unknown, 0 off, 1 on */
++static int diag_max = 16;
++static int diag_count;
++static int diag_ring_dumped;
++static char diag_host[64];
++
++static uint64_t diag_now(void)
++{
++	struct timespec ts;
++
++	clock_gettime(CLOCK_MONOTONIC, &ts);
++	return (uint64_t)ts.tv_sec * 1000000000ull + ts.tv_nsec;
++}
++
++static bool diag_on(void)
++{
++	const char *v;
++
++	if (diag_state >= 0)
++		return diag_state;
++
++	v = getenv("FI_CXI_DIAG");
++	diag_state = !(v && v[0] == '0');
++	v = getenv("FI_CXI_DIAG_MAX");
++	if (v)
++		diag_max = atoi(v);
++	gethostname(diag_host, sizeof(diag_host) - 1);
++	return diag_state;
++}
++
++static bool diag_take(void)
++{
++	return __atomic_fetch_add(&diag_count, 1, __ATOMIC_RELAXED) < diag_max;
++}
++
++/* Offset of a code pointer inside its shared object, for addr2line. */
++static void diag_sym(const void *fn, char *buf, size_t len)
++{
++	Dl_info info;
++
++	if (fn && dladdr(fn, &info) && info.dli_fbase)
++		snprintf(buf, len, "%s+%#lx", info.dli_sname ? info.dli_sname :
++			 "?", (unsigned long)((const char *)fn -
++					      (const char *)info.dli_fbase));
++	else
++		snprintf(buf, len, "%p", fn);
++}
++
++static void diag_hex(const char *tag, const uint8_t *raw, size_t size)
++{
++	char line[64 * 2 + 1];
++	size_t i;
++
++	for (i = 0; i < size && i < 64; i++)
++		sprintf(line + 2 * i, "%02x", raw[i]);
++	line[2 * i] = 0;
++	fprintf(stderr, "CXIDIAG %s pid=%d %s raw=%s\n", diag_host, getpid(),
++		tag, line);
++}
++
++static void diag_event_fields(const char *tag, const union c_event *ev)
++{
++	switch (ev->hdr.event_type) {
++	case C_EVENT_ACK:
++	case C_EVENT_REPLY:
++	case C_EVENT_SEND:
++		fprintf(stderr,
++			"CXIDIAG %s pid=%d %s type=%s rc=%d(%s) size=%u user_ptr=%#lx mlength=%u rendezvous=%u retry=%u tgt_error=%u ptl_list=%u\n",
++			diag_host, getpid(), tag, cxi_event_to_str(ev),
++			cxi_event_rc(ev), cxi_rc_to_str(cxi_event_rc(ev)),
++			8u << ev->hdr.event_size,
++			(unsigned long)ev->init_short.user_ptr,
++			ev->init_short.mlength, ev->init_short.rendezvous,
++			ev->init_short.retry, ev->init_short.tgt_error,
++			ev->init_short.ptl_list);
++		break;
++	case C_EVENT_LINK:
++	case C_EVENT_UNLINK:
++	case C_EVENT_GET:
++	case C_EVENT_PUT:
++	case C_EVENT_PUT_OVERFLOW:
++	case C_EVENT_RENDEZVOUS:
++	case C_EVENT_SEARCH:
++		fprintf(stderr,
++			"CXIDIAG %s pid=%d %s type=%s rc=%d(%s) size=%u buffer_id=%u ptlte=%u ptl_list=%u initiator=%#x match_bits=%#lx rlength=%u mlength=%u remote_offset=%#lx start=%#lx rendezvous=%u get_issued=%u rendezvous_id=%u auto_unlinked=%u vni=%u\n",
++			diag_host, getpid(), tag, cxi_event_to_str(ev),
++			cxi_event_rc(ev), cxi_rc_to_str(cxi_event_rc(ev)),
++			8u << ev->hdr.event_size, ev->tgt_long.buffer_id,
++			ev->tgt_long.ptlte_index, ev->tgt_long.ptl_list,
++			ev->tgt_long.initiator.initiator.process,
++			(unsigned long)ev->tgt_long.match_bits,
++			ev->tgt_long.rlength, ev->tgt_long.mlength,
++			(unsigned long)ev->tgt_long.remote_offset,
++			(unsigned long)ev->tgt_long.start,
++			ev->tgt_long.rendezvous, ev->tgt_long.get_issued,
++			ev->tgt_long.rendezvous_id, ev->tgt_long.auto_unlinked,
++			ev->tgt_long.vni);
++		break;
++	default:
++		fprintf(stderr, "CXIDIAG %s pid=%d %s type=%s(%d) rc=%d(%s)\n",
++			diag_host, getpid(), tag, cxi_event_to_str(ev),
++			ev->hdr.event_type, cxi_event_rc(ev),
++			cxi_rc_to_str(cxi_event_rc(ev)));
++	}
++}
++
++static void diag_req(const char *tag, const struct cxip_req *req)
++{
++	char cb[128];
++	const struct cxip_md *md = NULL;
++
++	if (!req) {
++		fprintf(stderr, "CXIDIAG %s pid=%d %s req=NULL\n", diag_host,
++			getpid(), tag);
++		return;
++	}
++
++	diag_sym((const void *)req->cb, cb, sizeof(cb));
++	fprintf(stderr,
++		"CXIDIAG %s pid=%d %s req=%p req_id=%d type=%d cb=%s flags=%#lx data_len=%lu tag=%#lx discard=%d\n",
++		diag_host, getpid(), tag, (const void *)req, req->req_id,
++		req->type, cb, (unsigned long)req->flags,
++		(unsigned long)req->data_len, (unsigned long)req->tag,
++		req->discard);
++
++	if (req->type == CXIP_REQ_SEND) {
++		md = req->send.send_md;
++		fprintf(stderr,
++			"CXIDIAG %s pid=%d %s send len=%zu tag=%#lx tagged=%d dest_addr=%lu caddr.nic=%#x caddr.pid=%u rdzv_id/tx_id=%d rc=%d(%s) rdzv_send_events=%d canceled=%d retries=%d tclass=%u hmem_iface=%d md_cached=%d\n",
++			diag_host, getpid(), tag, req->send.len,
++			(unsigned long)req->send.tag, req->send.tagged,
++			(unsigned long)req->send.dest_addr,
++			req->send.caddr.nic, req->send.caddr.pid,
++			req->send.rdzv_id, req->send.rc,
++			cxi_rc_to_str(req->send.rc),
++			req->send.rdzv_send_events, req->send.canceled,
++			req->send.retries, req->send.tclass,
++			md ? (int)md->info.iface : -1, md ? md->cached : -1);
++	} else if (req->type == CXIP_REQ_RECV) {
++		md = req->recv.recv_md;
++		fprintf(stderr,
++			"CXIDIAG %s pid=%d %s recv ulen=%u rlen=%u tag=%#lx ignore=%#lx match_id=%#x initiator=%#x rdzv_initiator=%#x rdzv_id=%u rdzv_lac=%u rdzv_proto=%d done_notify=%d rdzv_events=%d ev_types=%d,%d,%d,%d rget_nic=%#x rget_pid=%u rc=%d(%s) canceled=%d unlinked=%d multi_recv=%d tgt_event=%d src_offset=%#lx rdzv_mlen=%u hmem_iface=%d md_cached=%d\n",
++			diag_host, getpid(), tag, req->recv.ulen,
++			req->recv.rlen, (unsigned long)req->recv.tag,
++			(unsigned long)req->recv.ignore, req->recv.match_id,
++			req->recv.initiator, req->recv.rdzv_initiator,
++			req->recv.rdzv_id, req->recv.rdzv_lac,
++			req->recv.rdzv_proto, req->recv.done_notify,
++			req->recv.rdzv_events,
++			req->recv.rdzv_event_types[0],
++			req->recv.rdzv_event_types[1],
++			req->recv.rdzv_event_types[2],
++			req->recv.rdzv_event_types[3], req->recv.rget_nic,
++			req->recv.rget_pid, req->recv.rc,
++			cxi_rc_to_str(req->recv.rc), req->recv.canceled,
++			req->recv.unlinked, req->recv.multi_recv,
++			req->recv.tgt_event,
++			(unsigned long)req->recv.src_offset,
++			req->recv.rdzv_mlen,
++			md ? (int)md->info.iface : -1, md ? md->cached : -1);
++	}
++}
++
++static void diag_ring_dump(void)
++{
++	unsigned int i, n;
++	char tag[96];
++
++	if (__atomic_exchange_n(&diag_ring_dumped, 1, __ATOMIC_RELAXED))
++		return;
++
++	n = diag_pos < DIAG_RING ? diag_pos : DIAG_RING;
++	fprintf(stderr, "CXIDIAG %s pid=%d ring begin n=%u now=%lu\n",
++		diag_host, getpid(), n, (unsigned long)diag_now());
++	for (i = diag_pos - n; i != diag_pos; i++) {
++		const struct diag_ent *e = &diag_ring[i % DIAG_RING];
++
++		snprintf(tag, sizeof(tag), "ring[%u] t=%lu eqn=%d req=%p",
++			 i, (unsigned long)e->ns, e->eqn, e->req);
++		diag_event_fields(tag, (const union c_event *)e->raw);
++	}
++	fprintf(stderr, "CXIDIAG %s pid=%d ring end\n", diag_host, getpid());
++}
++
++/* True for return codes the provider expects in normal operation. */
++static bool diag_benign(const union c_event *ev, int rc)
++{
++	if (rc == C_RC_OK)
++		return true;
++
++	switch (ev->hdr.event_type) {
++	case C_EVENT_UNLINK:
++		return rc == C_RC_ENTRY_NOT_FOUND;
++	case C_EVENT_LINK:
++		return rc == C_RC_NO_SPACE;
++	case C_EVENT_PUT:
++	case C_EVENT_PUT_OVERFLOW:
++	case C_EVENT_RENDEZVOUS:
++	case C_EVENT_SEARCH:
++		return rc == C_RC_NO_MATCH;
++	default:
++		return false;
++	}
++}
++
++void cxip_diag_event(struct cxip_evtq *evtq, const union c_event *ev,
++		     struct cxip_req *req)
++{
++	struct diag_ent *e;
++	size_t size;
++	int rc;
++
++	if (!diag_on())
++		return;
++
++	size = 8u << ev->hdr.event_size;
++	if (size > sizeof(e->raw))
++		size = sizeof(e->raw);
++
++	e = &diag_ring[diag_pos++ % DIAG_RING];
++	e->ns = diag_now();
++	e->evtq = evtq;
++	e->req = req;
++	e->eqn = evtq->eq ? (int)evtq->eq->eqn : -1;
++	e->size = size;
++	memcpy(e->raw, ev, size);
++	if (size < sizeof(e->raw))
++		memset(e->raw + size, 0, sizeof(e->raw) - size);
++
++	rc = cxi_event_rc(ev);
++	if (diag_benign(ev, rc) || !diag_take())
++		return;
++
++	fprintf(stderr, "CXIDIAG %s pid=%d EVENT t=%lu eqn=%d\n", diag_host,
++		getpid(), (unsigned long)e->ns, e->eqn);
++	diag_event_fields("EVENT", ev);
++	diag_hex("EVENT", e->raw, size);
++	diag_req("EVENT-REQ", req);
++	diag_ring_dump();
++	fflush(stderr);
++}
++
++void cxip_diag_req_error(const char *where, struct cxip_req *req, int err,
++			 int prov_errno)
++{
++	if (!diag_on() || !diag_take())
++		return;
++
++	fprintf(stderr,
++		"CXIDIAG %s pid=%d REQ-ERROR where=%s err=%d(%s) prov_errno=%d(%s) t=%lu\n",
++		diag_host, getpid(), where, err, fi_strerror(err), prov_errno,
++		cxi_rc_to_str(prov_errno), (unsigned long)diag_now());
++	diag_req("REQ-ERROR", req);
++	diag_ring_dump();
++	fflush(stderr);
++}
+diff --git a/prov/cxi/src/cxip_evtq.c b/prov/cxi/src/cxip_evtq.c
+index 42384ca85..b42d860ee 100644
+--- a/prov/cxi/src/cxip_evtq.c
++++ b/prov/cxi/src/cxip_evtq.c
+@@ -386,6 +386,7 @@ void cxip_evtq_progress(struct cxip_evtq *evtq)
+ 		} else {
+ 
+ 			req = cxip_evtq_event_req(evtq, event);
++			cxip_diag_event(evtq, event, req);
+ 			if (req) {
+ 				ret = req->cb(req, event);
+ 				if (ret != FI_SUCCESS)
+diff --git a/prov/cxi/src/cxip_msg.c b/prov/cxi/src/cxip_msg.c
+index 5786edc87..8a163b3ae 100644
+--- a/prov/cxi/src/cxip_msg.c
++++ b/prov/cxi/src/cxip_msg.c
+@@ -280,6 +280,7 @@ void cxip_recv_req_report(struct cxip_req *req)
+ 				 err, cxi_rc_to_str(req->recv.rc));
+ 		}
+ 
++		cxip_diag_req_error("recv_req_report", req, err, req->recv.rc);
+ 		ret = cxip_cq_req_error(req, truncated, err, req->recv.rc,
+ 					NULL, 0, FI_ADDR_UNSPEC);
+ 		if (ret != FI_SUCCESS)
+@@ -674,6 +675,8 @@ void cxip_report_send_completion(struct cxip_req *req, bool sw_cntr)
+ 			 req->send.caddr.pid, req, ret_err,
+ 			 cxi_rc_to_str(req->send.rc));
+ 
++		cxip_diag_req_error("report_send_completion", req, ret_err,
++				    req->send.rc);
+ 		ret = cxip_cq_req_error(req, 0, ret_err,
+ 					req->send.rc, NULL, 0,
+ 					FI_ADDR_UNSPEC);
+-- 
+2.51.0
+
