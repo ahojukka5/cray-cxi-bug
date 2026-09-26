@@ -1,0 +1,33 @@
+srun: Step created for StepId=22358862.1
+libfabric:75370:1790392302::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid007631: TXC (0x109c0:2): Get error: 0x65d63f0 rc: CONN_CLOSED
+libfabric:75370:1790392302::cxi:ep_data:cxip_report_send_completion():675<warn> nid007631: TXC (0x109c0:2): Request dest_addr: 424 caddr.nic: 0XED51 caddr.pid: 0 error: 0x65d63f0 (err: 5, CONN_CLOSED)
+MPICH ERROR [Rank 450] [job id 22358862.1] [Sat Sep 26 06:11:42 2026] [nid007631] - Abort(204093583) (rank 450 in comm 0): Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x6623b00, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+
+aborting job:
+Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x6623b00, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+srun: error: nid007631: task 450: Exited with exit code 255
+srun: Terminating StepId=22358862.1
+[2026-09-26T06:11:43.235] error: *** STEP 22358862.1 ON nid005143 CANCELLED AT 2026-09-26T06:11:43 DUE TO TASK FAILURE ***
+[2026-09-26T06:11:43.466] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T06:11:44.467] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T06:11:45.467] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T06:11:46.467] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T06:11:47.467] error: Failed to destroy CXI Service ID 5 (cxi0): Device or resource busy
+[2026-09-26T06:11:48.467] error: switch_g_job_postfini: Device or resource busy
+srun: forcing job termination
+srun: got SIGCONT
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+/var/spool/slurmd/job22358862/slurm_script: line 67: 102066 Killed                  timeout -k 30 -s TERM "${EXCH_TIMEOUT:-330}" srun --gpus-per-task=1 --gpu-bind=closest --cpu-bind=cores "$BIN" --mb "$MB" --rounds "${ROUNDS:-40}" --verify
+[2026-09-26T06:17:55.321] error: *** JOB 22358862 ON nid005143 CANCELLED AT 2026-09-26T06:17:55 DUE TO TIME LIMIT ***

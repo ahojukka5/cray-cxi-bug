@@ -1,0 +1,26 @@
+libfabric:104229:1790385103::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid005921: TXC (0xa3f0:1): Get error: 0x5b87ed0 rc: CONN_CLOSED
+libfabric:104229:1790385103::cxi:ep_data:cxip_report_send_completion():675<warn> nid005921: TXC (0xa3f0:1): Request dest_addr: 399 caddr.nic: 0XE803 caddr.pid: 7 error: 0x5b87ed0 (err: 5, CONN_CLOSED)
+MPICH ERROR [Rank 137] [job id 22358616.1] [Sat Sep 26 04:11:43 2026] [nid005921] - Abort(405420175) (rank 137 in comm 0): Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x5bc1650, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+
+aborting job:
+Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x5bc1650, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+srun: error: nid005921: task 137: Exited with exit code 255
+srun: Terminating StepId=22358616.1
+[2026-09-26T04:11:43.391] error: *** STEP 22358616.1 ON nid005164 CANCELLED AT 2026-09-26T04:11:43 DUE TO TASK FAILURE ***
+srun: forcing job termination
+srun: got SIGCONT
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+/var/spool/slurmd/job22358616/slurm_script: line 67: 123558 Killed                  timeout -k 30 -s TERM "${EXCH_TIMEOUT:-330}" srun --gpus-per-task=1 --gpu-bind=closest --cpu-bind=cores "$BIN" --mb "$MB" --rounds "${ROUNDS:-40}" --verify
+[2026-09-26T04:18:49.388] error: *** JOB 22358616 ON nid005164 CANCELLED AT 2026-09-26T04:18:49 DUE TO TIME LIMIT ***

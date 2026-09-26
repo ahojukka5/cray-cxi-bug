@@ -1,0 +1,30 @@
+arm=shs15 nodes=60 ranks=480 payload=12.431MB rounds=40 bin=bin/alltoall_gpu_ref
+nodelist: nid[005133,005143-005144,005197-005198,005269,005299-005300,005345-005346,005403-005404,005500-005501,005510-005511,005528-005529,005559-005560,005568-005569,005613-005614,005699-005700,005714-005715,005827-005828,005926-005927,006049-006050,006173-006174,006193-006194,006202-006203,006312-006313,006337-006338,006375-006376,006378-006379,006381-006382,006389-006390,006434-006435,006893-006894,007019-007020,007641-007642]
+start: 2026-09-26T06:42:26+03:00
+exchange start: 2026-09-26T06:42:43+03:00
+LIBS libfabric=/pfs/lustrep4/scratch/project_462001519/juaho/cray-cxi-bug/lf/shs15/lib/libfabric.so.1.33.0 fi_version=2.7 libcxi=/usr/lib64/libcxi.so.1.5.0 same_on_all_ranks=yes
+MPI_Get_library_version: MPI VERSION    : CRAY MPICH version 8.1.32.110 (ANL base 3.4a2)
+MPI BUILD INFO : Thu Feb 06 22:43 2025 (git hash f9c5634)
+
+ranks=480  payload=12.431 MB/peer  device buffers=11.65 GiB/rank  rounds=40  thread_level=3  exchange=p2p
+  verify=on (3 x 256 B windows per peer per round)
+  visible GCDs per rank=1  using device 0  free=63.9 GiB of 64.0 GiB
+  MPICH_GPU_SUPPORT_ENABLED=1
+  MPICH_GPU_IPC_ENABLED=0
+  FI_CXI_RX_MATCH_MODE=software
+  FI_CXI_RDZV_THRESHOLD=16384
+  FI_CXI_DEFAULT_CQ_SIZE=131072
+  FI_CXI_DEFAULT_TX_SIZE=1024
+  FI_CXI_REQ_BUF_MIN_POSTED=6
+  FI_CXI_REQ_BUF_SIZE=12582912
+  FI_CXI_OFLOW_BUF_COUNT=3
+round     1  elapsed     2.5 s
+round    10  elapsed    20.3 s
+round    20  elapsed    40.0 s
+round    30  elapsed    59.9 s
+round    40  elapsed    79.6 s
+VERIFY OK  0 bad bytes, 14714880 bytes checked on rank 0
+PROBE OK  40 rounds in 79.6 s
+RESULT arm=shs15: OK
+exchange end: 2026-09-26T06:44:07+03:00
+end: 2026-09-26T06:44:27+03:00

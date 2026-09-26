@@ -1,0 +1,2 @@
+job 22360074: 240 NICs, no after-snapshot: none
+  max fgfc stall nid005921/cxi2 x1.2 fgfc_frames=417773

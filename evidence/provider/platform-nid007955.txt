@@ -1,0 +1,285 @@
+timestamp: 2026-09-26T05:39:22+03:00
+hostname: nid007955  slurm_job: 22360322
+=== os / kernel ===
+VERSION_ID="15.6"
+PRETTY_NAME="SUSE Linux Enterprise Server 15 SP6"
+Linux nid007955 6.4.0-150600.23.73_15.0.14-cray_shasta_c #1 SMP Tue Oct 21 11:16:37 PM EEST 2025 (89d3c98) x86_64 x86_64 x86_64 GNU/Linux
+=== rpm: fabric stack ===
+amdgpu-6.3.60304-2125197.x86_64
+amdgpu-core-6.3.60304-2125197.noarch
+amdgpu-dkms-6.10.5.60304-2125197.noarch
+amdgpu-dkms-firmware-6.10.5.60304-2125197.noarch
+amdgpu-lib-6.3.60304-2125197.x86_64
+amdgpu-multimedia-6.3.60304-2125197.x86_64
+cassini2-firmware-devel-0.1-SHS12.0.1_20250611142625_656c3af47b59.noarch
+cray-cassini-csr-defs-1.1.1-SHS12.0.1_20250610153948_2b8239f06a6b.noarch
+cray-cassini-headers-user-1.1.1-SHS12.0.1_20250610153948_2b8239f06a6b.noarch
+cray-cxi-driver-devel-1.0.0-SHS12.0.2_20250716152823_27f7be52e4b1.x86_64
+cray-cxi-driver-dkms-1.0.0-SHS12.0.2_20250716152823_27f7be52e4b1.noarch
+cray-cxi-driver-udev-1.0.0-SHS12.0.2_20250716152823_27f7be52e4b1.x86_64
+cray-kfabric-devel-1.0.0-SHS12.0.2_20250716163426_68828c1029aa.x86_64
+cray-kfabric-dkms-1.0.0-SHS12.0.2_20250716163426_68828c1029aa.noarch
+cray-kfabric-dracut-1.0.0-SHS12.0.2_20250716163426_68828c1029aa.x86_64
+cray-kfabric-udev-1.0.0-SHS12.0.2_20250716163426_68828c1029aa.x86_64
+cray-libcxi-1.0.2-SHS12.0.2_20250716170353_30fa2ddd65a2.x86_64
+cray-libcxi-devel-1.0.2-SHS12.0.2_20250716170353_30fa2ddd65a2.x86_64
+cray-libcxi-dracut-1.0.2-SHS12.0.2_20250716170353_30fa2ddd65a2.x86_64
+cray-libcxi-retry-handler-1.0.2-SHS12.0.2_20250716170353_30fa2ddd65a2.x86_64
+cray-libcxi-utils-1.0.2-SHS12.0.2_20250716170353_30fa2ddd65a2.x86_64
+cray-slingshot-base-link-devel-1.0.0-SHS12.0.1_20250610161416_79e842240606.x86_64
+cray-slingshot-base-link-dkms-1.0.0-SHS12.0.1_20250610161416_79e842240606.noarch
+kdreg2-1.0.0-SHS12.0.2_20250716180529_746483bc686d.x86_64
+kdreg2-devel-1.0.0-SHS12.0.2_20250716180529_746483bc686d.x86_64
+kdreg2-dkms-1.0.0-SHS12.0.2_20250716180529_746483bc686d.noarch
+kernel-firmware-amdgpu-20250205-150600.3.15.1.noarch
+libdrm_amdgpu1-2.4.118-150600.1.4.x86_64
+libdrm-amdgpu-2.4.123.60304-2125197.x86_64
+libdrm-amdgpu-common-1.0.0.60304-2125197.noarch
+libfabric-1.22.0-SHS12.0.2_20250722150439_8dad011dfdb6.x86_64
+libfabric-devel-1.22.0-SHS12.0.2_20250722150439_8dad011dfdb6.x86_64
+libva-amdgpu-2.16.0.60304-2125197.x86_64
+libvdpau-amdgpu-6.3-2125197.x86_64
+libwayland-amdgpu-client-1.23.0.60304-2125197.x86_64
+libwayland-amdgpu-server-1.23.0.60304-2125197.x86_64
+llvm-amdgpu-libs-19.1.60304-2125197.x86_64
+mesa-amdgpu-dri-drivers-24.3.0.60304-2125197.x86_64
+mesa-amdgpu-filesystem-24.3.0.60304-2125197.x86_64
+mesa-amdgpu-libEGL-24.3.0.60304-2125197.x86_64
+mesa-amdgpu-libgallium-24.3.0.60304-2125197.x86_64
+mesa-amdgpu-libgbm-24.3.0.60304-2125197.x86_64
+mesa-amdgpu-libGL-24.3.0.60304-2125197.x86_64
+mesa-amdgpu-libglapi-24.3.0.60304-2125197.x86_64
+mesa-amdgpu-libxatracker-24.3.0.60304-2125197.x86_64
+mesa-amdgpu-va-drivers-24.3.0.60304-2125197.x86_64
+mesa-amdgpu-vdpau-drivers-24.3.0.60304-2125197.x86_64
+pycxi-1.0.0-SHS12.0.2_20250716180530_108dde082c2f.x86_64
+pycxi-utils-1.0.0-SHS12.0.2_20250716180530_108dde082c2f.x86_64
+rocm-core-6.3.4.60304-sles155.76.x86_64
+sl-driver-devel-1.20.1-SHS12.0.1_20250610171313_712f8affaabc.x86_64
+sl-driver-dkms-1.20.1-SHS12.0.1_20250610171313_712f8affaabc.noarch
+slingshot-firmware-cassini-1.5.59-SHS12.0.1_20250611142410_86d6113bd464.noarch
+slingshot-firmware-management-2.1.1-SHS12.0.2_20250716163425_93710b1592a0.noarch
+slingshot-network-config-1.2.0-SHS12.0.1_20250430151432_afcdb778b152.x86_64
+slingshot-network-config-full-1.2.0-SHS12.0.1_20250430151432_afcdb778b152.x86_64
+slingshot-utils-2.1.0-SHS12.0.1_20250429181430_43a3e9b8b6c8.noarch
+xorg-x11-amdgpu-drv-amdgpu-22.0.0.60304-2125197.x86_64
+=== loaded kernel modules ===
+kkfilnd version=0.2.0 srcversion=CDDB219EEEC88CAA8693A62
+lnet version=0.7.0 srcversion=875867B65BA64884FD15C2E
+libcfs version=0.7.1 srcversion=1408A12A64DFA295473ADD7
+kfi_cxi version=- srcversion=DBEB668E58A8B6F886692E6
+kfabric version=- srcversion=B508C211D516BE3EEA12FED
+cxi_eth version=- srcversion=3198992E36C74E593E2117C
+cxi_user version=- srcversion=85ECBD62D844146BEB2F07B
+amdgpu version=6.10.5 srcversion=5F61E61E224B5B80576A443
+cxi_ss1 version=- srcversion=D7B34F5FFECC24BF99C281A
+cxi_sl version=1.24.2 srcversion=907D0DECF95F63E09D70A83
+cxi_sbl version=3.22.1 srcversion=3A878F3EBFE38CCF37430A3
+amddrm_ttm_helper version=- srcversion=7BD2302C39B0C354730C9D8
+amdttm version=- srcversion=0CE2A92576A14AA26527A4B
+amddrm_buddy version=- srcversion=E75054C5BA1798D9841F25C
+amdxcp version=- srcversion=E83EC53180E672D2801AE2F
+drm_exec version=- srcversion=F69BFD8CC75425F827EC83D
+drm_suballoc_helper version=- srcversion=E7F0E45523C8582D6B05E75
+amd_sched version=- srcversion=D66162E3953FC9F908CE366
+amdkcl version=1.0 srcversion=D3943A1609910035108B229
+drm_display_helper version=- srcversion=06DF699D07084A17B5E0D7D
+video version=- srcversion=C1CF2BEFDF846AFFFC717CA
+crc16 version=- srcversion=1128AF1A2DDD5DB477561B5
+i2c_algo_bit version=- srcversion=1EE7C7ED220579B268F471E
+kdreg2 version=- srcversion=FA5E3717505F2CC4283127D
+=== modinfo cxi_ss1 / cxi_core ===
+filename:       /lib/modules/6.4.0-150600.23.73_15.0.14-cray_shasta_c/updates/cxi-ss1.ko
+srcversion:     D7B34F5FFECC24BF99C281A
+vermagic:       6.4.0-150600.23.73_15.0.14-cray_shasta_c SMP mod_unload modversions 
+filename:       /lib/modules/6.4.0-150600.23.73_15.0.14-cray_shasta_c/updates/cxi-user.ko
+srcversion:     85ECBD62D844146BEB2F07B
+vermagic:       6.4.0-150600.23.73_15.0.14-cray_shasta_c SMP mod_unload modversions 
+=== CXI devices ===
+cxi0
+cxi1
+cxi2
+cxi3
+--- /sys/class/cxi/cxi0
+device/uevent: DRIVER=cxi_ss1 PCI_CLASS=20000 PCI_ID=17DB:0501 PCI_SUBSYS_ID=17DB:0000 PCI_SLOT_NAME=0000:c5:00.0 MODALIAS=pci:v000017DBd00000501sv000017DBsd00000000bc02sc00i00 
+device/vendor: 0x17db 
+device/device: 0x0501 
+device/subsystem_device: 0x0000 
+device/fru/serial_number: PR1149582S 
+device power subsystem uevent 
+--- /sys/class/cxi/cxi1
+device/uevent: DRIVER=cxi_ss1 PCI_CLASS=20000 PCI_ID=17DB:0501 PCI_SUBSYS_ID=17DB:0000 PCI_SLOT_NAME=0000:cd:00.0 MODALIAS=pci:v000017DBd00000501sv000017DBsd00000000bc02sc00i00 
+device/vendor: 0x17db 
+device/device: 0x0501 
+device/subsystem_device: 0x0000 
+device/fru/serial_number: PR1149582S 
+device power subsystem uevent 
+--- /sys/class/cxi/cxi2
+device/uevent: DRIVER=cxi_ss1 PCI_CLASS=20000 PCI_ID=17DB:0501 PCI_SUBSYS_ID=17DB:0000 PCI_SLOT_NAME=0000:d5:00.0 MODALIAS=pci:v000017DBd00000501sv000017DBsd00000000bc02sc00i00 
+device/vendor: 0x17db 
+device/device: 0x0501 
+device/subsystem_device: 0x0000 
+device/fru/serial_number: PR11495822 
+device power subsystem uevent 
+--- /sys/class/cxi/cxi3
+device/uevent: DRIVER=cxi_ss1 PCI_CLASS=20000 PCI_ID=17DB:0501 PCI_SUBSYS_ID=17DB:0000 PCI_SLOT_NAME=0000:dd:00.0 MODALIAS=pci:v000017DBd00000501sv000017DBsd00000000bc02sc00i00 
+device/vendor: 0x17db 
+device/device: 0x0501 
+device/subsystem_device: 0x0000 
+device/fru/serial_number: PR11495822 
+device power subsystem uevent 
+=== cxi_stat ===
+/usr/bin/cxi_stat
+Device: cxi0
+    Description: SS11 200Gb 2P 
+    Part Number: P43012-001
+    Serial Number: PR1149582S
+    FW Version: 1.5.59-ESM
+    Network device: hsn0
+    MAC: 02:00:00:01:1e:e0
+    NID: 73440 (0x11ee0)
+    PID granule: 256
+    PCIE speed/width: 25.0 GT/s x16
+    PCIE slot: 0000:c5:00.0
+        Link layer retry: on
+        Link loopback: off
+        Link media: electrical
+        Link MTU: 2112
+        Link speed: BS_200G
+        Link state: up
+Device: cxi1
+    Description: SS11 200Gb 2P 
+    Part Number: P43012-001
+    Serial Number: PR1149582S
+    FW Version: 1.5.59-ESM
+    Network device: hsn1
+    MAC: 02:00:00:01:1e:e1
+    NID: 73441 (0x11ee1)
+    PID granule: 256
+    PCIE speed/width: 25.0 GT/s x16
+    PCIE slot: 0000:cd:00.0
+        Link layer retry: on
+        Link loopback: off
+        Link media: electrical
+        Link MTU: 2112
+        Link speed: BS_200G
+        Link state: up
+Device: cxi2
+    Description: SS11 200Gb 2P 
+    Part Number: P43012-001
+    Serial Number: PR11495822
+    FW Version: 1.5.59-ESM
+    Network device: hsn2
+    MAC: 02:00:00:01:1e:a1
+    NID: 73377 (0x11ea1)
+    PID granule: 256
+    PCIE speed/width: 25.0 GT/s x16
+    PCIE slot: 0000:d5:00.0
+        Link layer retry: on
+        Link loopback: off
+        Link media: electrical
+        Link MTU: 2112
+        Link speed: BS_200G
+        Link state: up
+Device: cxi3
+    Description: SS11 200Gb 2P 
+    Part Number: P43012-001
+    Serial Number: PR11495822
+    FW Version: 1.5.59-ESM
+    Network device: hsn3
+    MAC: 02:00:00:01:1e:a0
+    NID: 73376 (0x11ea0)
+    PID granule: 256
+    PCIE speed/width: 25.0 GT/s x16
+    PCIE slot: 0000:dd:00.0
+        Link layer retry: on
+        Link loopback: off
+        Link media: electrical
+        Link MTU: 2112
+        Link speed: BS_200G
+        Link state: up
+=== retry handler service ===
+  UNIT                LOAD   ACTIVE SUB     DESCRIPTION
+  cxi_rh@cxi0.service loaded active running CXI Retry Handler on cxi0
+  cxi_rh@cxi1.service loaded active running CXI Retry Handler on cxi1
+  cxi_rh@cxi2.service loaded active running CXI Retry Handler on cxi2
+  cxi_rh@cxi3.service loaded active running CXI Retry Handler on cxi3
+  cxi_rh.target       loaded active active  CXI Retry Handlers Started
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+=== libcxi / libfabric files ===
+/usr/lib64/libcxi.so.1 -> /usr/lib64/libcxi.so.1.5.0 sha256=c8f650aa17c3cae3d2492fb0afaf58191f993336c0fae0f474f1991a851b90de
+/opt/cray/libfabric/1.22.0/lib64/libfabric.so.1 -> /opt/cray/libfabric/1.22.0/lib64/libfabric.so.1.25.0 sha256=a43aa8a5efba9d0230016cdfe6ad469e4eadef697defbd80088dd3d4c4acac98
+/opt/cray/libfabric/1.22.0/bin/fi_info: 1.22.0
+libfabric: 1.22.0
+libfabric api: 1.22
+cxi:
+    version: 0.1
+ofi_rxm:
+    version: 122.0
+ofi_rxd:
+    version: 122.0
+shm:
+    version: 122.0
+udp:
+    version: 122.0
+=== fi_info -p cxi (first entry) ===
+provider: cxi
+    fabric: cxi
+    domain: cxi0
+    version: 0.1
+    type: FI_EP_RDM
+    protocol: FI_PROTO_CXI
+provider: cxi
+    fabric: cxi
+    domain: cxi1
+    version: 0.1
+    type: FI_EP_RDM
+    protocol: FI_PROTO_CXI
+provider: cxi
+    fabric: cxi
+    domain: cxi2
+    version: 0.1
+    type: FI_EP_RDM
+    protocol: FI_PROTO_CXI
+provider: cxi
+    fabric: cxi
+=== FI_CXI defaults (fi_info -e, cxi) ===
+# FI_CXI_RDZV_ALIGNED_SW_RGET: Boolean (0/1, on/off, true/false, yes/no)
+# cxi: Enables SW RGet address alignment (default: 1).
+# FI_CXI_RX_MATCH_MODE: String
+# cxi: Sets RX message match mode (hardware | software | hybrid).
+# FI_CXI_RDZV_THRESHOLD: size_t
+# cxi: Message size threshold for rendezvous protocol.
+# FI_CXI_RDZV_GET_MIN: size_t
+# cxi: Minimum rendezvous Get payload size.
+# FI_CXI_RDZV_EAGER_SIZE: size_t
+# cxi: Eager data size for rendezvous protocol.
+# FI_CXI_OFLOW_BUF_SIZE: size_t
+# cxi: Overflow buffer size.
+# FI_CXI_OFLOW_BUF_COUNT: size_t
+# cxi: Overflow buffer count/min posted.
+# FI_CXI_OFLOW_BUF_MIN_POSTED: size_t
+# cxi: Overflow buffer count/min posted.
+# FI_CXI_OFLOW_BUF_MAX_CACHED: size_t
+# cxi: Maximum number of overflow buffers cached.
+# FI_CXI_SAFE_DEVMEM_COPY_THRESHOLD: size_t
+# cxi: Max memcpy for load/store HMEM access (default 4096).
+# FI_CXI_REQ_BUF_SIZE: size_t
+# cxi: Size of request buffer.
+# FI_CXI_REQ_BUF_MIN_POSTED: size_t
+# cxi: Minimum number of request buffer posted.
+# FI_CXI_REQ_BUF_MAX_COUNT: size_t
+# cxi: Maximum number of request buffer cached.
+# FI_CXI_REQ_BUF_MAX_CACHED: size_t
+# cxi: Maximum number of request buffer cached.
+# FI_CXI_DEFAULT_CQ_SIZE: size_t
+# cxi: Default provider CQ size (default: 1024).
+# FI_CXI_CQ_FILL_PERCENT: size_t
+# cxi: Fill percent of underlying hardware event queue used to determine when completion queue is saturated (default: 50).
+# FI_CXI_DEFAULT_TX_SIZE: size_t
+# cxi: Default provider tx_attr.size (default: 512).
+# FI_CXI_RDZV_PROTO: String
+# cxi: Sets preferred rendezvous protocol [default | alt_read] (default default).

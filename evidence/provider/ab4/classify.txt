@@ -1,0 +1,33 @@
+arm         job       start                class                          verify first_rc_line
+sys         22359754  2026-09-26T05:01:24  launch-failure-PMI             -      
+sysex       22359755  2026-09-26T05:01:24  harness-timeout@round-20       -      
+sysex       22359756  2026-09-26T05:01:24  harness-timeout@round-20       -      
+sys         22359757  2026-09-26T05:09:25  clean                          OK     
+sys         22359758  2026-09-26T05:09:25  CONN_CLOSED                    -      libfabric:61419:1790388702::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid005266: TXC (0x7923:4): Get error: 0x5b92580 rc: CONN_CLOSED
+sysex       22359759  -                    not-run:CANCELLED b+
+sysex       22359760  -                    not-run:CANCELLED b+
+sys         22359761  -                    not-run:CANCELLED b+
+sys         22359762  -                    not-run:CANCELLED b+
+sysex       22359763  -                    not-run:CANCELLED b+
+sysex       22359764  -                    not-run:CANCELLED b+
+sys         22359765  -                    not-run:CANCELLED b+
+sys         22359766  -                    not-run:CANCELLED b+
+sysex       22359767  -                    not-run:CANCELLED b+
+sysex       22359768  -                    not-run:CANCELLED b+
+sys         22359769  -                    not-run:CANCELLED b+
+sys         22360074  2026-09-26T05:13:16  clean                          OK     
+sysex       22360075  2026-09-26T05:13:16  clean                          OK     
+sysex       22360076  2026-09-26T05:13:17  clean                          OK     
+sys         22360077  2026-09-26T05:16:54  clean                          OK     
+sys         22360078  2026-09-26T05:16:54  clean                          OK     
+sysex       22360079  2026-09-26T05:20:52  clean                          OK     
+sysex       22360080  2026-09-26T05:20:52  clean                          OK     
+sys         22360081  2026-09-26T05:20:52  clean                          OK     
+sys         22360083  2026-09-26T05:20:52  CONN_CLOSED                    -      libfabric:120675:1790389320::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid006576: TXC (0xcd11:7): Get error: 0xc7db00 rc: CONN_CLOSED
+sysex       22360084  2026-09-26T05:24:41  clean                          OK     
+sysex       22360086  2026-09-26T05:24:41  clean                          OK     
+sys         22360087  2026-09-26T05:24:41  CONN_CLOSED                    -      libfabric:97456:1790389610::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid005876: TXC (0xa051:0): Get error: 0x645fd00 rc: CONN_CLOSED
+sys         22360088  2026-09-26T05:28:24  clean                          OK     
+sysex       22360089  2026-09-26T05:42:52  clean                          OK     
+sysex       22360090  2026-09-26T05:28:26  clean                          OK     
+sys         22360091  2026-09-26T05:28:28  gpu-hang                       -      

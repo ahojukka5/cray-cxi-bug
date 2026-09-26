@@ -1,0 +1,14 @@
+submitted: 2026-09-26T13:46:11+03:00 arms: mix1304 (-N60 --nodelist=nid006984,nid006991,nid006999,nid007009,nid007017,nid007023,nid007042,nid007048: 8 x1304 nodes + 52 anywhere else, --exclude nid007383) in1304 (--constraint=x1304); installed libfabric; EXCH_TIMEOUT=600. Purpose: same-window control for ab5.
+0 mix1304 22365925
+0 in1304 22365926
+1 in1304 22365927
+1 mix1304 22365928
+2 mix1304 22365929
+2 in1304 22365930
+3 in1304 22365931
+3 mix1304 22365932
+nodelist changed: 2026-09-26T13:46:45+03:00 mix1304 jobs -> nid006984,nid006991,nid007002,nid007009,nid007017,nid007023,nid007033,nid007042 (nid006999, nid007048 were drained)
+nodelist changed: 2026-09-26T13:50:11+03:00 mix1304 jobs -> nid006990,nid006999,nid007014,nid007043,nid007045,nid007048,nid007081,nid007096 (only currently idle x1304 nodes)
+nodelist changed: 2026-09-26T13:50:49+03:00 mix1304 jobs ->  (state exactly idle)
+changed: 2026-09-26T13:51:44+03:00 mix1304 jobs -> Features=[x1304*8&x1403*52], ReqNodeList cleared (named nodes kept getting drained)
+cancelled: 2026-09-27T07:35:00+03:00 mix1304 jobs (22365932 22365929 22365928 22365925) never scheduled with Features=[x1304*8&x1403*52] before the 2026-09-27 full-machine reservation; the same-window mixed control was not obtained

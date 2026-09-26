@@ -1,0 +1,74 @@
+22358615  sys         CONN_CLOSED                x1304=4
+22358616  shs12-ref   CONN_CLOSED                x1304=6
+22358617  shs12-diag  gpu-hang                   x1304=13
+22358618  shs12-ref   CONN_CLOSED                x1304=5
+22358619  shs12-diag  CONN_CLOSED                x1304=12
+22358620  sys         CONN_CLOSED                x1304=5
+22358621  shs12-diag  CONN_CLOSED                x1304=3
+22358622  sys         clean                      x1304=0
+22358623  shs12-ref   CONN_CLOSED                x1304=6
+22358624  sys         CONN_CLOSED                x1304=3
+22358855  sys         clean                      x1304=0
+22358856  shs15       CONN_CLOSED                x1304=2
+22358857  main        clean                      x1304=0
+22358858  shs15       clean                      x1304=0
+22358859  main        CONN_CLOSED                x1304=2
+22358860  sys         gpu-hang                   x1304=5
+22358861  main        CONN_CLOSED                x1304=8
+22358862  sys         CONN_CLOSED                x1304=6
+22358863  shs15       clean                      x1304=0
+22358864  sys         clean                      x1304=0
+22358865  shs15       clean                      x1304=0
+22358866  main        clean                      x1304=0
+22358867  shs15       CONN_CLOSED                x1304=3
+22358868  main        clean                      x1304=2
+22358869  sys         CONN_CLOSED                x1304=4
+22358870  main        clean                      x1304=0
+22358871  sys         clean                      x1304=0
+22358872  shs15       clean                      x1304=2
+22358873  sys         clean                      x1304=0
+22358874  shs15       clean                      x1304=0
+22358875  main        CONN_CLOSED                x1304=3
+22358876  shs15       CONN_CLOSED                x1304=2
+22358877  main        clean                      x1304=0
+22358878  sys         clean                      x1304=0
+22359754  sys         launch-failure-PMI         x1304=0
+22359755  sysex       harness-timeout@round-20   x1304=0
+22359756  sysex       harness-timeout@round-20   x1304=0
+22359757  sys         clean                      x1304=0
+22359758  sys         CONN_CLOSED                x1304=4
+22360074  sys         clean                      x1304=0
+22360075  sysex       clean                      x1304=0
+22360076  sysex       clean                      x1304=0
+22360077  sys         clean                      x1304=0
+22360078  sys         clean                      x1304=6
+22360079  sysex       clean                      x1304=0
+22360080  sysex       clean                      x1304=0
+22360081  sys         clean                      x1304=2
+22360083  sys         CONN_CLOSED                x1304=7
+22360084  sysex       clean                      x1304=0
+22360086  sysex       clean                      x1304=0
+22360087  sys         CONN_CLOSED                x1304=7
+22360088  sys         clean                      x1304=0
+22360089  sysex       clean                      x1304=0
+22360090  sysex       clean                      x1304=0
+22360091  sys         gpu-hang                   x1304=9
+22360325  diagex      clean                      x1304=0
+22360326  diagex      clean                      x1304=0
+22360327  diagex      clean                      x1304=0
+22360328  diagex      clean                      x1304=0
+22360329  diagex      clean                      x1304=0
+22360330  diagex      clean                      x1304=0
+22360331  diagex      clean                      x1304=0
+22360332  diagex      clean                      x1304=0
+22360333  diagex      clean                      x1304=0
+22360334  diagex      clean                      x1304=0
+22360335  diagex      clean                      x1304=0
+22360336  diagex      clean                      x1304=0
+---
+with CONN_CLOSED 19
+without clean 38
+with other:gpu-hang 3
+without other:harness-timeout@round-20 2
+without other:launch-failure-PMI 1
+with clean 4

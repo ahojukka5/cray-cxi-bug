@@ -1,0 +1,19 @@
+source: /pfs/lustref1/flash/project_462001519/juaho/dev/worktrees/libfabric/shs12-diag
+commit: 70baeb80929b576fc1a37ad737654cd4bc323bf2
+describe: release/shs-12.0.2-2-g70baeb809
+dirty_diff_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+untracked: 
+cc: gcc (SUSE Linux) 7.5.0
+configure: LDFLAGS=-Wl,--build-id --prefix=/scratch/project_462001519/juaho/cray-cxi-bug/lf/shs12-diag --enable-only --enable-cxi --enable-restricted-dl --with-rocr=/opt/rocm-6.3.4 --enable-rocr-dlopen --enable-xpmem=no
+host: nid007955  date: 2026-09-26T05:39:50+03:00  job: 22360322
+libfabric.so: /pfs/lustrep4/scratch/project_462001519/juaho/cray-cxi-bug/lf/shs12-diag/lib/libfabric.so.1.25.0
+sha256: 9dae9f213f38136c23c7d381a45fe91be5d03e52ee95e68c26bb5da212037a97
+ldd:
+  	linux-vdso.so.1 (0x00007ffda2ffc000)
+  	libcxi.so.1 => /usr/lib64/libcxi.so.1 (0x000014c2a0447000)
+  	libnl-3.so.200 => /usr/lib64/libnl-3.so.200 (0x000014c2a0424000)
+  	libm.so.6 => /lib64/libm.so.6 (0x000014c2a0324000)
+  	libatomic.so.1 => /usr/lib64/libatomic.so.1 (0x000014c2a0318000)
+  	libc.so.6 => /lib64/libc.so.6 (0x000014c2a0103000)
+  	/lib64/ld-linux-x86-64.so.2 (0x000014c2a0532000)
+  	libpthread.so.0 => /lib64/libpthread.so.0 (0x000014c2a0100000)

@@ -1,0 +1,12 @@
+HW Exception by GPU node-4 (Agent handle: 0x525130) reason :GPU Hang
+HW Exception by GPU node-4 (Agent handle: 0x5265a0) reason :GPU Hang
+HW Exception by GPU node-4 (Agent handle: 0x525130) reason :GPU Hang
+HW Exception by GPU node-4 (Agent handle: 0x525130) reason :GPU Hang
+HW Exception by GPU node-4 (Agent handle: 0x525130) reason :GPU Hang
+HW Exception by GPU node-4 (Agent handle: 0x525130) reason :GPU Hang
+HW Exception by GPU node-4 (Agent handle: 0x525130) reason :GPU Hang
+HW Exception by GPU node-4 (Agent handle: 0x525130) reason :GPU Hang
+srun: error: nid007383: tasks 416-423: Aborted
+srun: Terminating StepId=22360091.1
+[2026-09-26T05:28:56.987] error: *** STEP 22360091.1 ON nid005203 CANCELLED AT 2026-09-26T05:28:56 DUE TO TASK FAILURE ***
+srun: Force Terminated StepId=22360091.1

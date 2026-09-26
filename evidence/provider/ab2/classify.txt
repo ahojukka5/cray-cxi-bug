@@ -1,0 +1,25 @@
+arm         job       start                class                          verify first_rc_line
+sys         22358615  2026-09-26T04:04:08  CONN_CLOSED                    -      libfabric:122567:1790384730::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid006264: TXC (0xb951:0): Get error: 0x6454210 rc: CONN_CLOSED
+shs12-ref   22358616  2026-09-26T04:10:35  CONN_CLOSED                    -      libfabric:104229:1790385103::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid005921: TXC (0xa3f0:1): Get error: 0x5b87ed0 rc: CONN_CLOSED
+shs12-diag  22358617  2026-09-26T04:15:19  gpu-hang                       -      
+shs12-ref   22358618  2026-09-26T04:19:41  CONN_CLOSED                    -      libfabric:122150:1790385660::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid005345: TXC (0x7ee3:2): Get error: 0x5a2bbf0 rc: CONN_CLOSED
+shs12-diag  22358619  2026-09-26T04:19:42  CONN_CLOSED                    -      CXIDIAG nid007227 pid=49093 EVENT type=GET rc=53(CONN_CLOSED) size=64 buffer_id=2 ptlte=17 ptl_list=0 initiator=0 match_bits=0x82000000000033 rlength=13032800 m
+sys         22358620  2026-09-26T04:22:51  CONN_CLOSED                    -      libfabric:55009:1790385842::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid005929: TXC (0xa3d3:0): Get error: 0xc85250 rc: CONN_CLOSED
+shs12-diag  22358621  2026-09-26T04:27:33  CONN_CLOSED                    -      CXIDIAG nid006194 pid=43023 EVENT type=GET rc=53(CONN_CLOSED) size=64 buffer_id=2 ptlte=17 ptl_list=0 initiator=0 match_bits=0x8200000000009f rlength=13032832 m
+sys         22358622  2026-09-26T04:31:54  clean                          OK     
+shs12-ref   22358623  2026-09-26T04:31:54  CONN_CLOSED                    -      libfabric:81910:1790386625::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid006881: TXC (0xe1b0:6): Get error: 0xc70380 rc: CONN_CLOSED
+sys         22358624  2026-09-26T04:36:37  CONN_CLOSED                    -      libfabric:49841:1790386873::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid005165: TXC (0x7290:4): Get error: 0x648ee40 rc: CONN_CLOSED
+shs12-ref   22358625  -                    not-run:CANCELLED b+
+shs12-diag  22358626  -                    not-run:CANCELLED b+
+shs12-ref   22358627  -                    not-run:CANCELLED b+
+shs12-diag  22358628  -                    not-run:CANCELLED b+
+sys         22358629  -                    not-run:CANCELLED b+
+shs12-diag  22358630  -                    not-run:CANCELLED b+
+sys         22358631  -                    not-run:CANCELLED b+
+shs12-ref   22358632  -                    not-run:CANCELLED b+
+sys         22358633  -                    not-run:CANCELLED b+
+shs12-ref   22358634  -                    not-run:CANCELLED b+
+shs12-diag  22358635  -                    not-run:CANCELLED b+
+shs12-ref   22358636  -                    not-run:CANCELLED b+
+shs12-diag  22358637  -                    not-run:CANCELLED b+
+sys         22358638  -                    not-run:CANCELLED b+

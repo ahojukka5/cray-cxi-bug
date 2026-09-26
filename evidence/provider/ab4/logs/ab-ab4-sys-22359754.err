@@ -1,0 +1,261 @@
+Sat Sep 26 05:04:42 2026: [PE_357]:_pmi_mmap_tmp: Warning bootstrap barrier failed: num_syncd=6, pes_this_node=8, timeout=180 secs
+Sat Sep 26 05:04:42 2026: [PE_355]:_pmi_mmap_tmp: Warning bootstrap barrier failed: num_syncd=6, pes_this_node=8, timeout=180 secs
+Sat Sep 26 05:04:42 2026: [PE_355]:_pmi_mmap_init:Failed to setup PMI mmap.Sat Sep 26 05:04:42 2026: [PE_355]:globals_init:_pmi_mmap_init returned -1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:04:42 2026] [nid007657] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+Sat Sep 26 05:04:42 2026: [PE_356]:_pmi_mmap_tmp: Warning bootstrap barrier failed: num_syncd=6, pes_this_node=8, timeout=180 secs
+Sat Sep 26 05:04:42 2026: [PE_356]:_pmi_mmap_init:Failed to setup PMI mmap.Sat Sep 26 05:04:42 2026: [PE_356]:globals_init:_pmi_mmap_init returned -1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:04:42 2026] [nid007657] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+Sat Sep 26 05:04:42 2026: [PE_384]:_pmi_mmap_tmp: Warning bootstrap barrier failed: num_syncd=5, pes_this_node=8, timeout=180 secs
+Sat Sep 26 05:04:42 2026: [PE_386]:_pmi_mmap_tmp: Warning bootstrap barrier failed: num_syncd=5, pes_this_node=8, timeout=180 secs
+Sat Sep 26 05:04:42 2026: [PE_386]:_pmi_mmap_init:Failed to setup PMI mmap.Sat Sep 26 05:04:42 2026: [PE_386]:globals_init:_pmi_mmap_init returned -1
+Sat Sep 26 05:04:42 2026: [PE_387]:_pmi_mmap_tmp: Warning bootstrap barrier failed: num_syncd=5, pes_this_node=8, timeout=180 secs
+Sat Sep 26 05:04:42 2026: [PE_387]:_pmi_mmap_init:Failed to setup PMI mmap.Sat Sep 26 05:04:42 2026: [PE_387]:globals_init:_pmi_mmap_init returned -1
+Sat Sep 26 05:04:42 2026: [PE_388]:_pmi_mmap_tmp: Warning bootstrap barrier failed: num_syncd=5, pes_this_node=8, timeout=180 secs
+Sat Sep 26 05:04:42 2026: [PE_388]:_pmi_mmap_init:Failed to setup PMI mmap.Sat Sep 26 05:04:42 2026: [PE_388]:globals_init:_pmi_mmap_init returned -1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:04:42 2026] [nid007703] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:04:42 2026] [nid007703] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:04:42 2026] [nid007703] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+Sat Sep 26 05:04:42 2026: [PE_354]:_pmi_mmap_tmp: Warning bootstrap barrier failed: num_syncd=6, pes_this_node=8, timeout=180 secs
+Sat Sep 26 05:04:42 2026: [PE_354]:_pmi_mmap_init:Failed to setup PMI mmap.Sat Sep 26 05:04:42 2026: [PE_354]:globals_init:_pmi_mmap_init returned -1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:04:42 2026] [nid007657] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+Sat Sep 26 05:04:42 2026: [PE_385]:_pmi_mmap_tmp: Warning bootstrap barrier failed: num_syncd=5, pes_this_node=8, timeout=180 secs
+Sat Sep 26 05:04:42 2026: [PE_385]:_pmi_mmap_init:Failed to setup PMI mmap.Sat Sep 26 05:04:42 2026: [PE_385]:globals_init:_pmi_mmap_init returned -1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:04:42 2026] [nid007703] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+Sat Sep 26 05:04:42 2026: [PE_353]:_pmi_mmap_tmp: Warning bootstrap barrier failed: num_syncd=6, pes_this_node=8, timeout=180 secs
+Sat Sep 26 05:04:42 2026: [PE_353]:_pmi_mmap_init:Failed to setup PMI mmap.Sat Sep 26 05:04:42 2026: [PE_353]:globals_init:_pmi_mmap_init returned -1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:04:42 2026] [nid007657] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+Sat Sep 26 05:04:42 2026: [PE_352]:_pmi_mmap_tmp: Warning bootstrap barrier failed: num_syncd=6, pes_this_node=8, timeout=180 secs
+Sat Sep 26 05:04:42 2026: [PE_352]:_pmi_mmap_init:Failed to setup PMI mmap.Sat Sep 26 05:04:42 2026: [PE_352]:globals_init:_pmi_mmap_init returned -1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:04:42 2026] [nid007657] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+Sat Sep 26 05:04:42 2026: [PE_456]:_pmi_mmap_tmp: Warning bootstrap barrier failed: num_syncd=4, pes_this_node=8, timeout=180 secs
+Sat Sep 26 05:04:42 2026: [PE_459]:_pmi_mmap_tmp: Warning bootstrap barrier failed: num_syncd=4, pes_this_node=8, timeout=180 secs
+Sat Sep 26 05:04:42 2026: [PE_459]:_pmi_mmap_init:Failed to setup PMI mmap.Sat Sep 26 05:04:42 2026: [PE_459]:globals_init:_pmi_mmap_init returned -1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:04:42 2026] [nid007713] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+Sat Sep 26 05:04:42 2026: [PE_458]:_pmi_mmap_tmp: Warning bootstrap barrier failed: num_syncd=4, pes_this_node=8, timeout=180 secs
+Sat Sep 26 05:04:42 2026: [PE_458]:_pmi_mmap_init:Failed to setup PMI mmap.Sat Sep 26 05:04:42 2026: [PE_458]:globals_init:_pmi_mmap_init returned -1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:04:42 2026] [nid007713] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+srun: error: nid007657: tasks 352-356: Exited with exit code 255
+srun: Terminating StepId=22359754.1
+Sat Sep 26 05:04:42 2026: [PE_457]:_pmi_mmap_tmp: Warning bootstrap barrier failed: num_syncd=4, pes_this_node=8, timeout=180 secs
+Sat Sep 26 05:04:42 2026: [PE_457]:_pmi_mmap_init:Failed to setup PMI mmap.Sat Sep 26 05:04:42 2026: [PE_457]:globals_init:_pmi_mmap_init returned -1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:04:42 2026] [nid007713] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+[2026-09-26T05:04:42.464] error: *** STEP 22359754.1 ON nid005133 CANCELLED AT 2026-09-26T05:04:42 DUE TO TASK FAILURE ***
+srun: error: nid007703: tasks 385-388: Exited with exit code 255
+srun: error: nid007713: tasks 457-459: Exited with exit code 255
+srun: error: nid007715: task 479: Killed
+srun: error: nid007714: task 471: Killed
+srun: error: nid007703: tasks 389-391: Killed
+srun: error: nid007713: tasks 460-463: Killed
+srun: error: nid007708: tasks 424-431: Killed
+srun: error: nid007648: tasks 280-287: Killed
+srun: error: nid007657: tasks 358-359: Killed
+Sat Sep 26 05:06:48 2026: [PE_400]:inet_recv:inet_recv: recv error on nid007705 from nid007704 (fd=4) Connection reset by peer
+Sat Sep 26 05:06:48 2026: [PE_400]:_pmi_network_barrier:_pmi_inet_recv from target 0 failed pmi errno -1
+Sat Sep 26 05:06:48 2026: [PE_400]:control_nets_join:network_barrier failed
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:06:48 2026] [nid007705] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+Sat Sep 26 05:06:48 2026: [PE_405]:control_nets_join:_pmi_smp_barrier failed -1
+Sat Sep 26 05:06:48 2026: [PE_401]:control_nets_join:_pmi_smp_barrier failed -1
+Sat Sep 26 05:06:48 2026: [PE_402]:control_nets_join:_pmi_smp_barrier failed -1
+Sat Sep 26 05:06:48 2026: [PE_403]:control_nets_join:_pmi_smp_barrier failed -1
+Sat Sep 26 05:06:48 2026: [PE_404]:control_nets_join:_pmi_smp_barrier failed -1
+Sat Sep 26 05:06:48 2026: [PE_406]:control_nets_join:_pmi_smp_barrier failed -1
+Sat Sep 26 05:06:48 2026: [PE_407]:control_nets_join:_pmi_smp_barrier failed -1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:06:48 2026] [nid007705] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:06:48 2026] [nid007705] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:06:48 2026] [nid007705] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:06:48 2026] [nid007705] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:06:48 2026] [nid007705] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:06:48 2026] [nid007705] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+MPICH ERROR [Rank 0] [job id unknown] [Sat Sep 26 05:06:48 2026] [nid007705] - Abort(1092879) (rank 0 in comm 0): Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+aborting job:
+Fatal error in PMPI_Init_thread: Other MPI error, error stack:
+MPIR_Init_thread(170): 
+MPID_Init(455).......: 
+MPIR_pmi_init(110)...: PMI_Init returned 1
+srun: error: nid007704: tasks 392-399: Killed
+srun: error: nid007656: tasks 344-351: Killed
+srun: error: nid006463: tasks 136-143: Killed
+srun: error: nid007705: tasks 400-407: Killed
+srun: error: nid006469: tasks 184-191: Killed
+srun: error: nid007651: tasks 304-311: Killed
+srun: error: nid007460: tasks 224-231: Killed
+srun: error: nid007659: tasks 368-375: Killed
+srun: error: nid006466: tasks 160-167: Killed
+srun: error: nid007649: tasks 288-295: Killed
+srun: error: nid007709: tasks 432-439: Killed
+srun: Force Terminated StepId=22359754.1

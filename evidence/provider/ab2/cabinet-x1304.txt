@@ -1,0 +1,10 @@
+ab-ab2-sys-22358615          FAIL    x1304_nodes= 4  x1304 fgfc median 1.01x max 23.5x of job median
+ab-ab2-shs12-ref-22358616    FAIL    x1304_nodes= 6  x1304 fgfc median 0.94x max 1.1x of job median
+ab-ab2-shs12-diag-22358617   FAIL    x1304_nodes=13  x1304 fgfc median 0.00x max 0.0x of job median
+ab-ab2-shs12-ref-22358618    FAIL    x1304_nodes= 5  x1304 fgfc median 1.04x max 23.3x of job median
+ab-ab2-shs12-diag-22358619   FAIL    x1304_nodes=12  x1304 fgfc median 0.97x max 84.0x of job median
+ab-ab2-sys-22358620          FAIL    x1304_nodes= 5  x1304 fgfc median 0.93x max 1.1x of job median
+ab-ab2-shs12-diag-22358621   FAIL    x1304_nodes= 3  x1304 fgfc median 1.05x max 11.1x of job median
+ab-ab2-sys-22358622          OK      x1304_nodes= 0
+ab-ab2-shs12-ref-22358623    run?    x1304_nodes= 6  (no counters)
+ab-ab2-sys-22358624          FAIL    x1304_nodes= 3  x1304 fgfc median 0.90x max 1.0x of job median

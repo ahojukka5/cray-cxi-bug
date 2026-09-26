@@ -1,0 +1,4 @@
+job 22360199: 240 NICs, no after-snapshot: none
+  max fgfc stall nid007011/cxi3 x1.2 fgfc_frames=530176
+  rel nid007062/cxi3 fgfc x1.1 pct_retry_srb_requests=34 pct_bad_seq_nacks=33
+  rel nid007065/cxi3 fgfc x1.1 pct_retry_srb_requests=42 pct_bad_seq_nacks=41

@@ -1,0 +1,46 @@
+libfabric:61419:1790388702::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid005266: TXC (0x7923:4): Get error: 0x5b92580 rc: CONN_CLOSED
+libfabric:61419:1790388702::cxi:ep_data:cxip_report_send_completion():675<warn> nid005266: TXC (0x7923:4): Request dest_addr: 346 caddr.nic: 0XEBD2 caddr.pid: 2 error: 0x5b92580 (err: 5, CONN_CLOSED)
+libfabric:61420:1790388702::cxi:ep_data:cxip_rdzv_pte_src_cb():4296<warn> nid005266: TXC (0x7923:5): Get error: 0x65f83f0 rc: CONN_CLOSED
+libfabric:61420:1790388702::cxi:ep_data:cxip_report_send_completion():675<warn> nid005266: TXC (0x7923:5): Request dest_addr: 346 caddr.nic: 0XEBD2 caddr.pid: 2 error: 0x65f83f0 (err: 5, CONN_CLOSED)
+MPICH ERROR [Rank 21] [job id 22359758.1] [Sat Sep 26 05:11:42 2026] [nid005266] - Abort(942291087) (rank 21 in comm 0): Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x5c0c1b0, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+
+MPICH ERROR [Rank 20] [job id 22359758.1] [Sat Sep 26 05:11:42 2026] [nid005266] - Abort(472529039) (rank 20 in comm 0): Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x5bc4720, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+
+aborting job:
+Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x5c0c1b0, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+aborting job:
+Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x5bc4720, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - Invalid request descriptor)
+srun: error: nid005266: tasks 20-21: Exited with exit code 255
+srun: Terminating StepId=22359758.1
+[2026-09-26T05:11:42.262] error: *** STEP 22359758.1 ON nid005166 CANCELLED AT 2026-09-26T05:11:42 DUE TO TASK FAILURE ***
+[2026-09-26T05:11:42.501] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T05:11:43.501] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T05:11:44.501] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T05:11:45.501] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T05:11:46.501] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T05:11:47.502] error: switch_g_job_postfini: Device or resource busy
+srun: Force Terminated StepId=22359758.1

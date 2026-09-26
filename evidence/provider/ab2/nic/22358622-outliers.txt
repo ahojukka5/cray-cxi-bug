@@ -1,0 +1,5 @@
+job 22358622: 4 NICs, no after-snapshot: none
+  max fgfc stall nid005166/cxi3 x1.1 fgfc_frames=472290
+  rel nid005166/cxi0 fgfc x1.0 rh_tct_timeouts=10
+  rel nid005166/cxi1 fgfc x1.0 rh_tct_timeouts=18
+  rel nid005166/cxi2 fgfc x1.0 rh_spt_timeouts=39 rh_tct_timeouts=31

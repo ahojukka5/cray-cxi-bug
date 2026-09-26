@@ -1,0 +1,28 @@
+libfabric:101183:1790387210::cxi:ep_data:cxip_rdzv_pte_src_cb():4472<warn> nid006312: TXC (0xbc10:5): Get error: 0x645dad0 rc: CONN_CLOSED
+libfabric:101183:1790387210::cxi:ep_data:cxip_report_send_completion():711<warn> nid006312: TXC (0xbc10:5): Request dest_addr: 320 caddr.nic: 0XEEE0 caddr.pid: 0 error: 0x645dad0 (err: 5, CONN_CLOSED)
+MPICH ERROR [Rank 213] [job id 22358856.1] [Sat Sep 26 04:46:50 2026] [nid006312] - Abort(405420175) (rank 213 in comm 0): Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x66441a0, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - CONN_CLOSED)
+
+aborting job:
+Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x66441a0, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - CONN_CLOSED)
+srun: error: nid006312: task 213: Exited with exit code 255
+srun: Terminating StepId=22358856.1
+[2026-09-26T04:46:51.165] error: *** STEP 22358856.1 ON nid005273 CANCELLED AT 2026-09-26T04:46:51 DUE TO TASK FAILURE ***
+srun: forcing job termination
+srun: got SIGCONT
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+/var/spool/slurmd/job22358856/slurm_script: line 67: 20340 Killed                  timeout -k 30 -s TERM "${EXCH_TIMEOUT:-330}" srun --gpus-per-task=1 --gpu-bind=closest --cpu-bind=cores "$BIN" --mb "$MB" --rounds "${ROUNDS:-40}" --verify
+srun: StepId=22358856.2 aborted before step completely launched.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-09-26T04:53:26.770] error: *** JOB 22358856 ON nid005273 CANCELLED AT 2026-09-26T04:53:26 DUE TO TIME LIMIT ***

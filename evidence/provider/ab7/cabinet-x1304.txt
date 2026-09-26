@@ -1,0 +1,4 @@
+ab-ab7-in1304-22365926       OK      x1304_nodes=60  x1304 fgfc median 1.00x max 1.3x of job median
+ab-ab7-in1304-22365927       OK      x1304_nodes=60  x1304 fgfc median 1.00x max 1.3x of job median
+ab-ab7-in1304-22365930       OK      x1304_nodes=60  x1304 fgfc median 1.00x max 1.2x of job median
+ab-ab7-in1304-22365931       OK      x1304_nodes=60  x1304 fgfc median 1.00x max 1.3x of job median

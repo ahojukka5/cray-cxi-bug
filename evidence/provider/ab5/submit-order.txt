@@ -1,0 +1,10 @@
+submitted: 2026-09-26T05:22:57+03:00 arms: in1304 (--constraint=x1304, all 60 nodes in cabinet x1304) in1305 (--constraint=x1305 control); installed libfabric; EXCH_TIMEOUT=600; account project_462001120
+0 in1304 22360195
+0 in1305 22360196
+1 in1305 22360197
+1 in1304 22360198
+2 in1304 22360199
+2 in1305 22360200
+3 in1305 22360201
+3 in1304 22360202
+excluded nid007383 (repeated GPU Hang) from pending jobs: 2026-09-26T05:55:14+03:00

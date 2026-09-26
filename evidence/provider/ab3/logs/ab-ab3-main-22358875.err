@@ -1,0 +1,28 @@
+libfabric:117141:1790394725::cxi:ep_data:cxip_rdzv_pte_src_cb():4472<warn> nid005299: TXC (0x7be3:3): Get error: 0x5af6870 rc: CONN_CLOSED
+libfabric:117141:1790394725::cxi:ep_data:cxip_report_send_completion():711<warn> nid005299: TXC (0x7be3:3): Request dest_addr: 378 caddr.nic: 0XEA71 caddr.pid: 2 error: 0x5af6870 (err: 5, CONN_CLOSED)
+MPICH ERROR [Rank 43] [job id 22358875.1] [Sat Sep 26 06:52:05 2026] [nid005299] - Abort(673855631) (rank 43 in comm 0): Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x650ffc0, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - CONN_CLOSED)
+
+aborting job:
+Fatal error in PMPI_Waitall: Other MPI error, error stack:
+PMPI_Waitall(378)..............: MPI_Waitall(count=958, req_array=0x650ffc0, status_array=0x1) failed
+MPIR_Waitall(167)..............: 
+MPIR_Waitall_impl(51)..........: 
+MPID_Progress_wait(201)........: 
+MPIDI_Progress_test(97)........: 
+MPIDI_OFI_handle_cq_error(1310): OFI poll failed (ofi_events.c:1312:MPIDI_OFI_handle_cq_error:Input/output error - CONN_CLOSED)
+srun: error: nid005299: task 43: Exited with exit code 255
+srun: Terminating StepId=22358875.1
+[2026-09-26T06:52:05.888] error: *** STEP 22358875.1 ON nid005143 CANCELLED AT 2026-09-26T06:52:05 DUE TO TASK FAILURE ***
+[2026-09-26T06:52:06.107] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T06:52:07.107] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T06:52:08.107] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T06:52:09.107] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T06:52:10.107] error: Failed to destroy CXI Service ID 5 (cxi1): Device or resource busy
+[2026-09-26T06:52:11.108] error: switch_g_job_postfini: Device or resource busy
+srun: Force Terminated StepId=22358875.1
