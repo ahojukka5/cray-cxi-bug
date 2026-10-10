@@ -1,0 +1,44 @@
+# cxi-alt7..cxi-alt16: ten alt_read runs whose output is lost.
+# 2026-09-21, 60 nodes each, standard-g, account project_462001120.
+# Recorded 2026-10-10 from sacct. Status: recorded, not interpreted.
+#
+# Launch, identical for all ten except --job-name (sacct SubmitLine,
+# submitted 20:58:36-37 from the primary checkout of this repository):
+#   sbatch --parsable --account=project_462001120 --time=00:05:00 \
+#     --nodes=60 --job-name=cxi-altN \
+#     --export=ALL,MATCH_MODE=software,RDZV_PROTO=alt_read,ROUNDS=40 \
+#     run_point.sbatch
+#
+# Source revision: unknown. The last commit before submission is
+# 7ab6de72873fb63f6d8feb9927ac990db28281b0 (16:44); the working tree and
+# the alltoall_gpu binary at 20:58 were not recorded.
+#
+# Output: run_point.sbatch wrote cxi-altN-<jobid>.out/.err to the
+# repository root. They were never committed and are lost. On 2026-10-10
+# they were in neither /scratch/project_462001519/juaho/cray-cxi-bug.tar.zst
+# nor /scratch/project_462001519/juaho/forensics/slurm-logs/
+# dev-slurm-logs-2026-09-20.tar.zst nor the cold-archive job-log tarballs.
+# No file in this repository names these job IDs. The README's per-window
+# failure table does not list job IDs, so whether these runs are counted
+# there is not recorded.
+#
+# sacct -X state and the state of step .0 (srun alltoall_gpu). A job is
+# COMPLETED when the batch script exits 0; run_point.sbatch exits 0 after
+# printing "RESULT ...: FAILED", so the step state is listed too.
+# Times are local (EEST).
+
+JOBID     NAME       STATE      ELAPSED   START     END       STEP0      STEP0_ELAPSED
+22220232  cxi-alt7   COMPLETED  00:02:38  21:02:20  21:04:58  COMPLETED  00:00:56
+22220233  cxi-alt8   COMPLETED  00:02:38  21:02:20  21:04:58  COMPLETED  00:00:56
+22220234  cxi-alt9   TIMEOUT    00:05:25  21:02:20  21:07:45  CANCELLED  00:03:51
+22220235  cxi-alt10  TIMEOUT    00:05:25  21:02:20  21:07:45  CANCELLED  00:03:51
+22220236  cxi-alt11  COMPLETED  00:01:01  21:12:57  21:13:58  COMPLETED  00:00:55
+22220237  cxi-alt12  TIMEOUT    00:05:22  21:12:57  21:18:19  CANCELLED  00:41:47
+22220238  cxi-alt13  COMPLETED  00:01:01  21:23:24  21:24:25  COMPLETED  00:00:55
+22220239  cxi-alt14  COMPLETED  00:00:22  21:23:24  21:23:46  CANCELLED  00:00:16
+22220240  cxi-alt15  COMPLETED  00:01:01  21:23:24  21:24:25  COMPLETED  00:00:55
+22220241  cxi-alt16  COMPLETED  00:01:04  21:23:27  21:24:31  COMPLETED  00:00:58
+
+# Job states: 7 COMPLETED, 3 TIMEOUT. Step .0 states: 6 COMPLETED,
+# 4 CANCELLED (exit 0:15). The 00:41:47 step elapsed of 22220237 is as
+# sacct reports it, longer than its job.

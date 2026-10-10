@@ -143,6 +143,10 @@ Identical work throughout. The rate fell from 100% to 6% over five
 hours and later returned to 50%. Any comparison not interleaved in
 time is measuring the machine, not the setting.
 
+Ten further `alt_read` runs that evening (`cxi-alt7`..`cxi-alt16`,
+21:02–21:24) lost their output; what `sacct` still holds is in
+`evidence/alt-read-runs-lost.txt`.
+
 Also ruled out, each on interleaved or same-window evidence:
 
 - **Message size.** 4, 8, 12 and 16 MB per peer at 480 ranks: one
