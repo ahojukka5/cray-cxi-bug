@@ -234,5 +234,9 @@ python3 jobs/nic_outliers.py <jobid>
 python3 jobs/cabinet_table.py x1304 <tag>
 ```
 
-Scratch: `/scratch/project_462001519/juaho/cray-cxi-bug/{logs,runs,lf}`.
+Raw NIC counters, full Slurm logs and libfabric trees: the scratch
+directory `/scratch/project_462001519/juaho/cray-cxi-bug/{logs,runs,lf}`
+was packed into `/scratch/project_462001519/juaho/cray-cxi-bug.tar.zst` on
+2026-10-05 and removed. Checksum and member summary:
+`../archive/README.md`.
 Platform record: `platform-nid005002.txt`, `stack_ref.txt`.
