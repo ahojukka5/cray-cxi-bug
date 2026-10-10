@@ -7,10 +7,15 @@ Window 2026-09-25 12:08–13:25. Account `project_462001120`.
 `MPI_Alltoall` includes the self block that the point-to-point loop
 skips: one peer out of 480, copied locally.
 
-Stack identity is in `stacks.md`. Each rank-0 log prints
-`MPI_Get_library_version`. Raw logs are
-`evidence/mpi9/logs/cxi9-<arm>-<jobid>.out` and `.err`
-(job 22337437 is `cxi9-prio-probe-22337437`).
+Stack identity is in `stacks.md`. Each rank-0 log printed
+`MPI_Get_library_version`. The raw logs, `cxi9-<arm>-<jobid>.out` and
+`.err` (job 22337437 is `cxi9-prio-probe-22337437`), were written to the
+`worktrees/cray-cxi-bug/mpi9` checkout and never committed. They were
+removed with that worktree and are lost: on 2026-10-10 they were in neither
+`/scratch/project_462001519/juaho/cray-cxi-bug.tar.zst`,
+`/scratch/project_462001519/juaho/forensics/slurm-logs/dev-slurm-logs-2026-09-20.tar.zst`
+(which predates these runs), nor the cold-archive job-log tarballs. The
+tables and quoted error lines below are the surviving record.
 
 | stack | exchange | nodes | jobs | clean | CXI fail | hung | other | CXI rate | median exchange time |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
