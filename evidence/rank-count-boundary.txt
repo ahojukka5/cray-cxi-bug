@@ -33,7 +33,7 @@ clean runs in the same period. The application is not the cause.
 
 The answer is a gradient, not a boundary at 6144 ranks. 512 nodes still
 completes some of the time; from 640 nodes upward nothing completed,
-and above 512 nodes the failure comes on the first exchange rather than
-part way through. Twelve runs in one two-hour evening window cannot
+and most failures appeared at the first exchange, though job 22251815
+reported an error only by round 10. Twelve runs in one two-hour evening window cannot
 separate rank count from time of day (see failure-rate-vs-time.txt),
 so the statement is limited to that window.
